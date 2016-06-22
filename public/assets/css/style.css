@@ -1,26 +1,42 @@
-html, body {
-	font-family: Consolas, monaco, monospace;
-	background-color: #272822;
-	color: #F8F8F2;
+/***************************************/
+/*Modification css sur Bootstrap/Agency*/
+/***************************************/
+header {
+	background-image: url("../img/header-bg1.jpg");
+	min-height: 1200px; /*pour voir plus mon image...*/
 }
 
-.container {
-	margin: 50px;
+.btn-xl {
+    margin-top: 300px;
 }
 
-a {
-	text-decoration: none;
-	color: #A6E22E;
+.navbar-default .navbar-brand {
+    font-size: 3em;
+    transition: all 0.3s ease 0s;
 }
 
-a:hover {
-	color: #F92672;
+.navbar-default .nav li a {
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-h1 {
-	color: #F92672;
+#intro-parag {
+	color: #482A0A;
 }
 
-h2 {
-	color: #66D9EF;
+/* Deuxième image timeline, attention doit avoir la classe "second" */
+.timeline-image.second {
+	margin-top: 20%;
+}
+
+#inscription {
+	background-image: url("../img/VeryGoodTripMapMonde.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+
+}
+
+#inscription img {
+	opacity: 0.2;
 }

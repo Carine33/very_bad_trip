@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?= $this->e($title) ?> - Very Good Trip</title>
+	<title><?= $this->e($title) ?>  Very Good Trip </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,9 +25,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body  id="page-top" class="index">
 
-<nav>
+<nav class="navbar navbar-default navbar-fixed-top">
 	<?=$this->insert('_partials/navbar');?>
 </nav>
 
@@ -43,6 +43,24 @@
 	<?=$this->insert('_partials/footer');?>
 </footer>
 
-<!-- // JS -->
+    <!-- jQuery -->
+    <script src="<?=$this->assetUrl('js/jquery.js');?>"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?=$this->assetUrl('js/bootstrap.min.js');?>"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="<?=$this->assetUrl('js/classie.js');?>"></script>
+    <script src="<?=$this->assetUrl('js/cbpAnimatedHeader.js');?>"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="<?=$this->assetUrl('js/jqBootstrapValidation.js');?>"></script>
+    <script src="<?=$this->assetUrl('js/contact_me.js');?>"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="<?=$this->assetUrl('js/agency.js');?>"></script>
+
+    
 </body>
 </html>
