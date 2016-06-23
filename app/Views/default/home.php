@@ -4,7 +4,7 @@
 	
 <!-- <body id="page-top" class="index"> -->
 
-    <!-- Services Section -->
+    <!-- Section Inscription -->
     <section id="inscription">
         <div class="container">
             <div class="row">
@@ -40,6 +40,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="scroll-top page-scroll">
+            <a class="btn btn-primary" href="#page-top">Retour à l'accueil</a>
+        </div>
+
+        <!-- <a href="#top" class="js-scrollTo retour">Revenir en haut</a> -->
     </section>
 
     <!-- Portfolio Grid Section 
@@ -140,7 +146,7 @@
         </div>
     </section> -->
 
-    <!-- About Section -->
+    <!-- Section Destinations -->
     <section id="destinations">
         <div class="container">
             <div class="row">
@@ -285,7 +291,7 @@
         </div>
     </section>
 
-    <!-- La Team Section -->
+    <!-- Section La Team -->
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -314,7 +320,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Damien_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Damien_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Damien" title="Photo de Damien, cliquez pour agrandir la photo">
                         <h4>Damien Vermilas</h4>
-                        <p class="text-muted">...</p>
+                        <p class="text-muted">Un résumé à éditer...</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -329,7 +335,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Hugues_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Hugues_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Hugues" title="Photo de Hugues, cliquez pour agrandir la photo">
                         <h4>Hugues Fonteyraud</h4>
-                        <p class="text-muted">Fondu de musique et en particulier la guitare...</p>
+                        <p class="text-muted">Un résumé à éditer... Fondu de musique et en particulier la guitare...</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -344,7 +350,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Thibaut_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Thibaut_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Thibaut" title="Photo de Thibaut, cliquez pour agrandir la photo">
                         <h4>Thibaut Taquet</h4>
-                        <p class="text-muted">...</p>
+                        <p class="text-muted">Un résumé à éditer...</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -358,7 +364,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">Carine, Damien, Hugues et Thibaut sortis de divers horizons...</p>
                 </div>
             </div>
         </div>
@@ -392,43 +398,60 @@
         </div>
     </aside> -->
     
-    <!-- Contact Section -->
+    <!-- Section Contact -->
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Contactez-nous</h2>
+                    <h3 class="section-subheading text-muted contact">Un petit coucou ! Un petit message à nos développeurs ! N'hésitez pas à nous adresser un commentaire !</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+
+                    <?php if(!empty($errors)): // On affiche les erreurs si le tableau n'est pas vide ?>
+                        <div class="alert alert-danger">
+                            <?=implode('<br>', $errors); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if(isset($success) && $success === true): ?>
+                        <div class="alert alert-success">
+                            <p>Votre message a bien été pris en compte. Merci !</p>
+                        </div>
+                    <?php endif; ?> 
+
+                    <form method="post" action="#contact" id="formContact" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <label for="lastname">Votre nom : </label>
+                                    <input type="text" class="form-control" placeholder="Votre nom *" id="lastname" name="lastname" required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <label for="firstname">Votre prénom : </label>
+                                    <input type="text" class="form-control" placeholder="Votre prénom *" id="firstname" name="firstname" required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <label for="email">Votre adresse mail : </label>
+                                    <input type="email" class="form-control" placeholder="Votre adresse email *" id="email" name="email" required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <label for="message">Votre message : </label>
+                                    <textarea class="form-control" placeholder="Votre Message *" id="message" name="message" required></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" id="submit" class="btn btn-xl">Envoyer</button>
                             </div>
                         </div>
                     </form>

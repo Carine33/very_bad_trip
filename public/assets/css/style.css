@@ -1,12 +1,16 @@
-/***************************************/
-/*Modification css sur Bootstrap/Agency*/
-/***************************************/
+
+/******** MODIFICATION CSS SUR BOOTSTRAP/Agency *********/
+
+/***************************/
+/***** SECTION ACCUEIL *****/
+/***************************/
+
 header {
 	background-image: url("../img/header-bg1.jpg");
 	min-height: 1200px; /*pour voir plus mon image...*/
 }
 
-.btn-xl {
+.btn-xl.quiz {
     margin-top: 300px;
 }
 
@@ -20,23 +24,48 @@ header {
     letter-spacing: 2px;
 }
 
-#intro-parag {
+/*#intro-parag {
 	color: #482A0A;
+}*/
+
+/***************************/
+/*** SECTION INSCRIPTION ***/
+/***************************/
+
+#inscription {
+	background-image: url("../img/VeryGoodTripMapMonde.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 }
+
+/***************************/
+/*** SECTION DESTINATION ***/
+/***************************/
 
 /* Deuxième image timeline, attention doit avoir la classe "second" */
 .timeline-image.second {
 	margin-top: 20%;
 }
 
-#inscription {
-	background-image: url("../img/VeryGoodTripMapMonde.jpg");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 
+/***************************/
+/***** SECTION CONTACT *****/
+/***************************/
 
+/* personnalisation de la couleur de texte avec ajout "contact" */
+.section-subheading.text-muted.contact {
+    color: #fec503;
 }
 
-#inscription img {
-	opacity: 0.2;
+label {
+	color: #fff;
 }
+
+
+
+
+/**************************/
+
+/*.js-scrollTo.retour{
+	
+}*/
