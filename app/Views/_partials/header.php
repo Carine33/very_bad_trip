@@ -21,5 +21,5 @@
             <div></div>
             <div></div> -->
         </div>
-        <a href="#inscription" class="page-scroll btn btn-xl">Faites le quiz !</a>
+        <a href="#inscription" class="page-scroll btn btn-xl quiz">Faites le quiz !</a>
     <!-- </header> -->

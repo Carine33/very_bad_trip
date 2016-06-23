@@ -21,7 +21,7 @@
                         <a class="page-scroll" href="#page-top">Accueil</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Inscription/Se connecter</a>
+                        <a class="page-scroll" href="#inscription">Inscription/Se connecter</a>
                     </li>
 <!--                     <li>
                         <a class="page-scroll" href="#portfolio">Connection</a>
