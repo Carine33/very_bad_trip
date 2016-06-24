@@ -38,6 +38,14 @@ header {
 	background-position: 50% 50%;
 }
 
+.monBtn { 
+	padding: 10px;
+}
+
+.lienInscription {
+    color: #fff;
+}
+
 /***************************/
 /*** SECTION DESTINATION ***/
 /***************************/

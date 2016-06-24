@@ -1,6 +1,7 @@
 <?php
 	
 	$w_routes = array(
+
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/page-quiz', 'Quiz#repondreQuiz', 'quiz_repondreQuiz'],
 		['GET', '/insertion', 'Insert#insertDb', 'insert_db'],
@@ -11,5 +12,4 @@
 		['GET|POST', '/page-admin-dest', 'Users#selectDestinations', 'users_selectDestinations'],
 		['GET', '/page-supprimer-user/[i:userid]', 'Users#supprimerUser', 'user_supprimerUser'],
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Users#supprimerDestination', 'user_supprimerDestination'],
-
 	);
