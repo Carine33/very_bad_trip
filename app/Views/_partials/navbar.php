@@ -18,7 +18,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#page-top">Accueil</a>
+                        <a class="page-scroll" href="<?= $this->url('default_home');?>">Accueil</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#inscription">Inscription</a>
