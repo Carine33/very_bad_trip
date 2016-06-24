@@ -21,11 +21,11 @@
                         <a class="page-scroll" href="#page-top">Accueil</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#inscription">Inscription/Se connecter</a>
+                        <a class="page-scroll" href="#inscription">Inscription</a>
                     </li>
-<!--                     <li>
-                        <a class="page-scroll" href="#portfolio">Connection</a>
-                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="">Se connecter</a>
+                    </li> 
                     <li>
                         <a class="page-scroll" href="#destinations">Destination</a>
                     </li>

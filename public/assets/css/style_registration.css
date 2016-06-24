@@ -5,11 +5,6 @@
 /***** SECTION ACCUEIL *****/
 /***************************/
 
-header {
-	background-image: url("../img/header-bg1.jpg");
-	min-height: 1200px; /*pour voir plus mon image...*/
-}
-
 .btn-xl.quiz {
     margin-top: 300px;
 }
@@ -24,6 +19,15 @@ header {
     letter-spacing: 2px;
 }
 
+.navbar-default {
+	background-color: #222;
+}
+
+.btn-xl {
+	letter-spacing: 2px;
+	font-size: 14px;
+	padding: 10px 20px;
+}
 /*#intro-parag {
 	color: #482A0A;
 }*/
@@ -31,6 +35,9 @@ header {
 /***************************/
 /*** SECTION INSCRIPTION ***/
 /***************************/
+section { 
+	padding: 300px 0;
+}
 
 #inscription {
 	background-image: url("../img/VeryGoodTripMapMonde.jpg");
@@ -44,6 +51,10 @@ header {
 
 .lienInscription {
     color: #fff;
+}
+
+#btnSubReg { /* btn submit registration */
+	margin-top: 30px;
 }
 
 /***************************/
@@ -65,9 +76,7 @@ header {
     color: #fec503;
 }
 
-label {
-	color: #fff;
-}
+
 
 
 

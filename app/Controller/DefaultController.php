@@ -5,9 +5,10 @@ namespace Controller;
 use \W\Controller\Controller;
 use Model\ContactsModel; // Permet "d'importer" la classe ContactsModel que l'on pourra instancier via new ContactsModel();
 
+
+
 class DefaultController extends Controller
 {
-
 	/**
 	 * Page d'accueil par défaut + section contact
 	 */
