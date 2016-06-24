@@ -8,7 +8,7 @@
 if(!empty($w_user)){
 	var_dump($w_user);
 	echo '<br><br>';
-	echo '<a href="'.$this->url('default_logout').'">Déconnexion</a>';
+	echo '<a href="'.$this->url('login_logout').'">Déconnexion</a>';
 	echo '<br><br>';
 }
 ?>
@@ -32,7 +32,7 @@ if(!empty($w_user)){
                        	</div>
                         <div class="form-group">
                         	<label for="password">Votre mot de passe : </label>
-                            <input type="text" class="form-control" placeholder="Votre mot de passe *" id="password" name="password" required>
+                            <input type="password" class="form-control" placeholder="Votre mot de passe *" id="password" name="password" required>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

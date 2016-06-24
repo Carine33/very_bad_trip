@@ -10,4 +10,7 @@
 		['GET|POST', '/page-admin-dest', 'Users#selectDestinations', 'users_selectDestinations'],
 		['GET', '/page-supprimer-user/[i:userid]', 'Users#supprimerUser', 'user_supprimerUser'],
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Users#supprimerDestination', 'user_supprimerDestination'],
+		['GET|POST', '/login', 'Login#login', 'login_login'],
+		['GET|POST', '/logout', 'Login#logout', 'login_logout'],
+
 	);
