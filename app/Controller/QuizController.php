@@ -11,7 +11,26 @@ class QuizController extends Controller
 	 * Page du Quiz
 	 */
 
-	
+	public function declaration(){
+
+
+		$post['gastronomie']= "";
+		$post['monument']= "";
+		$post['musique']="";
+		$post['film']="";
+		$post['evenement']="";
+		$post['plante']="";
+
+		$tableauDeux = array(
+			'AS' => 0,
+			'Inde' => 0,
+			'Afrique' => 0,
+			'AN' => 0,
+			'Oceanie' => 0,
+			'Europe' => 0
+			);
+		
+	}
 
 	public function switchQuiz($theme, $tableau)
 	{
@@ -103,24 +122,24 @@ class QuizController extends Controller
 	{
 
 
+			//self::declaration();
+		
 
-		$tableautemp = array();
+		/*$tableautemp = array();
 		
 	
 		
+
+
+			
 	
 		if(!empty($_GET)){
 
-			$tableauDeux = array(
-			'AS' => 0,
-			'Inde' => 0,
-			'Afrique' => 0,
-			'AN' => 0,
-			'Oceanie' => 0,
-			'Europe' => 0
-			);
 
-		
+
+			
+
+			
 
 			if(isset($_GET['gastronomie'])){
 			$tableauDeux = self::switchQuizDeux($_GET['gastronomie'],$tableauDeux);
@@ -147,13 +166,15 @@ class QuizController extends Controller
 			//$_GET['plante'] = 0;
 			}
 
+			$this->show('quiz/page_quiz', ['monTableau' => $tableauDeux] );
 
-
-		}
+		}*/
 		
 
 		if(!empty($_POST)){
-
+			foreach ($_POST as $key => $value) {
+				$post[$key] = trim(strip_tags($value)); 
+			}
 
 		$tableau = array(
 			'AS' => 0,
@@ -165,13 +186,24 @@ class QuizController extends Controller
 			);
 		
 
-
-			$tableau = self::switchQuiz($_POST['gastronomie'],$tableau);
-			$tableau = self::switchQuiz($_POST['monument'],$tableau);
-			$tableau = self::switchQuiz($_POST['musique'],$tableau);
-			$tableau = self::switchQuiz($_POST['film'],$tableau);
-			$tableau = self::switchQuiz($_POST['evenement'],$tableau);
-			$tableau = self::switchQuiz($_POST['plante'],$tableau);
+			if(!empty($post['gastronomie'])){
+			$tableau = self::switchQuiz($post['gastronomie'],$tableau);
+			}
+			if(!empty($post['monument'])){
+			$tableau = self::switchQuiz($post['monument'],$tableau);
+			}
+			if(!empty($post['musique'])){
+			$tableau = self::switchQuiz($post['musique'],$tableau);
+			}
+			if(!empty($post['film'])){
+			$tableau = self::switchQuiz($post['film'],$tableau);
+			}
+			if(!empty($post['evenement'])){
+			$tableau = self::switchQuiz($post['evenement'],$tableau);
+			}
+			if(!empty($post['plante'])){
+			$tableau = self::switchQuiz($post['plante'],$tableau);
+		    }
 
 
 			$this->show('quiz/page_quiz', ['monTableau' => $tableau] );
