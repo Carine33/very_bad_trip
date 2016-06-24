@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<p>le user est supprimé</p>
+	<p>la destination est supprimée</p>
 
 
 <?php $this->stop('main_content') ?>

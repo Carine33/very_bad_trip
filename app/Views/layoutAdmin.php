@@ -74,7 +74,7 @@
     </style>
 </head>
 <body  id="page-top" class="index">
-<section>
+<section id="wrapper">
 	<?= $this->section('main_content') ?>
 </section>
 

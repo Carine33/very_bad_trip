@@ -15,8 +15,8 @@ foreach ($listeUsers as $user) {
 		
 
 			?>
-			<tr></td><td class="adminKey"><?= $user['avatar'] ?></td><td class="adminKey"><?= $user['username'] ?></td><td class="adminKey"><?= $user['password'] ?></td><td class="adminEmail"><?= $user['email'] ?></td><td class="adminRole"><?= $user['role'] ?></td><td class="adminKey"><?= $user['country'] ?></td><td class="adminKey"><?= $user['city'] ?></td>
-			<td class="adminKey"><a href="">modifier</a></td><td class="adminKey"><a href="page-supprimer-user/<?= $user['id']?>">supprimer</a></td></tr>
+			<tr><td class="adminKey"><?= $user['avatar'] ?></td><td class="adminKey"><?= $user['username'] ?></td><td class="adminKey"><?= $user['password'] ?></td><td class="adminEmail"><?= $user['email'] ?></td><td class="adminRole"><?= $user['role'] ?></td><td class="adminKey"><?= $user['country'] ?></td><td class="adminKey"><?= $user['city'] ?></td>
+			<td class="adminKey"><a href="">modifier</a></td><td class="adminKey"><a href="<?=$this->url('user_supprimerUser',['userid' => $user['id']]);?>">supprimer</a></td></tr>
 
 			<?php
 

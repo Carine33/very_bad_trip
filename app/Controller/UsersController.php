@@ -4,7 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \W\Model\UsersModel as UsersModel;//permet d'importer la classe UsersModel que l'on pourra instancier via new UsersModel();
-
+use \W\Model\DestinationsModel as DestinationsModel;
 
 
 
@@ -16,7 +16,7 @@ use \W\Security\AuthentificationModel as AuthModel;
 
 class UsersController extends Controller
 {
-
+	
 	public function selectUsers()
 	{
 
@@ -29,8 +29,10 @@ class UsersController extends Controller
 	
 
 
-	$this->show('users/page_administration', ['listeUsers' => $listeUsers]);
+	$this->show('users/page_admin_users', ['listeUsers' => $listeUsers]);
 	}
+
+
 	
 	public function supprimerUser($id)
 	{
@@ -39,15 +41,44 @@ class UsersController extends Controller
 	//$this->allowTo(['admin']);
 
 	$usersModelsuppr = new UsersModel();
-	if($usersModelsuppr->delete($id)){
 
+			if($usersModelsuppr->delete($id)){
 
-	$this->show('users/page_supprimer_user');
-		
+			$this->show('users/page_supprimer_user');
+				
+			}
 	}
+
+
+	public function selectDestinations()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$destinationModel = new DestinationsModel();
+	$listeDestinations = $destinationModel->destFindAll();
 
 	
 
 
+	$this->show('users/page_admin_destinations', ['listeDestinations' => $listeDestinations]);
 	}
+
+	public function supprimerDestination($id)
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$destinationModelsuppr = new DestinationsModel();
+
+			if($destinationModelsuppr->destDelete($id)){
+			$this->show('users/page_supprimer_destination');
+				
+			}
+	}
+
+
+	
 }
