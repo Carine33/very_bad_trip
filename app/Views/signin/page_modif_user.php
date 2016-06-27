@@ -36,8 +36,18 @@
 				            <div class="form-group">
 								<label for="avatar">Avatar</label>
 								<input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-						    	<input type="file" class="form-control" id="avatar" name="avatar" value="<?php echo $this->assetUrl('upload/'.$w_user['avatar']); ?>">
+
+						    	<!-- <input type="file" class="form-control" id="avatar" name="avatar" value="<?php echo $this->assetUrl('upload/'.$w_user['avatar']); ?>"> -->
+
+
+						    	<input type="file" class="form-control" id="avatar" name="avatar" >
 						    	<p class="help-block text-danger"></p>
+
+						    	<div class="col-sm-6">
+  									<input type="text" id="nomFichier" readonly="true" name="pictureDeux" value="<?php echo $users['avatar'] ?>">
+  									<button type="button" class="btn btn-xl" id="fakeBrowser" >choisir </button>
+  								</div>
+
 						    </div>	
 							
 						</div>	

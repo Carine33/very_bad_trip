@@ -13,7 +13,11 @@
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Destination#supprimerDestination', 'destination_supprimerDestination'],
 		['GET|POST', '/miseAJourUserParAdmin', 'Signin#updateSigninAdmin', 'signin_updateSigninAdmin'],
 		['GET|POST', '/miseAJourUserParUser', 'Signin#updateSigninUser', 'signin_updateSigninUser'],
+
 		['GET|POST', '/selectUser/[i:userid]', 'Signin#selectSignin', 'signin_selectSignin'],
+		['GET|POST', '/selectUserParUser/[i:userid]', 'Signin#selectSigninUser', 'signin_selectSigninUser'],
+		
+
 
 
 

@@ -26,6 +26,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    #avatar {
+
+        display: none;
+    }
+
+</style>
 </head>
 <body  id="page-top" class="index">
 
@@ -61,6 +68,50 @@
     <!-- Custom Theme JavaScript -->
     <script src="<?=$this->assetUrl('js/agency.js');?>"></script>
 
+    <script>
+    var fileInput = document.getElementById("avatar");
+    var textInput = document.getElementById("nomFichier");
+    var fauxBouton =  document.getElementById("fakeBrowser");
+    /*var vraiBouton = document.getElementById("btnSubmit");
+    var tmp = document.getElementById("tmp");*/
     
+    fauxBouton.addEventListener("click", clicBrowser);
+    fileInput.addEventListener("change", modifNomFichier);
+    /*vraiBouton.addEventListener("click", clicBtn);
+*/
+
+
+    function clicBrowser(){
+
+        fileInput.click();
+    }
+
+    function modifNomFichier(){
+
+        /*document.getElementById('demo').innerHTML = '<img src="' + fileInput.value +'" />';*/
+        //document.getElementById('demo').innerHTML = fileInput.value;
+        textInput.value = fileInput.value;
+    }
+
+    /*function clicBtn(){
+
+        vraiBouton.click();
+        vraiBouton.click();
+
+
+    }*/
+
+     var previewImage = function(event) {
+        var fakeImage = URL.createObjectURL(event.target.files[0]); 
+
+        var fileName = document.getElementById('nomFichier');
+        fileName.value = fakeImage;
+
+        // Remplit la prévisualisation
+        var output = document.getElementById('demo');
+        output.innerHTML = '<img src="' + fakeImage +'" alt="">';
+    };
+
+</script>
 </body>
 </html>
