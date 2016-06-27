@@ -1,0 +1,77 @@
+
+/******** MODIFICATION CSS SUR BOOTSTRAP/Agency *********/
+
+/***************************/
+/***** SECTION ACCUEIL *****/
+/***************************/
+.btn-xl.quiz {
+    margin-top: 300px;
+}
+
+.navbar-default .navbar-brand {
+    font-size: 3em;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-default .nav li a {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/*#intro-parag {
+	color: #482A0A;
+}*/
+
+
+.navbar-default {
+    background-color: #222;
+}
+
+.btn-xl {
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+section {
+    padding: 300px 0;
+}
+/***************************/
+/*** SECTION INSCRIPTION ***/
+/***************************/
+
+#inscription {
+	background-image: url("../img/VeryGoodTripMapMonde.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+/***************************/
+/*** SECTION DESTINATION ***/
+/***************************/
+
+/* Deuxième image timeline, attention doit avoir la classe "second" */
+.timeline-image.second {
+	margin-top: 20%;
+}
+
+
+/***************************/
+/***** SECTION CONTACT *****/
+/***************************/
+
+/* personnalisation de la couleur de texte avec ajout "contact" */
+.section-subheading.text-muted.contact {
+    color: #fec503;
+}
+
+
+
+
+
+
+/**************************/
+
+/*.js-scrollTo.retour{
+	
+}*/

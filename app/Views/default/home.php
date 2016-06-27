@@ -17,8 +17,7 @@
                 <div class="text-center col-md-4 col-sm-6 ">
                 </div>
                 <div class="text-center col-md-4 col-sm-6 ">                    
-                    <button type="button" class="btn btn-default btn-lg btn-block btn-xl monBtn"><a class="lienInscription" href="<?=$this->url('signin_signin');?>">S'inscrire</a></button><br><br>
-                    <button type="button" class="btn btn-default btn-lg btn-block btn-xl monBtn"><a class="lienInscription" href="<?=$this->url('signin_signin');?>">Se connecter</button>              
+                    <a class="lienInscription btn btn-default btn-lg btn-block btn-xl monBtn" href="<?=$this->url('signin_signin');?>">S'inscrire</a>           
                 </div>
                 <div class="text-center col-md-4 col-sm-6 ">
                 </div>
