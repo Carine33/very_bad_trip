@@ -24,9 +24,9 @@
             </div>
         </div>
 
-        <div class="scroll-top page-scroll">
+<!--         <div class="scroll-top page-scroll">
             <a class="btn btn-primary" href="#page-top">Retour à l'accueil</a>
-        </div>
+        </div> -->
 
         <!-- <a href="#top" class="js-scrollTo retour">Revenir en haut</a> -->
     </section>
@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Envolez-vous vers le paradis sur terre... Vivez votre rêve et partez pour un voyage en Océanie. Vous l’avez pensé et imaginé depuis des mois, reste à le mettre en scène et à le concrétiser et pour cela nous allons vous aider.<br>
-									De la culture millénaire du peuple aborigène à l'opéra de Sydney en passant par le désert ocre-rouge au bush et par les forêts tropicales... Un voyage en Australie vous fascinera. Profitez d'un voyage en Nouvelle-Zélande pour découvrir le "pays du long nuage blanc" et explorez ce véritable éden où la nature règne en maître. <br>
+									De la culture millénaire du peuple aborigène à l'opéra de Sydney en passant par le désert ocre-rouge au bush et par les forêts tropicales... Un voyage en Australie vous fascinera. Profitez d'un voyage en Nouvelle-Zélande pour découvrir le "pays du long nuage blanc" et explorez ce véritable éden où la nature règne en&nbsp;maître. <br>
 									Une destination qui est aussi le berceau de la culture maori et du célèbre Haka ! <br>
                                     </p>
                                 </div>
@@ -151,7 +151,7 @@
                                 <img class="img-circle img-responsive" src="<?=$this->assetUrl('img/destinations/maroc.jpg');?>" alt="">
                             </div>
                             <div class="timeline-image second">
-                                <img class="img-circle img-responsive" src="<?=$this->assetUrl('img/destinations/togo.jpg');?>" alt="">
+                                <img class="img-circle img-responsive" src="<?=$this->assetUrl('img/destinations/egypte.jpg');?>" alt="">
                             </div>      
                             <div class="timeline-panel">
                                 <div class="timeline-heading">

@@ -67,6 +67,12 @@ section {
 	margin-top: 30px;
 }
 
+.btn-xl {
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+}
+
 /***************************/
 /*** SECTION DESTINATION ***/
 /***************************/

@@ -30,11 +30,15 @@
 				            	<p class="help-block text-danger"></p>
 				        	</div>
 
-				            <div class="form-group">
-								<label for="avatar">Avatar</label>
+				           <div class="form-group">
+								<label for="avatar">Avatar : </label>
 								<input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-						    	<input type="file" class="form-control" id="avatar" name="avatar">
+						    	<input type="file" class="form-control" id="avatar" name="avatar" >
 						    	<p class="help-block text-danger"></p>
+						    	<div class="col-md-10">
+  									<button type="button" class="btn btn-xl" id="fakeBrowser">Choisir </button>
+  									<input type="text" id="nomFichier" readonly="true" name="pictureDeux">
+  								</div>
 						    </div>	
 							<div class="form-group">
 								<label for="password">Votre mot de passe : </label>
