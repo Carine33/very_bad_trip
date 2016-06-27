@@ -37,7 +37,7 @@
 	<?=$this->insert('_partials/header');?>
 </header>
 
-<section>
+<section id="mainSection">
 	<?= $this->section('main_content') ?>
 </section>
 
