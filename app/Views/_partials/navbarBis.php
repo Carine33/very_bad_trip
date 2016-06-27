@@ -28,15 +28,7 @@
                         <a class="page-scroll" href="<?= $this->url('login_login');?>">Se connecter</a>
                     </li>
                      <?php endif; ?>
-                    <li>
-                        <a class="page-scroll" href="#destinations">Destination</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">La Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                     
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'user'): ?>
                         <li>
                         <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>

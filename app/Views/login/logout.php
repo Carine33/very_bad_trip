@@ -4,7 +4,7 @@
 
 	<h2>Vous voulez vous déconnecter ?</h2>
 	<form method="get">
-		<a href="<?=$this->url('login_login');?>" class="btn btn-primary btn-lg">Non</a>
+		<a href="<?=$this->url('default_home');?>" class="btn btn-primary btn-lg">Non</a>
 
 
 		<input type="submit" name="logout" value="Oui" class="btn btn-danger btn-lg">

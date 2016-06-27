@@ -24,6 +24,16 @@ header {
     letter-spacing: 2px;
 }
 
+#myAvatar {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+}
+.dropdown-menu {
+    background-color: #222;
+}
+
 /*#intro-parag {
 	color: #482A0A;
 }*/
