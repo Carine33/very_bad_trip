@@ -70,11 +70,12 @@
         text-align: center;
         
     }
+
  
     </style>
 </head>
 <body  id="page-top" class="index">
-<section id="wrapper">
+<section>
 	<?= $this->section('main_content') ?>
 </section>
 

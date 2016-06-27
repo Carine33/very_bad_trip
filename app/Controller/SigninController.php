@@ -181,8 +181,189 @@ class SigninController extends Controller
 
 
 
+			public function updateSigninAdmin(){
+
+			$maxSize = 5 * 1000000 ; // 5Mo
+			$filename = ''; // Juste au cas ou ..
+			$post = [];
+			$errors = [];
+			$success = false;
+			
+			if(!empty($_POST)){
+			foreach ($_POST as $key => $value) {
+				$post[$key] = trim(strip_tags($value));
+			}
+
+/*			if(strlen($post['username']) < 5){
+				$errors[] = 'Votre nom d\'utilisateur doit comporter au moins 5 caractères';
+			}*/
+
+			//if(strlen($post['username']) < 3 || strlen($post['username']) > 25){
+		    if(!preg_match("#^[A-Z]+[a-zA-Z0-9À-ú'\s]{3,25}#", $post['username'])) {   
+		        $errors[] = 'Votre pseudo doit comporter entre 3 et 25 caractères et commencer par une majuscule';
+		    }
+
+		    if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 
 
+			if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+				$errors[] = 'Votre adresse email est invalide';
+			}
+
+			if(empty($post['country'])){
+				$errors[] = 'Vous devez indiquer votre pays';
+			}
+
+			if(empty($post['city'])){
+				$errors[] = 'Vous devez indiquer votre ville';
+			}
+
+			if(empty($post['role'])){
+				$errors[] = 'Vous indiquez votre statut';
+			}
+
+			// Ici, il n'y a pas d'erreurs, on peut donc enregistrer en base de données
+			if(count($errors) === 0){
+
+				// On instancie la classe UserModel qui étends la classe Model 
+				$usersModel = new UsersModel();
+				$authModel = new AuthModel();
+
+				// On utilise la méthode insert() qui permet d'insérer des données en base
+				$data = [
+					// La clé du tableau correspond au nom de la colonne SQL
+					'username' 	=> $post['username'],
+					//'avatar'	=> $fileForDB,
+					//'password'	=> $authModel->hashPassword($post['password']),
+					'email'		=> $post['email'],
+					'role'		=> $post['role'],
+					'country' 	=> $post['country'],
+					'city'		=> $post['city']
+				];
+				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
+				/*if($usersModel->update( $data, $post['id'], $stripTags = true)){*/
+				if($usersModel->update( $data, $post['id'], $stripTags = true)){
+					// Ici l'insertion en base est effectuée
+					$success = true;
+					$this->show('signin/page_vide');
+				}
+
+				//je redirige vers la page "infos_users.php"
+
+
+				/*header ('Location: home.php');
+				die;*/
+
+				//$this->redirectToRoute('users_selectUsers');
+			}
+			else {
+				$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize, 'users' => $post];
+				$this->show('signin/page_modif_admin', $params);
+			}
+		}
+
+
+			}
+
+			public function updateSigninUser(){
+
+			$maxSize = 5 * 1000000 ; // 5Mo
+			$filename = ''; // Juste au cas ou ..
+			$post = [];
+			$errors = [];
+			$success = false;
+			
+			if(!empty($_POST)){
+			foreach ($_POST as $key => $value) {
+				$post[$key] = trim(strip_tags($value));
+			}
+
+/*			if(strlen($post['username']) < 5){
+				$errors[] = 'Votre nom d\'utilisateur doit comporter au moins 5 caractères';
+			}*/
+
+			//if(strlen($post['username']) < 3 || strlen($post['username']) > 25){
+		    if(!preg_match("#^[A-Z]+[a-zA-Z0-9À-ú'\s]{3,25}#", $post['username'])) {   
+		        $errors[] = 'Votre pseudo doit comporter entre 3 et 25 caractères et commencer par une majuscule';
+		    }
+
+		    if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
+
+
+			if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+				$errors[] = 'Votre adresse email est invalide';
+			}
+
+			if(empty($post['country'])){
+				$errors[] = 'Vous devez indiquer votre pays';
+			}
+
+			if(empty($post['city'])){
+				$errors[] = 'Vous devez indiquer votre ville';
+			}
+
+			
+
+			// Ici, il n'y a pas d'erreurs, on peut donc enregistrer en base de données
+			if(count($errors) === 0){
+
+				// On instancie la classe UserModel qui étends la classe Model 
+				$usersModel = new UsersModel();
+				$authModel = new AuthModel();
+
+				// On utilise la méthode insert() qui permet d'insérer des données en base
+				$data = [
+					// La clé du tableau correspond au nom de la colonne SQL
+					'username' 	=> $post['username'],
+					//'avatar'	=> $fileForDB,
+					'password'	=> $authModel->hashPassword($post['password']),
+					'email'		=> $post['email'],
+					'role'		=> $post['role'],
+					'country' 	=> $post['country'],
+					'city'		=> $post['city']
+				];
+				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
+				/*if($usersModel->update( $data, $post['id'], $stripTags = true)){*/
+				if($usersModel->update( $data, $post['id'], $stripTags = true)){
+					// Ici l'insertion en base est effectuée
+					$success = true;
+					$this->show('signin/page_vide');
+				}
+
+				//je redirige vers la page "infos_users.php"
+
+
+				/*header ('Location: home.php');
+				die;*/
+
+				//$this->redirectToRoute('users_selectUsers');
+			}
+			else {
+				$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize, 'users' => $post];
+				$this->show('signin/page_modif_user', $params);
+			}
+		}
+
+
+			}
+
+			public function selectSignin($id){
+
+
+				if(empty($_POST)){
+					$usersModel = new UsersModel();
+					$users = $usersModel->find($id);
+
+					$this->show('signin/page_modif_admin', ['users' => $users]);
+				}
+			
+
+
+			}
 
 
 }
