@@ -23,6 +23,7 @@
 	background-color: #222;
 }
 
+/* navbar quand utilisateur est connecté */
 #myAvatar {
 
         width: 60px;
@@ -38,6 +39,7 @@
 	font-size: 14px;
 	padding: 10px 20px;
 }
+
 /*#intro-parag {
 	color: #482A0A;
 }*/
@@ -71,6 +73,20 @@ section {
     font-size: 14px;
     letter-spacing: 2px;
     padding: 8px 20px;
+}
+
+#avatar {
+
+    display: none;
+
+}
+    
+#nomFichier {
+    display: inline-block;
+}
+
+#fakeBrowser{
+    display: inline-block;
 }
 
 /***************************/

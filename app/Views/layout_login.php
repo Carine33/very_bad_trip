@@ -42,7 +42,7 @@
 </section>
 
 <footer>
-	<?=$this->insert('_partials/footer');?>
+	<?=$this->insert('_partials/footerBis');?>
 </footer>
 
     <!-- jQuery -->
