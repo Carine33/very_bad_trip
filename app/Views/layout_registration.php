@@ -30,6 +30,13 @@
     #avatar {
 
         display: none;
+
+    }
+    #nomFichier {
+        display: inline-block;
+    }
+    #fakeBrowser{
+        display: inline-block;
     }
 
 </style>
