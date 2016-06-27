@@ -46,12 +46,17 @@ header {
 /*** SECTION INSCRIPTION ***/
 /***************************/
 
+
 #inscription {
 	background-image: url("../img/VeryGoodTripMapMonde_150.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+	padding: 300px 300px;
 }
 
+#blockInscr {
+	margin-bottom: 200px;
+}
 .monBtn { 
 	padding: 10px;
 }
@@ -93,6 +98,7 @@ header {
 label {
 	color: #fff;
 }
+
 
 /**************************/
 /********* FOOTER *********/
