@@ -20,7 +20,6 @@
                     <li>
                         <a class="page-scroll" href="<?= $this->url('default_home');?>">Accueil</a>
                     </li>
-                    <?php if(empty($w_user['role']) || $w_user['role'] != 'user'): ?>
                     <li>
                         <a class="page-scroll" href="<?=$this->url('signin_signin');?>">Inscription</a>
                     </li>
@@ -40,6 +39,22 @@
                             <ul class="dropdown-menu">
                                 <li><a href="<?=$this->url('signin_selectSignin',['userid' => $w_user['id']]);?>">Modifier information</a></li>
                                 <li><a href="#">Changer de mot de passe</a></li>
+                                <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
+                            </ul>
+                        </li>
+                
+                    <?php endif; ?>
+
+                    <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
+                        <li>
+                        <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$w_user['username'];?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?=$this->url('admin_adminIndex');?>">Accés back office</a></li>
                                 <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
                             </ul>
                         </li>
