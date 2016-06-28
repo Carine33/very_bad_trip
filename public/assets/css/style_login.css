@@ -47,14 +47,16 @@ section {
     padding: 300px 0;
 }
 /***************************/
-/*** SECTION INSCRIPTION ***/
+/*** SECTION LOGIN *********/
 /***************************/
 
-#inscription {
-	background-image: url("../img/VeryGoodTripMapMonde.jpg");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+#background_login {
+    background-image: url("../img/VeryGoodTripExplorateur_150.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
 }
+
 
 /***************************/
 /*** SECTION DESTINATION ***/

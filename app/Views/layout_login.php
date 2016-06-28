@@ -37,7 +37,7 @@
 	
 </header>
 
-<section>
+<section id="background_login">
 	<?= $this->section('main_content'); ?>
 </section>
 
