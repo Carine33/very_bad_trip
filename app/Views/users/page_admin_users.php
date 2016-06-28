@@ -6,7 +6,7 @@
 		<div class="col-lg-12 text-center">
 			<h1>gestion des utilisateurs</h1>			
 
-				<table>
+				<table class="col-lg-12 text-center">
 					<tr>
 						<td class="adminKey">avatar</td>
 						<td class="adminKey">nom</td>
