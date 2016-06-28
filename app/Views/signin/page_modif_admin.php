@@ -22,6 +22,7 @@
 						<p>Votre inscription a bien été prise en charge en attente de validation de votre compte</p>
 					</div>
 				<?php else: ?>
+					<!-- <?php var_dump($w_user) ?> -->
 
 				<form method="post" enctype="multipart/form-data" action="<?=$this->url('signin_updateSigninAdmin');?>">
 					<input type="hidden" name="id" value="<?php echo $users['id'] ?>">

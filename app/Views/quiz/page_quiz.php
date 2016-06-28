@@ -8,9 +8,6 @@
 
         <h1>Page de Quiz</h1>
 
-        <?php if(!empty($_GET)){
-            var_dump($monTableau);
-        }?>
         <?php if(!empty($_POST) && !empty($monTableau)){ 
         ?>
                 <div class="row">

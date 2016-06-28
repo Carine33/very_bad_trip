@@ -100,24 +100,7 @@ class LoginController extends Controller
 					'showFormEmail' => $showFormEmail, 
 					'showFormPassword' => $showFormPassword
 				];
-		if(isset($token) && !empty($token) && isset($email) && !empty($email)){
-			$showFormEmail = false; 
-			$showFormPassword = true;
-			//var_dump($_GET[]);
-			/*$params = ['linkChangePassword' => $linkChangePassword, 'showFormEmail' => $showFormEmail, 'showFormPassword' => $showFormPassword];
-						
-			$this->show('login/lostpassword', $params);*/
-			//die('err 2');
-			$params = [
-
-					/*'linkChangePassword' => $linkChangePassword,*/
-					'showFormEmail' => $showFormEmail,
-					'showFormPassword' => $showFormPassword
-
-					];
-						
-			/*$this->show('login/lostpassword', $params);*/
-		}
+		
 
 		// On traite nos formulaires
 		if(!empty($_POST)){
@@ -166,55 +149,7 @@ class LoginController extends Controller
 				];
 
 			}
-			// Ici on traite le formulaire de mise à jour du mot de passe
-			elseif(isset($post['action']) && $post['action'] == 'updatePassword'){
 			
-				// Le mot de passe doit faire entre 8 et 20 caractères
-				if(strlen($post['new_password']) < 8 || strlen($post['new_password']) > 20){
-					$error[] = 'Le mot de passe doit comporter entre 8 et 20 caractères';
-				}
-				// Le mot de passe et sa confirmation doivent correspondre
-				if($post['new_password'] != $post['new_password_conf']){
-					$error[] = 'Les mots de passe doivent correspondre!';
-				}
-				if(count($error) == 0){ // Il n'y a pas d'erreurs dans le formulaire, on peut vérifier le token & l'adresse email ... et même la date d'expiration
-					$loginObjetDeux = new LoginModel();
-					/*$tokenExist  = $loginObjetDeux->selectTokenPassword($post['email'],$post['token']);*/
-					$tokenExist  = $loginObjetDeux->selectTokenPassword($email,$token);
-
-					if(empty($tokenExist)){
-						$error[] = 'Le token et l\'adresse email ne correspondent pas.'; // Ou le token est expiré, mais on va pas trop donner d'infos quand même :-)
-					}
-					else {
-
-						// Ici, on peut ENFIN changer ce putain de mot de passe :-)
-						$changeMdp = $loginObjetDeux->updatePassword($post['new_password'], $email);
-						/*$changeMdp = $loginObjetDeux->updatePassword($post['new_password'], $post['email']);*/
-
-
-						if($changeMdp){
-							$successUpdate = true;
-
-							// On supprime le token puisque le mdp est modifié
-							$deleteTokenPassword = $loginObjetDeux->deleteTokenPassword($tokenExist['id']);
-
-							// @todo : voir \W\Controller\Controller.php pour une méthode plus propre
-
-
-							$monController = new Controller();
-
-							$monController->redirectToRoute('login_login');
-						}
-					}
-
-				} //fin count($error) == 0
-
-				$params = [
-					'error' => $error, 
-					'showFormEmail' => $showFormEmail, 
-					'showFormPassword' => $showFormPassword
-				];
-			}
 		}
 		
 
