@@ -28,5 +28,6 @@
                     </ul>
                 </div> -->
             </div>
+            <a href="#top" id="back" class="js-scrollTo retour">Revenir en haut</a>
         </div>
     <!-- </footer> -->

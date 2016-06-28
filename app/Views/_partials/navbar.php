@@ -20,12 +20,14 @@
                     <li>
                         <a class="page-scroll" href="<?= $this->url('default_home');?>">Accueil</a>
                     </li>
+                    <?php if(empty($w_user['role']) || $w_user['role'] != 'user'): ?>
                     <li>
                         <a class="page-scroll" href="#inscription">Inscription</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="">Se connecter</a>
-                    </li> 
+                        <a class="page-scroll" href="<?= $this->url('login_login');?>">Se connecter</a>
+                    </li>
+                     <?php endif; ?>
                     <li>
                         <a class="page-scroll" href="#destinations">Destination</a>
                     </li>
@@ -35,6 +37,22 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <?php if(!empty($w_user['role']) && $w_user['role'] == 'user'): ?>
+                        <li>
+                        <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$w_user['username'];?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?=$this->url('signin_selectSignin',['userid' => $w_user['id']]);?>">Modifier information</a></li>
+                                <li><a href="#">Changer de mot de passe</a></li>
+                                <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
+                            </ul>
+                        </li>
+                
+                    <?php endif; ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

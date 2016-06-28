@@ -30,7 +30,7 @@
 <body  id="page-top" class="index">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-	<?=$this->insert('_partials/navbar');?>
+	<?=$this->insert('_partials/navbarBis');?>
 </nav>
 
 <header>
@@ -42,7 +42,7 @@
 </section>
 
 <footer>
-	<?=$this->insert('_partials/footer');?>
+	<?=$this->insert('_partials/footerBis');?>
 </footer>
 
     <!-- jQuery -->

@@ -37,7 +37,7 @@
 	<?=$this->insert('_partials/header');?>
 </header>
 
-<section>
+<section id="mainSection">
 	<?= $this->section('main_content') ?>
 </section>
 
@@ -61,6 +61,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="<?=$this->assetUrl('js/agency.js');?>"></script>
 
+    <script src="<?=$this->assetUrl('js/notreJs.js');?>" type="text/javascript"></script>
     
 </body>
 </html>

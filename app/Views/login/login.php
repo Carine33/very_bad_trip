@@ -5,12 +5,12 @@
 <?php 
 // $w_user est accessible dans tout les fichiers de vue (Views/)
 // elle retourne les infos de l'utilisateur connecté ou null sinon
-if(!empty($w_user)){
+/*if(!empty($w_user)){
 	var_dump($w_user);
 	echo '<br><br>';
 	echo '<a href="'.$this->url('login_logout').'">Déconnexion</a>';
-	echo '<br><br>';
-}
+	echo '<br><br>';*/
+
 ?>
 <div class="container">
     <div class="row">

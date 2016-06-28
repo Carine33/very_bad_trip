@@ -24,6 +24,20 @@ header {
     letter-spacing: 2px;
 }
 
+#myAvatar {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+}
+.dropdown-menu {
+    background-color: #222;
+}
+
+#mainSection {
+    padding-bottom: 0px;
+}
+
 /*#intro-parag {
 	color: #482A0A;
 }*/
@@ -32,12 +46,17 @@ header {
 /*** SECTION INSCRIPTION ***/
 /***************************/
 
+
 #inscription {
-	background-image: url("../img/VeryGoodTripMapMonde.jpg");
+	background-image: url("../img/VeryGoodTripMapMonde_150.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+	padding: 300px 300px;
 }
 
+#blockInscr {
+	margin-bottom: 200px;
+}
 .monBtn { 
 	padding: 10px;
 }
@@ -55,6 +74,17 @@ header {
 	margin-top: 20%;
 }
 
+@media (min-width:768px){ /* pour le côté responsive, je récupère mes contenus à la fois pair et impair en leur attribuant un nouveau padding */
+
+	.timeline > li .timeline-panel {
+    padding: 0 20px 20px 20px;
+	}
+
+	.timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px 20px;
+	}
+}
+
 
 /***************************/
 /***** SECTION CONTACT *****/
@@ -70,10 +100,22 @@ label {
 }
 
 
-
-
+/**************************/
+/********* FOOTER *********/
 /**************************/
 
-/*.js-scrollTo.retour{
-	
-}*/
+.retour {
+    background-color: #fed136;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+}
+
+#back {
+	color : #fff;
+}
+

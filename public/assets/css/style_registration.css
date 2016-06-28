@@ -23,11 +23,23 @@
 	background-color: #222;
 }
 
+/* navbar quand utilisateur est connecté */
+#myAvatar {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+}
+.dropdown-menu {
+    background-color: #222;
+}
+
 .btn-xl {
 	letter-spacing: 2px;
 	font-size: 14px;
 	padding: 10px 20px;
 }
+
 /*#intro-parag {
 	color: #482A0A;
 }*/
@@ -55,6 +67,26 @@ section {
 
 #btnSubReg { /* btn submit registration */
 	margin-top: 30px;
+}
+
+.btn-xl {
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+}
+
+#avatar {
+
+    display: none;
+
+}
+    
+#nomFichier {
+    display: inline-block;
+}
+
+#fakeBrowser{
+    display: inline-block;
 }
 
 /***************************/

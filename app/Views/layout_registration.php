@@ -26,25 +26,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-    #avatar {
 
-        display: none;
-
-    }
-    #nomFichier {
-        display: inline-block;
-    }
-    #fakeBrowser{
-        display: inline-block;
-    }
-
-</style>
 </head>
 <body  id="page-top" class="index">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-	<?=$this->insert('_partials/navbar');?>
+	<?=$this->insert('_partials/navbarBis');?>
 </nav>
 
 <header>
@@ -56,7 +43,7 @@
 </section>
 
 <footer>
-	<?=$this->insert('_partials/footer');?>
+	<?=$this->insert('_partials/footerBis');?>
 </footer>
 
     <!-- jQuery -->
