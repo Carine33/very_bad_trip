@@ -22,7 +22,7 @@
                     </li>
                     <?php if(empty($w_user['role']) || $w_user['role'] != 'user'): ?>
                     <li>
-                        <a class="page-scroll" href="#inscription">Inscription</a>
+                        <a class="page-scroll" href="<?=$this->url('signin_signin');?>">Inscription</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?= $this->url('login_login');?>">Se connecter</a>
