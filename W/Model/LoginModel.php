@@ -74,7 +74,7 @@ class LoginModel extends Model
 
 				$sql = 'DELETE FROM tokens_password WHERE id = :idToken';
 				$delete = $this->dbh->prepare($sql);
-					$delete->bindValue(':idToken', $tokenExistIdPDO::PARAM_INT); // $tokenExist contient les infos de mon token extraites de la base de données.. et donc son ID
+					$delete->bindValue(':idToken', $tokenExistId); // $tokenExist contient les infos de mon token extraites de la base de données.. et donc son ID
 					return $delete->execute();
 
 	}
