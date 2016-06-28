@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         
-                        <img class="myPicture" src="<?=$this->assetUrl('img/destinations/inde.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/gastronomie/gastronomie_asie_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                        
                         
                     </a>
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         
-                        <img class="myPicture" src="<?=$this->assetUrl('img/destinations/inde.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/monument/monument_asie_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                        
                         
                     </a>
@@ -255,7 +255,7 @@
                             </div>
                         </div>
                         
-                        <img class="myPicture" src="<?=$this->assetUrl('img/destinations/inde.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/musique/musique_asie_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                        
                         
                     </a>
@@ -348,7 +348,7 @@
                             </div>
                         </div>
                         
-                        <img class="myPicture" src="<?=$this->assetUrl('img/destinations/inde.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/evenement/evenement_asie_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                        
                         
                     </a>
@@ -441,7 +441,7 @@
                             </div>
                         </div>
                         
-                        <img class="myPicture" src="<?=$this->assetUrl('img/destinations/inde.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/film/film_asie_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                        
                         
                     </a>

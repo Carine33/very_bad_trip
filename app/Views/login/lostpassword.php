@@ -2,11 +2,15 @@
 
 <?php $this->start('main_content') ?>
 	
-<?php if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPassword'];} ?>
+<?php 
+
+if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPassword'];} ?>
 <?php if(!empty($params['showFormEmail'])){$showFormEmail = $params['showFormEmail'];} ?>
 
 <?php if(!empty($params['linkChangePassword'])){$linkChangePassword = $params['linkChangePassword'];
-}?>
+}
+
+?>
           
            <main class="container">
         <h1 class="text-center">Mot de passe oublié</h1>

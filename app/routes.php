@@ -26,4 +26,10 @@
 		['GET|POST', '/logout', 'Login#logout', 'login_logout'],
 
 
+
+		['GET|POST', '/lost_password', 'Login#mylostpassword', 'login_mylostpassword'],
+		['GET|POST', '/reset-password/[:email]/[:token]', 'Login#mylostpassword', 'login_mypassword'],
+		['GET', '/page_de_test/[:email]', 'Login#lostPasswordTest', 'login_lostPasswordTest']
+
+
 	);
