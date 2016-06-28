@@ -20,6 +20,7 @@
                     <li>
                         <a class="page-scroll" href="<?= $this->url('default_home');?>">Accueil</a>
                     </li>
+                    <?php if(empty($w_user['role']) || ($w_user['role'] != 'user' && $w_user['role'] != 'admin')): ?>
                     <li>
                         <a class="page-scroll" href="<?=$this->url('signin_signin');?>">Inscription</a>
                     </li>
