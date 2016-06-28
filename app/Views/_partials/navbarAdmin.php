@@ -24,7 +24,7 @@
                         <a class="page-scroll" href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Liste des destinations</a>
+                        <a class="page-scroll" href="<?=$this->url('users_selectDestinations');?>">Liste des destinations</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Liste des requetes</a>
