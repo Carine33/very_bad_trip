@@ -24,6 +24,7 @@
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Users#supprimerDestination', 'user_supprimerDestination'],
 		['GET|POST', '/login', 'Login#login', 'login_login'],
 		['GET|POST', '/logout', 'Login#logout', 'login_logout'],
+		['GET|POST', '/admin', 'Admin#indexAdmin', 'admin_adminIndex'],
 
 
 
