@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-use \W\Controller\Controller;
+use \W\Controller\Controller as Controller;
 use \W\Model\UsersModel as UsersModel; // Permet "d'importer" la classe UsersModel que l'on pourra instancier via new UsersModel();
 use \W\Security\AuthentificationModel as AuthModel;
 use \W\Model\LoginModel;
@@ -113,7 +113,7 @@ class LoginController extends Controller
 	}
 
 
-	public function mylostpassword($email ='hugues.fonteyraud@wnanadoo', $token = 'f0efab921d4d08e4774806dea825b848')
+	public function mylostpassword($email, $token)
 	{
 
 		//die('err 1');
@@ -121,10 +121,17 @@ class LoginController extends Controller
 		$error = [];
 		$post = [];
 		$params = [];
+
 		 
 		$showFormEmail = true; // Permet d'afficher le premier formulaire de saisi d'email
 		$showFormPassword = false; // Permet d'afficher le second formulaire de mise à jour du mot de passe
 		// Si on a un token et une adresse mail dans l'url (en GET) on masque le 1er formulaire et on affiche le second
+
+		$params = [
+					/*'linkChangePassword' => $linkChangePassword, */
+					'showFormEmail' => $showFormEmail, 
+					'showFormPassword' => $showFormPassword
+				];
 		if(isset($token) && !empty($token) && isset($email) && !empty($email)){
 			$showFormEmail = false; 
 			$showFormPassword = true;
@@ -133,15 +140,15 @@ class LoginController extends Controller
 						
 			$this->show('login/lostpassword', $params);*/
 			//die('err 2');
-			/*$params = [
+			$params = [
 
-					'linkChangePassword' => $linkChangePassword,
+					/*'linkChangePassword' => $linkChangePassword,*/
 					'showFormEmail' => $showFormEmail,
 					'showFormPassword' => $showFormPassword
 
 					];
 						
-			$this->show('login/lostpassword', $params);*/
+			/*$this->show('login/lostpassword', $params);*/
 		}
 
 		// On traite nos formulaires
@@ -203,8 +210,9 @@ class LoginController extends Controller
 					$error[] = 'Les mots de passe doivent correspondre!';
 				}
 				if(count($error) == 0){ // Il n'y a pas d'erreurs dans le formulaire, on peut vérifier le token & l'adresse email ... et même la date d'expiration
-
-					$tokenExist  = $loginObjet->selectTokenPassword($post['email'],$post['token']);
+					$loginObjetDeux = new LoginModel();
+					/*$tokenExist  = $loginObjetDeux->selectTokenPassword($post['email'],$post['token']);*/
+					$tokenExist  = $loginObjetDeux->selectTokenPassword($email,$token);
 
 					if(empty($tokenExist)){
 						$error[] = 'Le token et l\'adresse email ne correspondent pas.'; // Ou le token est expiré, mais on va pas trop donner d'infos quand même :-)
@@ -212,28 +220,29 @@ class LoginController extends Controller
 					else {
 
 						// Ici, on peut ENFIN changer ce putain de mot de passe :-)
-						$changeMdp = $loginObjet->updatePassword($post['new_password'], $post['email']);
+						$changeMdp = $loginObjetDeux->updatePassword($post['new_password'], $email);
+						/*$changeMdp = $loginObjetDeux->updatePassword($post['new_password'], $post['email']);*/
+
 
 						if($changeMdp){
 							$successUpdate = true;
 
 							// On supprime le token puisque le mdp est modifié
-							$deleteTokenPassword = $loginObjet->deleteTokenPassword($tokenExist['id']);
+							$deleteTokenPassword = $loginObjetDeux->deleteTokenPassword($tokenExist['id']);
 
-							// @todo : voir \W\Controller\Controller.php pour une méthode plus propre		
-							header('Location: login.php');
-							die;
+							// @todo : voir \W\Controller\Controller.php pour une méthode plus propre
+
+
+							$monController = new Controller();
+
+							$monController->redirectToRoute('login_login');
 						}
 					}
 
 				} //fin count($error) == 0
 			}
 		}
-		$params = [
-					'linkChangePassword' => $linkChangePassword, 
-					'showFormEmail' => $showFormEmail, 
-					'showFormPassword' => $showFormPassword
-				];
+		
 
 		$this->show('login/lostpassword', $params);
 	}	
