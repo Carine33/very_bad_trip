@@ -8,6 +8,6 @@ class AdminController extends Controller
 {
 	public function indexAdmin(){
 
-		$this->show('admin/index', $params);
+		$this->show('admin/index');
 	}
 }

@@ -39,16 +39,22 @@ class LoginController extends Controller
 
 					// La méthode logUserIn() permet de connecter un utilisateur
 					if($authModel->logUserIn($user)){
-						if($user['role'] == 'admin'){
-							$this->redirectToRoute('default_home');
 						
-						}
+						
 					}
 					#$myUser = $authModel->getLoggedUser(); // Permet de récupérer les infos de sessions
 					#$myUser = $this->getUser(); // Permet de récupérer les infos de sessions
 				}
 				else {
 					$errors[] = 'Le couple identifiant/mot de passe est invalide';
+				}
+
+				if($user['role'] == 'user'){
+					$this->redirectToRoute('default_home');
+				}
+
+				if($user['role'] == 'admin'){
+					$this->redirectToRoute('admin_adminIndex');
 				}
 			}
 		}
