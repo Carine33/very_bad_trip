@@ -3,16 +3,16 @@
 <?php $this->start('main_content') ?>
 	
 <?php 
-
+/*
 if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPassword'];} ?>
 <?php if(!empty($params['showFormEmail'])){$showFormEmail = $params['showFormEmail'];} ?>
 
 <?php if(!empty($params['linkChangePassword'])){$linkChangePassword = $params['linkChangePassword'];
-}
+}*/
 
 ?>
           
-           <main class="container">
+<main class="container">
         <h1 class="text-center">Mot de passe oublié</h1>
         <br>
 
@@ -106,20 +106,6 @@ if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPas
                     Rappel : le token ou le lien de changement de mot de passe ne doit jamais apparaitre en clair sur la page. Celui-ci sera obligatoirement envoyé par email
                 -->
                 <code><?=$linkChangePassword; ?></code>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
