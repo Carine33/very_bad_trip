@@ -46,6 +46,7 @@
 section {
     padding: 300px 0;
 }
+
 /***************************/
 /*** SECTION LOGIN *********/
 /***************************/
@@ -54,7 +55,7 @@ section {
     background-image: url("../img/VeryGoodTripExplorateur_150.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    
+   
 }
 
 
