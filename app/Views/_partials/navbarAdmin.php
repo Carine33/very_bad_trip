@@ -26,6 +26,9 @@
                     <li>
                         <a class="page-scroll" href="#">Liste des destinations</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="#">Liste des requetes</a>
+                    </li>
                      
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
                         <li>
