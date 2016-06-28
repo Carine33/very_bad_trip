@@ -126,26 +126,28 @@ if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPas
 
             <?php else: // Sinon on affiche le formulaire ?>
 
-            <form class="form-horizontal well well-sm" method="post">
+            <form  method="post">
                 <input type="hidden" name="action" value="generateToken">
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="email_password">Votre adresse email</label>
-                    <div class="col-md-4">
-                        <input type="email" name="email_password" id="email_password" class="form-control">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6"></div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            <label  for="email_password">Votre adresse email</label>
+                            <input type="email" name="email_password" id="email_password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            
+                                <button type="submit" class="btn btn-xl">Réinitialiser mon mot de passe</button>
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-4 col-md-offset-4">
-                        <button type="submit" class="btn btn-default">Réinitialiser mon mot de passe</button>
-                    </div>
-                </div>
             </form>
         <?php endif; // ferme le if/else de $linkChangePassword ?>
     <?php endif; ?>
 
     <?php if($showFormPassword == true): // Permet d'afficher le formulaire de changement de mot de passe ?>
 
-        <form class="form-horizontal well well-sm" method="post">
+        <form  method="post">
             <input type="hidden" name="action" value="updatePassword">
             <input type="hidden" name="email" value="<?=$_GET['email'];?>">
             <input type="hidden" name="token" value="<?=$_GET['token'];?>">

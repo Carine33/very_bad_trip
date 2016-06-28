@@ -41,7 +41,7 @@
                     <div class="col-lg-12 text-center">
                         <div id="success"></div>
                         <button type="submit" id="submit" class="btn btn-xl">Envoyer</button>
-                       <a href="<?= $this->url('lost_password');?>">Mot de passe oublié</a> 
+                       <a href="<?= $this->url('login_mylostpassword');?>">Mot de passe oublié</a> 
                     </div>
                 </div>
             </form>
