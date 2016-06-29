@@ -31,6 +31,6 @@
 		['GET|POST', '/lost_password', 'Login#mylostpassword', 'login_mylostpassword'],
 		['GET|POST', '/reset-password/[*:email]/[:token]', 'Login#mylostpasswordDeux', 'login_mypassword'],
 		
-
+		['GET|POST', '/destination/[i:id]', 'Destination#viewDestination', 'destination_viewdestination'],
 
 	);
