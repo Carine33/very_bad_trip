@@ -25,18 +25,12 @@ class DestinationController extends Controller
 		$destinationsModel = new DestinationsModel();
 		$destination = $destinationsModel->find($id);
 
-
-
-
 		$params = [
 			'destination' => $destination,
 		];
 
 		$this->show('destination/file_destination', $params);
 	}
-
-
-
 
 
 }

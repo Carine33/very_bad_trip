@@ -37,11 +37,17 @@ section {
     padding: 300px 0;
 }
 
+/**************************/
+/******              ******/
+/**************************/
 
-
-
-
-
+/*CSS propre au carousel*/
+.carousel-page {
+    width:100%;
+    height:400px;
+    background-color:#5f666d;
+    color:white;
+}
 
 
 
