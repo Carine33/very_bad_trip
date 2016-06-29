@@ -1,4 +1,4 @@
-<?php $this->layout('layout_destination', ['title' => 'Se connecter']) ?>
+<?php $this->layout('layout_evenement', ['title' => 'Se connecter']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -18,9 +18,10 @@
         	<?php if(!empty($errors)): // On affiche les erreurs si le tableau n'est pas vide ?>
         		<div class="alert alert-danger">
             	<?=implode('<br>', $errors); ?>
-            	</div>
+            	</div>enctype="multipart/form-data"
         	<?php endif; ?>
-            
+            <h1>Evénement</h1>
+            <?php var_dump($picture) ?>
         	<form method="post" enctype="multipart/form-data">
             	<div class="row">
                     <div class="col-md-4 col-sm-6"></div>
@@ -36,39 +37,40 @@
                             </select>
                             <p class="help-block text-danger"></p>
                        	</div>
-
                         <div class="form-group">
-                                <label for="avatar">premiére image : </label>
+
+                            <label for="nation">Pays : </label>
+                            <input type="text" id="title_nation" name="title_nation">
+                            <p class="help-block text-danger"></p>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="name_event">nom de l'évenement : </label>
+                            <input type="text" id="name_event" name="name_event">
+                            <p class="help-block text-danger"></p>
+
+                        </div>
+
+                         <div class="form-group">
+                                <label for="avatar">Image : </label>
                                 <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_1avatar" name="img_1avatar" >
+                                <input type="file" class="form-control" id="avatar" name="avatar" >
                                 <p class="help-block text-danger"></p>
                                 <div class="col-md-12">
-                                    <button type="button" class="btn btn-xl" id="fakeBrowser1">Choisir </button>
-                                    <input type="text" id="nomFichier1" readonly="true" name="pictureDeuxImg_1">
+                                    <button type="button" class="btn btn-xl" id="fakeBrowser">Choisir </button>
+                                    <input type="text" id="nomFichier" readonly="true" name="pictureDeux">
                                 </div>
                             </div>  
+                            
                         <div class="form-group">
-                                <label for="avatar">deuxieme image : </label>
-                                <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_2avatar" name="img_2avatar" >
-                                <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
-                                    <button type="button" class="btn btn-xl" id="fakeBrowser2">Choisir </button>
-                                    <input type="text" id="nomFichier2" readonly="true" name="pictureDeuxImg_2">
-                                </div>
-                            </div>
-                        <div class="form-group">
-                                <label for="avatar">troisiéme image : </label>
-                                <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_3avatar" name="img_3avatar" >
-                                <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
-                                    <button type="button" class="btn btn-xl" id="fakeBrowser3">Choisir </button>
-                                    <input type="text" id="nomFichier" readonly="true" name="pictureDeuxImg_3">
-                                </div>
-                            </div>    
 
+                            <label for="name_event">description de l'évenement : </label>
+                            <textarea  id="description" name="description"></textarea>
+                            <p class="help-block text-danger"></p>
 
+                        </div>
+                    
 
                        
                     </div>
