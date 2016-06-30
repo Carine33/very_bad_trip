@@ -10,7 +10,25 @@
 		['GET|POST', '/page-admin-user', 'Users#selectUsers', 'users_selectUsers'],
 		['GET|POST', '/page-admin-dest', 'DestinationAdmin#selectDestinations', 'destinationAdmin_selectDestinations'],
 
-		['GET|POST', '/page-admin-event', 'Destination#selectEvent', 'destination_selectEvent'],
+		['GET|POST', '/page-admin-event', 'DestinationAdmin#selectEvenement', 'destinationAdmin_selectEvenement'],
+
+		['GET|POST', '/page-admin-flora', 'DestinationAdmin#selectFlora', 'destinationAdmin_selectFlora'],
+
+
+		['GET|POST', '/page-admin-gastronomy', 'DestinationAdmin#selectGastronomy', 'destinationAdmin_selectGastronomy'],
+
+
+
+		['GET|POST', '/page-admin-monument', 'DestinationAdmin#selectMonument', 'destinationAdmin_selectMonument'],
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28,11 +46,40 @@
 		['GET|POST', '/selectUser/[i:userid]', 'Signin#selectSignin', 'signin_selectSignin'],
 		['GET|POST', '/selectUserParUser/[i:userid]', 'Signin#selectSigninUser', 'signin_selectSigninUser'],
 		
-
-
-
-
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Users#supprimerDestination', 'user_supprimerDestination'],
+
+		['GET', '/page-supprimer-event/[i:eventid]', 'DestinationAdmin#supprimerEvenement', 'destinationAdmin_supprimerEvenement'],
+
+
+		['GET', '/page-supprimer-flora/[i:floraid]', 'DestinationAdmin#supprimerFlora', 'destinationAdmin_supprimerFlora'],
+
+
+		['GET', '/page-supprimer-gastronomy/[i:gastronomyid]', 'DestinationAdmin#supprimerGastronomy', 'destinationAdmin_supprimerGastronomy'],
+
+
+
+
+
+
+
+
+
+
+
+
+		['GET', '/page-supprimer-monument/[i:monumentid]', 'DestinationAdmin#supprimerMonument', 'destinationAdmin_supprimerMonument'],
+
+
+
+
+
+
+
+
+
+
+
+
 		['GET|POST', '/login', 'Login#login', 'login_login'],
 		['GET|POST', '/logout', 'Login#logout', 'login_logout'],
 		['GET|POST', '/admin', 'Admin#indexAdmin', 'admin_adminIndex'],

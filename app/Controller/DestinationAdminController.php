@@ -35,6 +35,69 @@ public function selectDestinations()
 	$this->show('users/page_admin_destinations', ['listeDestinations' => $listeDestinations]);
 	}
 
+
+
+public function selectEvenement()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$evenementModel = new EventModel();
+	$listeEvenement = $evenementModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_evenement', ['listeEvenement' => $listeEvenement]);
+	}
+
+public function selectFlora()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$floraModel = new FloraModel();
+	$listeFlora = $floraModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_flora', ['listeFlora' => $listeFlora]);
+	}
+
+public function selectGastronomy()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$gastronomyModel = new GastronomyModel();
+	$listeGastronomy = $gastronomyModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_gastronomy', ['listeGastronomy' => $listeGastronomy]);
+	}
+
+public function selectMonument()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$monumentModel = new MonumentModel();
+	$listeMonument = $monumentModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_monument', ['listeMonument' => $listeMonument]);
+	}
+
+
 	public function supprimerDestination($id)
 	{
 
@@ -1339,5 +1402,44 @@ public function insererFlora()
 		// On envoit les erreurs en paramètres à l'aide d'un tableau (array)
 		$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
 		$this->show('destination/formulaire_pays', $params);
+	}
+
+	public function supprimerEvenement($id)
+	{
+
+		$eventModel = new EventModel();
+		$resultat = $eventModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_evenement', $params);
+	}
+
+	public function supprimerFlora($id)
+	{
+
+		$floraModel = new FloraModel();
+		$resultat = $floraModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_flora', $params);
+	}
+	public function supprimerGastronomy($id)
+	{
+
+		$gastronomyModel = new GastronomyModel();
+		$resultat = $gastronomyModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_gastronomy', $params);
+	}
+
+	public function supprimerMonument($id)
+	{
+
+		$monumentModel = new MonumentModel();
+		$resultat = $monumentModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_monument', $params);
 	}
 }

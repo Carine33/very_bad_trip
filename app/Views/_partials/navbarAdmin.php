@@ -40,7 +40,25 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a></li>
                             <li><a href="<?=$this->url('destinationAdmin_selectDestinations');?>">Liste des destinations</a></li>
-                            <li><a href="#">Liste des requetes</a></li>
+                            <li><a href="#">Liste des requêtes</a></li>
+                            
+                        </ul>
+                    </li>
+
+
+
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Thêmes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=$this->url('destinationAdmin_selectEvenement');?>">Liste des événements</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectFlora');?>">Liste des plantes</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectGastronomy');?>">Liste des plats</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectMonument');?>">Liste des monuments</a></li>
+                            <li><a href="#">Liste des film</a></li>
+                            <li><a href="#">Liste des musique</a></li>
                         </ul>
                     </li>
                      
