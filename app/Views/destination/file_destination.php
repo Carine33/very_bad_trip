@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<h1><?php echo $destination['title_nation']; ?></h1>
+		<h1><?php echo $destination['title_destination']; ?></h1>
 
           	<div class="col-md-12"><!-- dbt div row 1-->
 

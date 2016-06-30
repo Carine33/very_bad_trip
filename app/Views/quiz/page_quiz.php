@@ -18,7 +18,7 @@
         <?php 
 
          if(!empty($_POST) && !empty($resultatQuiz)){ 
-            var_dump($resultatQuiz);
+            
             foreach ($resultatQuiz as $key => $value) {
                  ?>
              <div class="col-lg-12">
@@ -30,28 +30,7 @@
 
         ?>
 
-      <!--   <?php if(!empty($_POST) && !empty($resultatQuiz)){ 
-        ?>
-                <div class="row">
-                        
-        <?php 
-                    
-
-                        foreach ($monTableau as $key => $value) {
-                            # code...
-                            //echo $key."/".$value."<br>";
-                            if($value == max($monTableau) ){
-        ?>
-                                    <div class="col-lg-12">
-                                       <a href="<?=$this->Url('destination_viewdestination',[ 'id' => $monTableau['id'], ]); ?>"><?= $key ?></a>
-                                    </div>
-        <?php
-                            }
-                        }
-                            
-                }  
-
-        ?> -->
+     
                     
                 </div>
         </div>
