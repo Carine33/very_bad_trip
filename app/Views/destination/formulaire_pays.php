@@ -21,7 +21,7 @@
             	<?=implode('<br>', $errors); ?>
             	</div>
         	<?php endif; ?>
-            <h1>Evénement</h1>
+            <h1>Créer Pays</h1>
             
         	<form method="post" >
             	<div class="row">
