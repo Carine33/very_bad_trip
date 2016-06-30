@@ -39,7 +39,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listes<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a></li>
-                            <li><a href="<?=$this->url('destination_selectDestinations');?>">Liste des destinations</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectDestinations');?>">Liste des destinations</a></li>
                             <li><a href="#">Liste des requetes</a></li>
                         </ul>
                     </li>
