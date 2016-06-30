@@ -9,6 +9,7 @@ use Model\GastronomyModel;
 use Model\MonumentModel;
 use Model\MovieModel;
 use Model\MusicModel;
+use Model\CommentsModel;
 
 class InsertController extends Controller
 {
