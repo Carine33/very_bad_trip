@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use Model\DestinationModel;
 
 class QuizController extends Controller
 {
@@ -10,6 +11,7 @@ class QuizController extends Controller
 	/**
 	 * Page du Quiz
 	 */
+	
 
 	public function declaration(){
 
@@ -23,7 +25,7 @@ class QuizController extends Controller
 
 		$tableauDeux = array(
 			'AS' => 0,
-			'Inde' => 0,
+			'Asie' => 0,
 			'Afrique' => 0,
 			'AN' => 0,
 			'Oceanie' => 0,
@@ -43,8 +45,8 @@ class QuizController extends Controller
 						$tableau['AS'] = $tableau['AS'] + 1;
 					break;
 
-					case 'Inde':
-						$tableau['Inde'] = $tableau['Inde'] + 1;
+					case 'Asie':
+						$tableau['Asie'] = $tableau['Asie'] + 1;
 					break;
 
 					case 'Afrique':
@@ -84,8 +86,8 @@ class QuizController extends Controller
 						$VarAS = $tableau['AS'] + 1;
 					break;
 
-					case 'Inde':
-						$tableau['Inde'] = $tableau['Inde'] + 1;
+					case 'Asie':
+						$tableau['Asie'] = $tableau['Asie'] + 1;
 					break;
 
 					case 'Afrique':
@@ -120,7 +122,7 @@ class QuizController extends Controller
 	
 	public function repondreQuiz()
 	{
-
+		$i = 0;
 
 			//self::declaration();
 		
@@ -178,7 +180,7 @@ class QuizController extends Controller
 
 		$tableau = array(
 			'AS' => 0,
-			'Inde' => 0,
+			'Asie' => 0,
 			'Afrique' => 0,
 			'AN' => 0,
 			'Oceanie' => 0,
@@ -206,7 +208,25 @@ class QuizController extends Controller
 		    }
 
 
-			$this->show('quiz/page_quiz', ['monTableau' => $tableau] );
+
+
+            foreach ($tableau as $key => $value) {
+            # code...
+            //echo $key."/".$value."<br>";
+	            if($value == max($tableau) ){
+	            	
+	                  	$monObjetDestination = new DestinationModel();
+	                  	$resultatQuiz[$i] = $monObjetDestination->getDestinationByNameDestination($key);
+	                  	$i++;
+	            }
+            }
+                            
+                
+
+        
+
+
+			$this->show('quiz/page_quiz', ['resultatQuiz' => $resultatQuiz] );
 
 
 		}// fin if(!empty($_POST))

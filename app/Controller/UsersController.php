@@ -26,10 +26,14 @@ class UsersController extends Controller
 	$usersModel = new UsersModel();
 	$listeUsers = $usersModel->findAll();
 
+	$params = [
+			'listeUsers' => $listeUsers,
+		];
+
 	
 
 
-	$this->show('users/page_admin_users', ['listeUsers' => $listeUsers]);
+	$this->show('users/page_admin_users', $params);
 	}
 
 

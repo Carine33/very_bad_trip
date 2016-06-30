@@ -57,6 +57,7 @@
 		['GET|POST', '/creer-monument', 'DestinationAdmin#insererMonument', 'DestinationAdmin_insererMonument'],
 		['GET|POST', '/creer-movie', 'DestinationAdmin#insererMovie', 'DestinationAdmin_insererMovie'],
 		['GET|POST', '/creer-music', 'DestinationAdmin#insererMusic', 'DestinationAdmin_insererMusic'],
+
 		
 		['GET|POST', '/creer-pays', 'DestinationAdmin#insererPays', 'DestinationAdmin_insererPays'],
 	);

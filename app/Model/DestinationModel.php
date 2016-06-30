@@ -30,6 +30,20 @@ class DestinationModel extends \W\Model\Model
 
 	}
 	
+	public function getDestinationByNameDestination($destination){
+
+
+		$sql = 'SELECT * FROM destination WHERE title_destination = :destination';
+		$sth = $this->dbh->prepare($sql);
+		$sth->bindValue(':destination', $destination);
+		$sth->execute();
+
+		return $sth->fetch();
+
+
+
+
+	}
 
 }
 ?>
