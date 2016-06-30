@@ -170,7 +170,7 @@ class SigninController extends Controller
 				/*header ('Location: home.php');
 				die;*/
 
-				$this->redirectToRoute('default_home');
+				$this->redirectToRoute('login_login');
 			}
 			else {
 				// On peut faire un truc ici... 
