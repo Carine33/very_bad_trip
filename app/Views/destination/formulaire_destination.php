@@ -34,6 +34,7 @@
                                 <option value="Afrique">Afrique</option>
                                 <option value="Asie">Asie</option>
                                 <option value="Europe">Europe</option>
+                                <option value="Océanie">Océanie</option>
                             </select>
                             <p class="help-block text-danger"></p>
                        	</div>
