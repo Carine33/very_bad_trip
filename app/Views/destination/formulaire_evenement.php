@@ -19,10 +19,10 @@
         	<?php if(!empty($errors)): // On affiche les erreurs si le tableau n'est pas vide ?>
         		<div class="alert alert-danger">
             	<?=implode('<br>', $errors); ?>
-            	</div>enctype="multipart/form-data"
+            	</div>
         	<?php endif; ?>
             <h1>Evénement</h1>
-            <?php var_dump($picture) ?>
+         
         	<form method="post" enctype="multipart/form-data">
             	<div class="row">
                     <div class="col-md-4 col-sm-6"></div>

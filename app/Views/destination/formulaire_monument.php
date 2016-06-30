@@ -21,8 +21,8 @@
             	<?=implode('<br>', $errors); ?>
             	</div>
         	<?php endif; ?>
-            <h1>Evénement</h1>
-            <?php var_dump($picture) ?>
+            <h1>Monument</h1>
+           
         	<form method="post" enctype="multipart/form-data">
             	<div class="row">
                     <div class="col-md-4 col-sm-6"></div>
