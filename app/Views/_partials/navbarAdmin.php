@@ -20,14 +20,28 @@
                     <li>
                         <a class="page-scroll" href="<?= $this->url('default_home');?>">Accueil</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ajouter<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=$this->url('DestinationAdmin_insererDestination');?>">Ajouter un destination</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererPays');?>">Ajouter un pays</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererEvenement');?>">Ajouter un événement</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererFlora');?>">Ajouter de la flore</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererGastronomy');?>">Ajouter un plat</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererMonument');?>">Ajouter un monument</a></li>
+                            <li><a href="<?=$this->url('DestinationAdmin_insererMovie');?>">Ajouter un film</a></li>                            
+                            <li><a href="<?=$this->url('DestinationAdmin_insererMusic');?>">Ajouter un artiste</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="<?=$this->url('users_selectDestinations');?>">Liste des destinations</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#">Liste des requetes</a>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a></li>
+                            <li><a href="<?=$this->url('destination_selectDestinations');?>">Liste des destinations</a></li>
+                            <li><a href="#">Liste des requetes</a></li>
+                        </ul>
                     </li>
                      
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
