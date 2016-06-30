@@ -70,31 +70,31 @@ public function selectDestinations()
 			}
 
 			// Il faut utiliser l'antislash initial pour importer la classe, ou utiliser en haut de la classe : "use \finfo;"
-			$finfo = new \finfo(); 
+			$finfo1 = new \finfo(); 
 			// Permet d'obtenir le type mime du fichier
-			$mimeType = $finfo->file($_FILES['img_1avatar']['tmp_name'], FILEINFO_MIME_TYPE);
+			$mimeType1 = $finfo1->file($_FILES['img_1avatar']['tmp_name'], FILEINFO_MIME_TYPE);
 
 			// self::MIME_TYPE_ALLOWED => Permet de récupérer ma constante
-			if(!in_array($mimeType, self::MIME_TYPE_ALLOWED)){
+			if(!in_array($mimeType1, self::MIME_TYPE_ALLOWED)){
 				$errors[] = 'Le fichier n\'est pas valide';
 			}
 
 			if(count($errors) === 0){
 
-				$tmpFile = $_FILES['img_1avatar']['tmp_name']; // Le fichier temporaire
-				$tmpName = $_FILES['img_1avatar']['name']; // Le nom du fichier
+				$tmpFile1 = $_FILES['img_1avatar']['tmp_name']; // Le fichier temporaire
+				$tmpName1 = $_FILES['img_1avatar']['name']; // Le nom du fichier
 
 
-				$app = getApp();
-				$basePath = $_SERVER['DOCUMENT_ROOT'].$app->getBasePath();
-				$uploadDir = $app->getConfig('folder_upload'); // Me retournera la valeur correspondante du fichier de config
+				$app1 = getApp();
+				$basePath1 = $_SERVER['DOCUMENT_ROOT'].$app1->getBasePath();
+				$uploadDir1 = $app1->getConfig('folder_upload'); // Me retournera la valeur correspondante du fichier de config
 
 				// Destination de mon fichier : C:/xampp/htdocs/nom_du_projet/public/assets/upload
-				$destination = $basePath.'/assets/'.$uploadDir;
+				$destination1 = $basePath1.'/assets/'.$uploadDir1;
 
 				// Permet de vérifier que le dossier d'upload existe, sinon on le crée
-				if(!is_dir($destination)){
-					if(!mkdir($destination, 0755)){ // mkdir() permet de créer le dossier
+				if(!is_dir($destination1)){
+					if(!mkdir($destination1, 0755)){ // mkdir() permet de créer le dossier
 						// C'est une erreur PHP... en théorie, on devrait jamais y arriver
 						trigger_error('Le dossier d\'upload n\'a pu être créé', E_USER_WARNING);
 					}
@@ -102,32 +102,32 @@ public function selectDestinations()
 				}
 
 				// Permet de définir l'extension en fonction du mime type. Cela sera utile pour renommer le fichier.
-				switch($mimeType){
+				switch($mimeType1){
 					case 'image/jpg':
 					case 'image/jpeg':
-						$extension = '.jpg';
+						$extension1 = '.jpg';
 					break;
 
 					case 'image/png':
-						$extension = '.png';
+						$extension1 = '.png';
 					break;
 
 					case 'image/gif':
-						$extension = '.gif';
+						$extension1 = '.gif';
 					break;				
 				}
 
 				// Le nom de mon fichier final et son extension
-				$filenameImage1 = 'news-'.time().$extension;
+				$filenameImage1 = 'news-a'.time().$extension1;
 
 				// On upload le fichier
-				if(!move_uploaded_file($tmpFile, $destination.$filenameImage1)){
+				if(!move_uploaded_file($tmpFile1, $destination1.$filenameImage1)){
 					$fileForDBimg_1 = ''; // Juste au cas ou ...
 					$errors[] = 'Dommage, l\'image n\'a pu être envoyée :(';
 				}
 				else {
 					// Ce que je stockerais en base de données
-					$fileForDBimg_1 = $uploadDir.$filenameImage1;
+					$fileForDBimg_1 = $uploadDir1.$filenameImage1;
 				}
 
 			}
@@ -143,31 +143,31 @@ public function selectDestinations()
 			}
 
 			// Il faut utiliser l'antislash initial pour importer la classe, ou utiliser en haut de la classe : "use \finfo;"
-			$finfo = new \finfo(); 
+			$finfo2 = new \finfo(); 
 			// Permet d'obtenir le type mime du fichier
-			$mimeType = $finfo->file($_FILES['img_2avatar']['tmp_name'], FILEINFO_MIME_TYPE);
+			$mimeType2 = $finfo2->file($_FILES['img_2avatar']['tmp_name'], FILEINFO_MIME_TYPE);
 
 			// self::MIME_TYPE_ALLOWED => Permet de récupérer ma constante
-			if(!in_array($mimeType, self::MIME_TYPE_ALLOWED)){
+			if(!in_array($mimeType2, self::MIME_TYPE_ALLOWED)){
 				$errors[] = 'Le fichier n\'est pas valide';
 			}
 
 			if(count($errors) === 0){
 
-				$tmpFile = $_FILES['img_2avatar']['tmp_name']; // Le fichier temporaire
-				$tmpName = $_FILES['img_2avatar']['name']; // Le nom du fichier
+				$tmpFile2 = $_FILES['img_2avatar']['tmp_name']; // Le fichier temporaire
+				$tmpName2 = $_FILES['img_2avatar']['name']; // Le nom du fichier
 
 
-				$app = getApp();
-				$basePath = $_SERVER['DOCUMENT_ROOT'].$app->getBasePath();
-				$uploadDir = $app->getConfig('folder_upload'); // Me retournera la valeur correspondante du fichier de config
+				$app2 = getApp();
+				$basePath2 = $_SERVER['DOCUMENT_ROOT'].$app2->getBasePath();
+				$uploadDir2 = $app2->getConfig('folder_upload'); // Me retournera la valeur correspondante du fichier de config
 
 				// Destination de mon fichier : C:/xampp/htdocs/nom_du_projet/public/assets/upload
-				$destination = $basePath.'/assets/'.$uploadDir;
+				$destination2 = $basePath2.'/assets/'.$uploadDir2;
 
 				// Permet de vérifier que le dossier d'upload existe, sinon on le crée
-				if(!is_dir($destination)){
-					if(!mkdir($destination, 0755)){ // mkdir() permet de créer le dossier
+				if(!is_dir($destination2)){
+					if(!mkdir($destination2, 0755)){ // mkdir() permet de créer le dossier
 						// C'est une erreur PHP... en théorie, on devrait jamais y arriver
 						trigger_error('Le dossier d\'upload n\'a pu être créé', E_USER_WARNING);
 					}
@@ -175,32 +175,32 @@ public function selectDestinations()
 				}
 
 				// Permet de définir l'extension en fonction du mime type. Cela sera utile pour renommer le fichier.
-				switch($mimeType){
+				switch($mimeType2){
 					case 'image/jpg':
 					case 'image/jpeg':
-						$extension = '.jpg';
+						$extension2 = '.jpg';
 					break;
 
 					case 'image/png':
-						$extension = '.png';
+						$extension2 = '.png';
 					break;
 
 					case 'image/gif':
-						$extension = '.gif';
+						$extension2 = '.gif';
 					break;				
 				}
 
 				// Le nom de mon fichier final et son extension
-				$filenameImage2 = 'news-'.time().$extension;
+				$filenameImage2 = 'news-b'.time().$extension2;
 
 				// On upload le fichier
-				if(!move_uploaded_file($tmpFile, $destination.$filenameImage2)){
+				if(!move_uploaded_file($tmpFile2, $destination2.$filenameImage2)){
 					$fileForDBimg_2 = ''; // Juste au cas ou ...
 					$errors[] = 'Dommage, l\'image n\'a pu être envoyée :(';
 				}
 				else {
 					// Ce que je stockerais en base de données
-					$fileForDBimg_2 = $uploadDir.$filenameImage2;
+					$fileForDBimg_2 = $uploadDir2.$filenameImage2;
 				}
 
 			}
@@ -264,7 +264,7 @@ public function selectDestinations()
 				}
 
 				// Le nom de mon fichier final et son extension
-				$filenameImage3 = 'news-'.time().$extension;
+				$filenameImage3 = 'news-c'.time().$extension;
 
 				// On upload le fichier
 				if(!move_uploaded_file($tmpFile, $destination.$filenameImage3)){
