@@ -946,7 +946,7 @@ public function insererFlora()
 
 		// On envoit les erreurs en paramètres à l'aide d'un tableau (array)
 		$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize,];    
-		$this->show('destination/formulaire_flora', $params);
+		$this->show('destination/formulaire_monument', $params);
 
 	
 	}
