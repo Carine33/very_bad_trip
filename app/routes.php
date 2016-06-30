@@ -8,7 +8,7 @@
 		['GET|POST', '/inscription', 'Signin#signin', 'signin_signin'],
 
 		['GET|POST', '/page-admin-user', 'Users#selectUsers', 'users_selectUsers'],
-		['GET|POST', '/page-admin-dest', 'Destination#selectDestinations', 'destination_selectDestinations'],
+		['GET|POST', '/page-admin-dest', 'DestinationAdmin#selectDestinations', 'destinationAdmin_selectDestinations'],
 
 		['GET|POST', '/page-admin-event', 'Destination#selectEvent', 'destination_selectEvent'],
 

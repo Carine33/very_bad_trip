@@ -16,7 +16,7 @@ foreach ($listeDestinations as $dest) {
 		
 
 			?>
-			<tr><td class="adminKey"><?= $dest['title_nation'] ?></td><td class="adminKey"><?= $dest['img_1'] ?></td><td class="adminKey"><?= $dest['img_2'] ?></td><td class="adminKey"><?= $dest['img_3'] ?></td>
+			<tr><td class="adminKey"><?= $dest['title_destination'] ?></td><td class="adminKey"><?= $dest['img_1'] ?></td><td class="adminKey"><?= $dest['img_2'] ?></td><td class="adminKey"><?= $dest['img_3'] ?></td>
 			<td class="adminKey"><a href="">modifier</a></td><td class="adminKey"><a href="<?=$this->url('destination_supprimerDestination',['destinationid' => $dest['id']]);?>">supprimer</a></td></tr>
 
 			<?php

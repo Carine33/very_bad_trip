@@ -27,7 +27,7 @@ public function selectDestinations()
 	//$this->allowTo(['admin']);
 
 	$destinationModel = new DestinationsModel();
-	$listeDestinations = $destinationModel->destFindAll();
+	$listeDestinations = $destinationModel->findAll();
 
 	
 
