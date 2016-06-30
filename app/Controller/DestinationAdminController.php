@@ -925,7 +925,7 @@ public function insererFlora()
 
 									
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
-				if($eventModel->insert($dataEvent)){
+				if($monumentModel->insert($dataEvent)){
 					// Ici l'insertion en base est effectuée
 					$success = true;
 					$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize, 'picture' => $fileForDB, ];    
