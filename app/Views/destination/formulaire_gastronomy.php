@@ -1,4 +1,4 @@
-<?php $this->layout('layout_evenement', ['title' => 'Se connecter']) ?>
+<?php $this->layout('layout_evenement', ['title' => 'ajouter un plat']) ?>
 
 <?php $this->start('main_content') ?>
 

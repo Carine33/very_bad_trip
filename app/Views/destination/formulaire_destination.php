@@ -1,4 +1,4 @@
-<?php $this->layout('layout_destination', ['title' => 'Se connecter']) ?>
+<?php $this->layout('layout_destination', ['title' => 'Ajouter destination']) ?>
 
 <?php $this->start('main_content') ?>
 
