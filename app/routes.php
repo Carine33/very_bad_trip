@@ -6,8 +6,19 @@
 		['GET|POST', '/page-quiz', 'Quiz#repondreQuiz', 'quiz_repondreQuiz'],
 		['GET', '/insertion', 'Insert#insertDb', 'insert_db'],
 		['GET|POST', '/inscription', 'Signin#signin', 'signin_signin'],
+
 		['GET|POST', '/page-admin-user', 'Users#selectUsers', 'users_selectUsers'],
-		['GET|POST', '/page-admin-dest', 'Destination#selectDestinations', 'users_selectDestinations'],
+		['GET|POST', '/page-admin-dest', 'Destination#selectDestinations', 'destination_selectDestinations'],
+
+		['GET|POST', '/page-admin-event', 'Destination#selectEvent', 'destination_selectEvent'],
+
+
+
+
+
+
+
+
 		['GET', '/page-supprimer-user/[i:userid]', 'Users#supprimerUser', 'user_supprimerUser'],
 
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Destination#supprimerDestination', 'destination_supprimerDestination'],
@@ -46,4 +57,6 @@
 		['GET|POST', '/creer-monument', 'DestinationAdmin#insererMonument', 'DestinationAdmin_insererMonument'],
 		['GET|POST', '/creer-movie', 'DestinationAdmin#insererMovie', 'DestinationAdmin_insererMovie'],
 		['GET|POST', '/creer-music', 'DestinationAdmin#insererMusic', 'DestinationAdmin_insererMusic'],
+		
+		['GET|POST', '/creer-pays', 'DestinationAdmin#insererPays', 'DestinationAdmin_insererPays'],
 	);
