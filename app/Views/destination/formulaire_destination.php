@@ -64,7 +64,7 @@
                                 <p class="help-block text-danger"></p>
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-xl" id="fakeBrowser3">Choisir </button>
-                                    <input type="text" id="nomFichier" readonly="true" name="pictureDeuxImg_3">
+                                    <input type="text" id="nomFichier3" readonly="true" name="pictureDeuxImg_3">
                                 </div>
                             </div>    
 

@@ -418,8 +418,10 @@ public function selectDestinations()
 				$post[$key] = trim(strip_tags($value));
 			}
 
+			 if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 		   
-
 			if(empty($post['title_nation'])){
 				$errors[] = 'Vous devez indiquer le pays';
 			}
@@ -446,21 +448,15 @@ public function selectDestinations()
 
 				$dataEvent = [
 
-							'title_destination' => $post['title_destination'],
-							'title_nation' => $post['title_nation'],
-							'name_event' => $post['name_event'],
-							'picture_event' => '',
-							'description' => $post['description'],
+							'title_destination'  => $post['title_destination'],
+							'title_nation'       => $post['title_nation'],
+							'name_event'         => $post['name_event'],
+							'picture_event'	     => $fileForDB,
+							'description'        => $post['description'],
 
 						];
 
-					if (!empty($_FILES['avatar']['tmp_name'])){
-					$dataEvent['picture_event'] = $fileForDB;
-											
-					} //$finalFileName
-					else {
-					$dataEvent['picture_event'] = $post['pictureDeux'];
-					}
+					
 				
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
 				if($eventModel->insert($dataEvent)){
@@ -576,7 +572,9 @@ public function insererFlora()
 			foreach ($_POST as $key => $value) {
 				$post[$key] = trim(strip_tags($value));
 			}
-		   
+		    if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 
 			if(empty($post['title_nation'])){
 				$errors[] = 'Vous devez indiquer le pays';
@@ -607,18 +605,12 @@ public function insererFlora()
 							'title_destination' => $post['title_destination'],
 							'title_nation' => $post['title_nation'],
 							'name_flora' => $post['name_flora'],
-							'picture_flora' => '',
+							'picture_flora' => $fileForDB,
 							'description' => $post['description'],
 
 						];
 
-					if (!empty($_FILES['avatar']['tmp_name'])){
-					$dataEvent['picture_flora'] = $fileForDB;
-											
-					} //$finalFileName
-					else {
-					$dataEvent['picture_flora'] = $post['pictureDeux'];
-					}
+					
 				
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
 				if($floraModel->insert($dataEvent)){
@@ -737,7 +729,9 @@ public function insererFlora()
 			}
 
 
-		   
+		    if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 
 			if(empty($post['title_nation'])){
 				$errors[] = 'Vous devez indiquer le pays';
@@ -768,19 +762,12 @@ public function insererFlora()
 							'title_destination' => $post['title_destination'],
 							'title_nation' => $post['title_nation'],
 							'name_dish' => $post['name_gastronomy'],
-							'picture_dish' => '',
+							'picture_dish' => $fileForDB,
 							'description' => $post['description'],
 
 						];
 
-					if (!empty($_FILES['avatar']['tmp_name'])){
-					$dataEvent['picture_dish'] = $fileForDB;
-											
-					} //$finalFileName
-					else {
-					$dataEvent['picture_dish'] = $post['pictureDeux'];
-					}
-				
+									
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
 				if($gastronomyModel->insert($dataEvent)){
 					// Ici l'insertion en base est effectuée
@@ -896,11 +883,9 @@ public function insererFlora()
 				$post[$key] = trim(strip_tags($value));
 			}
 
-/*			if(strlen($post['username']) < 5){
-				$errors[] = 'Votre nom d\'utilisateur doit comporter au moins 5 caractères';
-			}*/
-
-			//if(strlen($post['username']) < 3 || strlen($post['username']) > 25){
+			 if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 		   
 
 			if(empty($post['title_nation'])){
@@ -932,19 +917,12 @@ public function insererFlora()
 							'title_destination' => $post['title_destination'],
 							'title_nation' => $post['title_nation'],
 							'name_monument' => $post['name_monument'],
-							'picture_monument' => '',
+							'picture_monument' => $fileForDB,
 							'description' => $post['description'],
 
 						];
 
-					if (!empty($_FILES['avatar']['tmp_name'])){
-					$dataEvent['picture_monument'] = $fileForDB;
-											
-					} //$finalFileName
-					else {
-					$dataEvent['picture_monument'] = $post['pictureDeux'];
-					}
-				
+									
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
 				if($eventModel->insert($dataEvent)){
 					// Ici l'insertion en base est effectuée
@@ -1061,12 +1039,10 @@ public function insererFlora()
 				$post[$key] = trim(strip_tags($value));
 			}
 
-/*			if(strlen($post['username']) < 5){
-				$errors[] = 'Votre nom d\'utilisateur doit comporter au moins 5 caractères';
-			}*/
 
-			//if(strlen($post['username']) < 3 || strlen($post['username']) > 25){
-		   
+		    if(empty($fileForDB)){
+		    	$errors[] = 'Vous devez mettre un upload';
+		    }
 
 			if(empty($post['title_nation'])){
 				$errors[] = 'Vous devez indiquer le pays';
@@ -1097,19 +1073,12 @@ public function insererFlora()
 							'title_destination' => $post['title_destination'],
 							'title_nation' => $post['title_nation'],
 							'title_movie' => $post['name_movie'],
-							'poster' => '',
+							'poster' => $fileForDB,
 							'description' => $post['description'],
 
 						];
 
-					if (!empty($_FILES['avatar']['tmp_name'])){
-					$dataEvent['poster'] = $fileForDB;
-											
-					} //$finalFileName
-					else {
-					$dataEvent['poster'] = $post['pictureDeux'];
-					}
-				
+								
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
 				if($movieModel->insert($dataEvent)){
 					// Ici l'insertion en base est effectuée
