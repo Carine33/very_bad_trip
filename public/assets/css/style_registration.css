@@ -80,6 +80,24 @@ section {
     display: none;
 
 }
+
+#img_1avatar {
+
+    display: none;
+
+}
+
+#img_2avatar {
+
+    display: none;
+
+}
+
+#img_3avatar {
+
+    display: none;
+
+}
     
 #nomFichier {
     display: inline-block;

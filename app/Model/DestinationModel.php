@@ -6,6 +6,7 @@ namespace Model;
 class DestinationModel extends \W\Model\Model
 {
 
+
 	public function getDestinationById($id) {
 
 		if (!is_numeric($id)){
@@ -29,5 +30,6 @@ class DestinationModel extends \W\Model\Model
 
 	}
 	
+
 }
 ?>

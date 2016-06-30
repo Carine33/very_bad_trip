@@ -14,9 +14,6 @@
     <link href="<?=$this->assetUrl('css/agency.css');?>" rel="stylesheet">
     <!-- // CSS Perso -->
     <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('css/style_registration.css');?>">
-
-    <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('css/style_destination.css');?>">
-
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('font-awesome/css/font-awesome.min.css');?>">
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> -->
@@ -38,16 +35,15 @@
 </nav>
 
 <header>
-	
+
 </header>
 
-<section id="mainSection">
-	<?= $this->section('main_content') ?>
+<section>
+	<?= $this->section('main_content'); ?>
 </section>
 
 <footer>
-	<?=$this->insert('_partials/footer');?>
-
+	<?=$this->insert('_partials/footerBis');?>
 </footer>
 
     <!-- jQuery -->
@@ -66,10 +62,45 @@
     <!-- Custom Theme JavaScript -->
     <script src="<?=$this->assetUrl('js/agency.js');?>"></script>
 
-
-    <script src="<?=$this->assetUrl('js/notreJs.js');?>" type="text/javascript"></script>
-     <script src="<?=$this->assetUrl('js/avatarFile.js');?>" type="text/javascript"></script>
+    <script>
+    var fileInput = document.getElementById("avatar");
+    var textInput = document.getElementById("nomFichier");
+    var fauxBouton =  document.getElementById("fakeBrowser");
+    /*var vraiBouton = document.getElementById("btnSubmit");
+    var tmp = document.getElementById("tmp");*/
     
+    fauxBouton.addEventListener("click", clicBrowser);
+    fileInput.addEventListener("change", modifNomFichier);
+    /*vraiBouton.addEventListener("click", clicBtn);
+*/
 
+
+    function clicBrowser(){
+
+        fileInput.click();
+    }
+
+    function modifNomFichier(){
+
+        /*document.getElementById('demo').innerHTML = '<img src="' + fileInput.value +'" />';*/
+        //document.getElementById('demo').innerHTML = fileInput.value;
+        textInput.value = fileInput.value;
+    }
+
+    /*function clicBtn(){
+
+        vraiBouton.click();
+        vraiBouton.click();
+
+
+    }*/
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
