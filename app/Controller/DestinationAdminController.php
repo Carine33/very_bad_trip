@@ -11,6 +11,7 @@ use Model\GastronomyModel;
 use Model\MonumentModel;
 use Model\MovieModel;
 use Model\MusicModel;
+use Model\PaysModel;
 
 
 use \W\Security\AuthentificationModel as AuthModel;
@@ -1261,5 +1262,82 @@ public function insererFlora()
 		// On envoit les erreurs en paramètres à l'aide d'un tableau (array)
 		$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
 		$this->show('destination/formulaire_music', $params);
+	}
+
+	public function insererPays()
+	{
+
+		
+
+		
+		/*  ! ajouter upload pour l'avatar ! */
+		$maxSize = 5 * 1000000 ; // 5Mo
+		$filename = ''; // Juste au cas ou ..
+		$post = [];
+		$errors = [];
+		$success = false;
+
+		
+
+		if(!empty($_POST)){
+			foreach ($_POST as $key => $value) {
+				$post[$key] = trim(strip_tags($value));
+			}
+
+
+		    
+
+		    
+
+
+
+			if(empty($post['title_nation'])){
+				$errors[] = 'Vous devez indiquer le pays';
+			}
+
+			
+
+			if(empty($post['description'])){
+				$errors[] = 'Vous devez indiquer une description de la musique';
+			}
+
+
+			// Ici, il n'y a pas d'erreurs, on peut donc enregistrer en base de données
+			if(count($errors) === 0){
+
+				// On instancie la classe UserModel qui étends la classe Model 
+				$paysModel = new PaysModel();
+				$authModel = new AuthModel();
+
+				// On utilise la méthode insert() qui permet d'insérer des données en base
+				$data = [
+					// La clé du tableau correspond au nom de la colonne SQL
+					'title_destination' 	=> $post['title_destination'],
+					'title_nation' 	        => $post['title_nation'],
+					'description'	        => $post['description'],
+					
+				];
+				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
+				if($paysModel->insert($data)){
+					// Ici l'insertion en base est effectuée
+					$success = true;
+				}
+
+				//je redirige vers la page "infos_users.php"
+
+
+				/*header ('Location: home.php');
+				die;*/
+
+				$this->redirectToRoute('default_home');
+			}
+			else {
+				// On peut faire un truc ici... 
+			}
+		}
+
+		// On envoit les erreurs en paramètres à l'aide d'un tableau (array)
+		$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
+		$this->show('destination/formulaire_pays', $params);
 	}
 }
