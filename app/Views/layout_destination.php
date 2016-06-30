@@ -34,7 +34,7 @@
 <body  id="page-top" class="index">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-	<?=$this->insert('_partials/navbarBis');?>
+	<?=$this->insert('_partials/navbarAdmin');?>
 </nav>
 
 <header>
