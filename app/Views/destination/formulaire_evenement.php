@@ -9,8 +9,9 @@
 	var_dump($w_user);
 	echo '<br><br>';
 	echo '<a href="'.$this->url('login_logout').'">Déconnexion</a>';
-	echo '<br><br>';*/
-
+	echo '<br><br>';
+    modif
+*/
 ?>
 <div class="container">
     <div class="row">

@@ -32,7 +32,11 @@
 		['GET|POST', '/reset-password/[*:email]/[:token]', 'Login#mylostpasswordDeux', 'login_mypassword'],
 		
 
+
 		['GET|POST', '/creer-destination', 'DestinationAdmin#insererDestination', 'DestinationAdmin_insererDestination'],
+
+		['GET|POST', '/destination/[i:id]', 'Destination#viewDestination', 'destination_viewdestination'],
+
 
 		['GET|POST', '/creer-evenement', 'DestinationAdmin#insererEvenement', 'DestinationAdmin_insererEvenement'],
 		['GET|POST', '/creer-flora', 'DestinationAdmin#insererFlora', 'DestinationAdmin_insererFlora'],

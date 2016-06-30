@@ -1,0 +1,77 @@
+.navbar-default .navbar-brand {
+    font-size: 3em;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-default .nav li a {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/*#intro-parag {
+	color: #482A0A;
+}*/
+
+
+.navbar-default {
+    background-color: #222;
+}
+
+#myAvatar {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+}
+.dropdown-menu {
+    background-color: #222;
+}
+
+.btn-xl {
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+section {
+    padding: 300px 0;
+}
+
+/**************************/
+/******              ******/
+/**************************/
+
+/*CSS propre au carousel*/
+.carousel-page {
+    width:100%;
+    height:400px;
+    background-color:#5f666d;
+    color:white;
+}
+
+
+
+
+
+
+
+/**************************/
+/********* FOOTER *********/
+/**************************/
+
+
+
+.retour {
+    background-color: #fed136;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+}
+
+#back {
+	color : #fff;
+}

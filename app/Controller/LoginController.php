@@ -89,6 +89,7 @@ class LoginController extends Controller
 		$error = [];
 		$post = [];
 		$params = [];
+		$app = getApp();
 
 		 
 		$showFormEmail = true; // Permet d'afficher le premier formulaire de saisi d'email
@@ -133,6 +134,56 @@ class LoginController extends Controller
 							$myEmail = $post['email_password']; 
 
 							$linkChangePassword = $this->generateUrl('login_mypassword',['email' => $myEmail, 'token' => $token]);
+
+
+							 $mail = new \PHPMailer();//à décommenter
+
+		                		//$mail->SMTPDebug = 3;                               
+		                		// Enable verbose debug output
+
+		                		$mail->isSMTP();// Set mailer to use SMTP//à décommenter
+		                		/*$mail->Host = 'smtp1.example.com;smtp2.example.com';*/  // Specify main and backup SMTP servers
+		                		$mail->Host = $app->getConfig('mail_host');//à décomenter
+		                		$mail->SMTPAuth = true;// Enable SMTP authentication//à décomenter
+		                		/*$mail->Username = 'user@example.com'; */                // SMTP username
+		                		$mail->Username = $app->getConfig('mail_username');;//à décommenter 
+		                		/*$mail->Password = 'secret'; */
+		                		$mail->Password = $app->getConfig('mail_password');;// SMTP password//à décomenter
+		                		$mail->SMTPSecure = 'tls';// Enable TLS encryption, `ssl` also accepted//à décomenter
+		                		$mail->Port =  465;// TCP port to connect to//à décommenter
+
+		                		$mail->setFrom('nom.prenom@exemple.com', 'prénom');//à décommenter
+		                		$mail->addAddress($post['email_password']); //à décommenter    
+		                		// Add a recipient
+		                		/*$mail->addAddress('ellen@example.com');*/               // Name is optional deuxieme adresse 
+		                		$mail->addReplyTo('info@example.com', 'Information');//à décommenter
+		                		/*$mail->addCC('cc@example.com');
+		                		$mail->addBCC('bcc@example.com');*/
+
+		                		/*$mail->addAttachment('/var/tmp/file.tar.gz');  */       // Add attachments
+		                		/*$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); */   // Optional name
+		                		$mail->isHTML(true);// Set email format to HTML//à décommenter
+
+		                		$mail->Subject = 'modification de password';//à décommenter
+		                		$mail->Body    = '<p>Vous pouvez réinitialiser votre mot de passe en cliquant sur le lien suivant :
+		                		<br>
+		                		<a href="localhost'.$linkChangePassword.'">Modifier mon mot de passe</a>
+		                		</p>
+		                		<br>
+		                		<code>'.$linkChangePassword.'</code>';
+
+		                		$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';//à décommenter
+
+		                		/*$mail->Body = nl2br($post['content']);
+		                		$mail->AltBody = $post['content'];*/
+
+
+		                		if(!$mail->send()) {
+		                			echo 'Le message n\'a pu être envoyé.';
+		                			echo 'Mailer Error: ' . $mail->ErrorInfo;
+		                		} else {
+		                		echo 'Le message a été envoyé.';
+		                		}//à décommenter
 						}
 					}
 				}
@@ -164,6 +215,8 @@ public function mylostpasswordDeux($email, $token)
 		$error = [];
 		$post = [];
 		$params = [];
+
+	
 
 		 
 		$showFormEmail = true; // Permet d'afficher le premier formulaire de saisi d'email
@@ -225,6 +278,8 @@ public function mylostpasswordDeux($email, $token)
 							$myEmail = $post['email_password']; 
 
 							$linkChangePassword = $this->generateUrl('login_mypassword',['email' => $myEmail, 'token' => $token]);
+
+
 						}
 					}
 				}
