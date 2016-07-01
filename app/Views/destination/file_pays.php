@@ -10,77 +10,137 @@
 
 	<div class="container">
 
-		<h1><?php echo $destination['title_destination']; ?></h1>
+		<h1><?=$listeThemesPays['pays'] ?></h1>	
+		<h2>Evénement</h2>
 
-          	<div class="col-md-12"><!-- dbt div row 1-->
+	
 
-            	<p></p>
-          	</div><!-- fin div row 1-->
-        
-
-        
-
-<!-- Slide à insérer -->
-			<div id="my_carousel" class="carousel slide" data-ride="carousel">
-		      	<!-- Bulles -->
-		    	<ol class="carousel-indicators">
-		        	<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
-		        	<li data-target="#my_carousel" data-slide-to="1"></li>
-		        	<li data-target="#my_carousel" data-slide-to="2"></li>
-		      	</ol>
-		      <!-- Slides -->
-		      	<div class="carousel-inner">
-			        <!-- Page 1 -->
-			        <div class="item active">  
-			        	<div class="carousel-page">
-			          	<img src="<?=$this->assetUrl($destination['img_1']); ?>" class="img-responsive" width="560" height="345" style="margin:0px auto;" alt="photo" />
-			          	</div> 
-			          		<!-- <div class="carousel-caption">Envie d'aller se baigner?</div> -->
-			        </div>   
-				   	<!-- Page 2 -->
-				    <div class="item"> 
-				        <div class="carousel-page">
-				        <img src="<?=$this->assetUrl($destination['img_2']); ?>" class="img-responsive img-rounded" width="560" height="345" style="margin:0px auto;" alt="photo">  <!-- rajouter les alt -->
-				        </div> 
-				        	<!-- <div class="carousel-caption">Envie de soleil?</div> -->
-				    </div>  
-				      <!-- Page 3 -->
-				    <div class="item">  
-				    	<div class="carousel-page">
-				        <img src="<?=$this->assetUrl($destination['img_3']); ?>" class="img-responsive img-rounded" width="560" height="345" style="margin:0px auto;max-height:100%;" alt="photo" />
-				        </div>  
-				      		<!-- <div class="carousel-caption">Envie de nature</div> -->
-				    </div>     
-				</div>
-			      
-			    <!-- Contrôles -->
-			    <a class="left carousel-control" href="#my_carousel" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span></a>
-			    <a class="right carousel-control" href="#my_carousel" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
+			<?php 
 
 
-<!-- SECTION FICHE PAYS -->
+			$tableauEvent = $listeThemesPays['event'];
 
-		<?php foreach ($listePays as $key => $value) {
 
+			foreach ($tableauEvent as $key => $value) {
+
+				?>
+				<p><?php echo $value['name_event'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_event']); ?>">
+				<P><?php echo $value['description'];?></P>
 				
+				<?php
+			}
+
+			?>
+	
+		<h2>Plantes</h2>
+
+	
+
+			<?php 
+
+
+			$tableauFlora = $listeThemesPays['flora'];
+
+
+			foreach ($tableauFlora as $key => $value) {
+
+				?>
+				<p><?php echo $value['name_flora'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_flora']); ?>">
+				<P><?php echo $value['description'];?></P>
+				
+				<?php
+			}
+
 			?>
 
-				<h2><?= $value['title_nation']?></h2>
-				<p><?= $value['description']?></p>
-				<a href="<?=$this->url('destination_viewpays',['pays' => $value['title_nation']]);?>">Liens vers la fiche pays&nbsp;<?= $value['title_nation'] ?></a>
 
-			<?php
-		}
-		?>
+		<h2>Gastronomie</h2>
+
+	
+
+			<?php 
+
+
+			$tableauGastronomy = $listeThemesPays['gastronomy'];
+
+
+			foreach ($tableauGastronomy as $key => $value) {
+
+				?>
+				<p><?php echo $value['name_dish'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_dish']); ?>">
+				<P><?php echo $value['description'];?></P>
 				
+				<?php
+			}
+
+			?>	
+			<h2>Monument</h2>
+
+	
+
+			<?php 
+
+
+			$tableauMonument = $listeThemesPays['monument'];
+
+
+			foreach ($tableauMonument as $key => $value) {
+
+				?>
+				<p><?php echo $value['name_monument'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_monument']); ?>">
+				<P><?php echo $value['description'];?></P>
 				
+				<?php
+			}
+
+			?>	
+
+			<h2>Film</h2>
+
+	
+
+			<?php 
 
 
+			$tableauMovie = $listeThemesPays['movie'];
 
 
+			foreach ($tableauMovie as $key => $value) {
 
+				?>
+				<p><?php echo $value['title_movie'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['poster']); ?>">
+				<P><?php echo $value['description'];?></P>
+				
+				<?php
+			}
+
+			?>	
+
+			<h2>Music</h2>
+
+	
+
+			<?php 
+
+
+			$tableauMusic = $listeThemesPays['music'];
+
+
+			foreach ($tableauMusic as $key => $value) {
+
+				?>
+				<p><?php echo $value['name_music'];?></p>
+				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_music']); ?>">
+				<P><?php echo $value['description'];?></P>
+				
+				<?php
+			}
+
+			?>	
 	</div>
 <?php $this->stop('main_content') ?>

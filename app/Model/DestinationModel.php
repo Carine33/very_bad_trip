@@ -68,5 +68,86 @@ class DestinationModel extends \W\Model\Model
 
 
 	}
+
+
+	public function getListeThemesPaysByTitleNation($pays)
+	{
+
+		$tableau = array();
+
+		$sql1 = 'SELECT * FROM event WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth1 = $this->dbh->prepare($sql1);
+		$sth1->bindValue(':pays', $pays);
+		$sth1->execute();
+
+		$event = $sth1->fetchALL();
+
+		$sql2 = 'SELECT * FROM flora WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth2 = $this->dbh->prepare($sql2);
+		$sth2->bindValue(':pays', $pays);
+		$sth2->execute();
+
+		$flora = $sth2->fetchALL();
+
+		$sql3 = 'SELECT * FROM gastronomy WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth3 = $this->dbh->prepare($sql3);
+		$sth3->bindValue(':pays', $pays);
+		$sth3->execute();
+
+		$gastronomy = $sth3->fetchALL();
+
+		$sql4 = 'SELECT * FROM monument WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth4 = $this->dbh->prepare($sql4);
+		$sth4->bindValue(':pays', $pays);
+		$sth4->execute();
+
+		$monument = $sth4->fetchALL();
+
+		$sql5 = 'SELECT * FROM movie WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth5 = $this->dbh->prepare($sql5);
+		$sth5->bindValue(':pays', $pays);
+		$sth5->execute();
+
+		$movie = $sth5->fetchALL();
+
+		$sql6 = 'SELECT * FROM music WHERE  title_nation = :pays LIMIT 3';
+			
+			
+			
+		$sth6 = $this->dbh->prepare($sql6);
+		$sth6->bindValue(':pays', $pays);
+		$sth6->execute();
+
+		$music = $sth6->fetchALL();
+
+		$tableau = [ 
+
+			'pays'		 => $pays,
+			'event'      => $event,
+			'flora'      => $flora,
+			'gastronomy' => $gastronomy,
+			'monument'   => $monument,
+			'movie'      => $movie,
+			'music'      => $music,
+
+		];
+
+		return $tableau;
+	}
 }
 ?>

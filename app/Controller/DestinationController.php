@@ -40,5 +40,21 @@ class DestinationController extends Controller
 		$this->show('destination/file_destination', $params);
 	}
 
+	public function viewPays($pays)
+	{
 
+		$destinationsModel = new DestinationsModel();
+		
+		$listeThemesPays = $destinationsModel->getListeThemesPaysByTitleNation($pays);
+
+
+
+
+		$params = [
+			
+			'listeThemesPays' => $listeThemesPays,
+		];
+
+		$this->show('destination/file_pays', $params);
+	}
 }
