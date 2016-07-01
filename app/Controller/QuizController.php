@@ -122,6 +122,8 @@ class QuizController extends Controller
 	
 	public function repondreQuiz()
 	{
+
+	if(!empty($this->getUser())){
 		$i = 0;
 
 			//self::declaration();
@@ -221,13 +223,17 @@ class QuizController extends Controller
 	            }
             }
                             
-                
+            /*$_SESSION['resultat'] = $resultatQuiz;*/
 
-        
+            
+
+        	
 
 
 			$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
 			die();
+			
+
 
 		}// fin if(!empty($_POST))
 
@@ -236,4 +242,10 @@ class QuizController extends Controller
 
 
 	}
+	
+	else{
+				$this->redirectToRoute('login_login');
+		
+	}
+}
 }

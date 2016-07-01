@@ -49,13 +49,18 @@ class LoginController extends Controller
 					$errors[] = 'Le couple identifiant/mot de passe est invalide';
 				}
 
-				if($user['role'] == 'user'){
-					$this->redirectToRoute('default_home');
-				}
 
-				if($user['role'] == 'admin'){
-					$this->redirectToRoute('admin_adminIndex');
-				}
+
+						if($user['role'] == 'user'){
+							$this->redirectToRoute('default_home');
+						}
+
+						if($user['role'] == 'admin'){
+							$this->redirectToRoute('admin_adminIndex');
+						}
+
+	
+
 			}
 		}
 

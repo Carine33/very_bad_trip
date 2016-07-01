@@ -159,9 +159,14 @@ class SigninController extends Controller
 					'city'		=> $post['city']
 				];
 				// On passe le tableau $data à la méthode insert() pour enregistrer nos données en base.
+				//die(debug($usersModel->insert($data)));
 				if($usersModel->insert($data)){
+
+
 					// Ici l'insertion en base est effectuée
 					$success = true;
+					$this->redirectToRoute('login_login');
+					/*$this->show('login/login');*/
 				}
 
 				//je redirige vers la page "infos_users.php"
@@ -170,7 +175,6 @@ class SigninController extends Controller
 				/*header ('Location: home.php');
 				die;*/
 
-				$this->redirectToRoute('login_login');
 			}
 			else {
 				// On peut faire un truc ici... 

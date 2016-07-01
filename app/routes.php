@@ -107,6 +107,9 @@
 
 
 
+		['GET|POST', '/pays/[:pays]', 'Destination#viewPays', 'destination_viewPays'],
+
+
 
 
 

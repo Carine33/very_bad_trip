@@ -8,6 +8,7 @@
 
         <h1>Page de Quiz</h1>
 <?php 
+   
 
          if(!empty($_POST) && !empty($resultatQuiz)){ 
             
@@ -18,6 +19,10 @@
             </div>
         <?php
             }
+        }
+        else{
+
+            echo 'bonjour';
         }
 
         ?>
