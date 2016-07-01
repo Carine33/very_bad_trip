@@ -226,8 +226,8 @@ class QuizController extends Controller
         
 
 
-			$this->show('quiz/page_quiz', ['resultatQuiz' => $resultatQuiz] );
-
+			$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+			die();
 
 		}// fin if(!empty($_POST))
 

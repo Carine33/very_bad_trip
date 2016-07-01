@@ -3,7 +3,15 @@
 	$w_routes = array(
 
 		['GET|POST', '/', 'Default#home', 'default_home'],
+
+
 		['GET|POST', '/page-quiz', 'Quiz#repondreQuiz', 'quiz_repondreQuiz'],
+
+		['GET|POST', '/page-resultat', '', 'quiz_resultat'],
+
+
+
+
 		['GET', '/insertion', 'Insert#insertDb', 'insert_db'],
 		['GET|POST', '/inscription', 'Signin#signin', 'signin_signin'],
 
@@ -96,6 +104,11 @@
 		['GET|POST', '/destination/[i:id]', 'Destination#viewDestination', 'destination_viewdestination'],
 
 
+
+
+
+
+
 		['GET|POST', '/creer-evenement', 'DestinationAdmin#insererEvenement', 'DestinationAdmin_insererEvenement'],
 		['GET|POST', '/creer-flora', 'DestinationAdmin#insererFlora', 'DestinationAdmin_insererFlora'],
 		['GET|POST', '/creer-gastronomy', 'DestinationAdmin#insererGastronomy', 'DestinationAdmin_insererGastronomy'],
@@ -107,4 +120,8 @@
 
 		
 		['GET|POST', '/creer-pays', 'DestinationAdmin#insererPays', 'DestinationAdmin_insererPays'],
+
+
+
+
 	);
