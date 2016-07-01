@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Very Good Trip !</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Very Good Trip ! <small style="font-family:Montserrat,Arial,sans-serif; letter-spacing: 1px; text-transform: uppercase; font-size: 16px; color: grey;">Administration</small></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

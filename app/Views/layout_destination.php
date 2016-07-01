@@ -13,7 +13,7 @@
     <link href="<?=$this->assetUrl('css/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$this->assetUrl('css/agency.css');?>" rel="stylesheet">
     <!-- // CSS Perso -->
-    <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('css/style_registration.css');?>">
+    <!-- <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('css/style_registration.css');?>"> -->
 
     <link rel="stylesheet" type="text/css" href="<?=$this->assetUrl('css/style_destination.css');?>">
 

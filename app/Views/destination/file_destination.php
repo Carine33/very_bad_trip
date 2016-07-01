@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<h1><?php echo $destination['title_destination']; ?></h1>
+		<h1 class="text-center"><?php echo $destination['title_destination']; ?></h1>
 
           	<div class="col-md-12"><!-- dbt div row 1-->
 
@@ -68,7 +68,7 @@
 				
 			?>
 
-				<h2><?= $value['title_nation']?></h2>
+				<h2 class="text-center"><?= $value['title_nation']?></h2>
 				<p><?= $value['description']?></p>
 				<a href="<?=$this->url('destination_viewPays' , ['pays' => $value['title_nation']]);?>">liens vers la fiche pays</a>
 			
