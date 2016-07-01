@@ -57,8 +57,8 @@
                             <li><a href="<?=$this->url('destinationAdmin_selectFlora');?>">Liste des plantes</a></li>
                             <li><a href="<?=$this->url('destinationAdmin_selectGastronomy');?>">Liste des plats</a></li>
                             <li><a href="<?=$this->url('destinationAdmin_selectMonument');?>">Liste des monuments</a></li>
-                            <li><a href="#">Liste des film</a></li>
-                            <li><a href="#">Liste des musique</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectFilm');?>">Liste des films</a></li>
+                            <li><a href="<?=$this->url('destinationAdmin_selectMusic');?>">Liste des musiques</a></li>
                         </ul>
                     </li>
                      

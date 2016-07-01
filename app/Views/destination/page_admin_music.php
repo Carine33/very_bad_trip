@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h1>gestion des plats</h1>
+			<h1>gestion des musique</h1>
 	
 
 					<table  class="col-lg-12 text-center">
@@ -18,19 +18,19 @@
 						</tr>
 					<?php 
 
-					foreach ($listeGastronomy as $gastro) {
+					foreach ($listeMusic as $music) {
 						# code...
 
 							
 
 								?>
 								<tr>
-									<td class="adminKey"><?= $gastro['title_destination'] ?></td>
-									<td class="adminKey"><?= $gastro['title_nation'] ?></td>
-									<td class="adminKey"><?= $gastro['name_dish'] ?></td>
-									<td class="adminKey"><?= $gastro['picture_dish'] ?></td>
+									<td class="adminKey"><?= $music['title_destination'] ?></td>
+									<td class="adminKey"><?= $music['title_nation'] ?></td>
+									<td class="adminKey"><?= $music['name_music'] ?></td>
+									<td class="adminKey"><?= $music['picture_music'] ?></td>
 									<td class="adminKey"><a href="">modifier</a></td>
-									<td class="adminKey"><a href="<?=$this->url('destinationAdmin_supprimerGastronomy',['gastronomyid' => $gastro['id']]);?>">supprimer</a></td>
+									<td class="adminKey"><a href="<?=$this->url('destinationAdmin_supprimerMusic',['musicid' => $music['id']]);?>">supprimer</a></td>
 								</tr>
 
 								<?php

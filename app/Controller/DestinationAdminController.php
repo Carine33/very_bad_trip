@@ -96,7 +96,35 @@ public function selectMonument()
 
 	$this->show('destination/page_admin_monument', ['listeMonument' => $listeMonument]);
 	}
+public function selectFilm()
+	{
 
+
+	//$this->allowTo(['admin']);
+
+	$movieModel = new MovieModel();
+	$listeMovie = $movieModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_movie', ['listeMovie' => $listeMovie]);
+	}
+
+	public function selectMusic()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$musicModel = new MusicModel();
+	$listeMusic = $musicModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_music', ['listeMusic' => $listeMusic]);
+	}
 
 	public function supprimerDestination($id)
 	{
@@ -1441,5 +1469,24 @@ public function insererFlora()
 
 		$params = ['resultat' => $resultat];
 		$this->show('destination/page_supprimer_monument', $params);
+	}
+
+	public function supprimerMovie($id)
+	{
+
+		$movieModel = new MovieModel();
+		$resultat = $movieModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_movie', $params);
+	}
+	public function supprimerMusic($id)
+	{
+
+		$musicModel = new MusicModel();
+		$resultat = $musicModel->delete($id);
+
+		$params = ['resultat' => $resultat];
+		$this->show('destination/page_supprimer_music', $params);
 	}
 }

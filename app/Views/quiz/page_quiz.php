@@ -15,20 +15,7 @@
 
 
 
-        <?php 
-
-         if(!empty($_POST) && !empty($resultatQuiz)){ 
-            
-            foreach ($resultatQuiz as $key => $value) {
-                 ?>
-             <div class="col-lg-12">
-                <a href="/very_good_trip/public/destination/<?= $value['id'] ?>"><?= $value['title_destination'] ?></a>
-            </div>
-        <?php
-            }
-        }
-
-        ?>
+        
 
      
                     

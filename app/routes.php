@@ -29,6 +29,11 @@
 
 		['GET|POST', '/page-admin-monument', 'DestinationAdmin#selectMonument', 'destinationAdmin_selectMonument'],
 
+		['GET|POST', '/page-admin-film', 'DestinationAdmin#selectFilm', 'destinationAdmin_selectFilm'],
+
+		['GET|POST', '/page-admin-music', 'DestinationAdmin#selectMusic', 'destinationAdmin_selectMusic'],
+
+
 
 
 
@@ -65,22 +70,18 @@
 		['GET', '/page-supprimer-gastronomy/[i:gastronomyid]', 'DestinationAdmin#supprimerGastronomy', 'destinationAdmin_supprimerGastronomy'],
 
 
-
-
-
-
-
-
-
-
-
-
 		['GET', '/page-supprimer-monument/[i:monumentid]', 'DestinationAdmin#supprimerMonument', 'destinationAdmin_supprimerMonument'],
 
 
 
 
 
+
+
+		['GET', '/page-supprimer-movie/[i:movieid]', 'DestinationAdmin#supprimerMovie', 'destinationAdmin_supprimerMovie'],
+
+
+['GET', '/page-supprimer-music/[i:musicid]', 'DestinationAdmin#supprimerMusic', 'destinationAdmin_supprimerMusic'],
 
 
 
