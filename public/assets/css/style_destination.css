@@ -34,7 +34,7 @@
 }
 
 section {
-    padding: 300px 0;
+    padding: 200px 0;
 }
 
 #mainSection {
@@ -63,10 +63,19 @@ section {
 /*    display: table-cell;
     vertical-align: top;*/
     padding: 20px 50px;
-    background: #F1F1F1;
+    background: #5EB6DD;
     
 }
 
+
+
+.floatLeft{
+    float: left;
+}
+
+.both{
+    clear: both;
+}
 
 
 

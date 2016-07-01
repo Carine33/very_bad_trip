@@ -26,8 +26,10 @@
 
 				?>
 				<h3><?php echo $value['name_event'];?></h3>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_event']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_event']); ?>">
+					</p>
+				<p ><?php echo $value['description'];?></p>
 				
 				<?php
 			}
@@ -38,7 +40,7 @@
 	
 		<h2>Plantes</h2>
 
-	
+			<div class="content">
 
 			<?php 
 
@@ -50,18 +52,21 @@
 
 				?>
 				<p><?php echo $value['name_flora'];?></p>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_flora']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_flora']); ?>">
+					</p>
+				<p><?php echo $value['description'];?></p>
 				
 				<?php
 			}
 
 			?>
 
+			</div>
 
 		<h2>Gastronomie</h2>
 
-	
+			<div class="content">
 
 			<?php 
 
@@ -73,16 +78,21 @@
 
 				?>
 				<p><?php echo $value['name_dish'];?></p>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_dish']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_dish']); ?>">
+					</p>
+				<p><?php echo $value['description'];?></p>
 				
 				<?php
 			}
 
 			?>	
-			<h2>Monument</h2>
 
-	
+			</div>
+
+		<h2>Monument</h2>
+
+			<div class="content">
 
 			<?php 
 
@@ -94,17 +104,21 @@
 
 				?>
 				<p><?php echo $value['name_monument'];?></p>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_monument']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_monument']); ?>">
+					</p>
+				<p><?php echo $value['description'];?></p>
 				
 				<?php
 			}
 
 			?>	
 
-			<h2>Film</h2>
+			</div>
 
-	
+		<h2>Les films à voir :</h2>
+
+			<div class="content">
 
 			<?php 
 
@@ -116,17 +130,22 @@
 
 				?>
 				<p><?php echo $value['title_movie'];?></p>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['poster']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['poster']); ?>">
+					</p>
+				<p><?php echo $value['description'];?></p>
 				
 				<?php
 			}
 
 			?>	
 
-			<h2>Music</h2>
+			</div>
 
-	
+
+		<h2>Music</h2>
+
+			<div class="content">
 
 			<?php 
 
@@ -138,12 +157,15 @@
 
 				?>
 				<p><?php echo $value['name_music'];?></p>
-				<img width="560" height="345" src="<?=$this->assetUrl($value['picture_music']); ?>">
-				<P><?php echo $value['description'];?></P>
+					<p class="floatLeft">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_music']); ?>">
+					</p>
+				<p><?php echo $value['description'];?></p>
 				
 				<?php
 			}
 
 			?>	
+			</div>
 	</div>
 <?php $this->stop('main_content') ?>
