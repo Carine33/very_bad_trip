@@ -21,5 +21,5 @@
             <div></div>
             <div></div> -->
         </div>
-        <a href="#inscription" class="page-scroll btn btn-xl quiz">Faites le quiz !</a>
+        <a href="<?=$this->url('quiz_repondreQuiz');?>" class="page-scroll btn btn-xl quiz">Faites le quiz !</a>
     <!-- </header> -->
