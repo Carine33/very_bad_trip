@@ -1,4 +1,4 @@
-<!--     <nav class="navbar navbar-default navbar-fixed-top"> -->
+    <nav class="navbar navbar-default navbar-fixed-top"> -->
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display = Menu "hamburger" -->
             <div class="navbar-header page-scroll">
@@ -30,6 +30,8 @@
                      <?php endif; ?>
                      
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'user'): ?>
+<!--                         <li> <a class="page-scroll" href="<?= $this;?>">destination</a> 
+                        </li> -->
                         <li>
                         <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>
                         </li>
@@ -66,4 +68,4 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-<!--     </nav> -->
+<!--     </nav>
