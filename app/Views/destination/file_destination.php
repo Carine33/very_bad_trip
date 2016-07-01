@@ -70,7 +70,7 @@
 
 				<h2><?= $value['title_nation']?></h2>
 				<p><?= $value['description']?></p>
-				<a href="<?=$this->url('destination_viewpays',['pays' => $value['title_nation']]);?>">Liens vers la fiche pays&nbsp;<?= $value['title_nation'] ?></a>
+			
 
 			<?php
 		}
