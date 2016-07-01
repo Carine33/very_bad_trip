@@ -45,5 +45,28 @@ class DestinationModel extends \W\Model\Model
 
 	}
 
+	public function getListePaysByIdDestination($id){
+
+
+		
+
+
+		if (!is_numeric($id)){
+			return false;
+		}
+
+		$sql = 'SELECT * FROM pays
+			INNER JOIN destination ON pays.title_destination = destination.title_destination			
+			WHERE destination.id  = :id';
+		$sth = $this->dbh->prepare($sql);
+		$sth->bindValue(':id', $id);
+		$sth->execute();
+
+		return $sth->fetchAll();
+
+
+
+
+	}
 }
 ?>

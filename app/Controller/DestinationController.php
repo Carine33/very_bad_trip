@@ -25,8 +25,16 @@ class DestinationController extends Controller
 		$destinationsModel = new DestinationsModel();
 		$destination = $destinationsModel->find($id);
 
+
+
+		$listePays = $destinationsModel->getListePaysByIdDestination($id);
+
+
+
+
 		$params = [
 			'destination' => $destination,
+			'listePays' => $listePays,
 		];
 
 		$this->show('destination/file_destination', $params);
