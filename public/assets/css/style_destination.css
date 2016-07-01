@@ -37,8 +37,14 @@ section {
     padding: 300px 0;
 }
 
+#mainSection {
+    background: url('../postit.png');
+    background-position: 3% 80%;
+    background-repeat: no-repeat;
+}
+
 /**************************/
-/******              ******/
+/** CONTENU AP CAROUSSEL **/
 /**************************/
 
 /*CSS propre au carousel*/
@@ -48,8 +54,17 @@ section {
     color: white;
 }
 
+#descript {
+    text-align: justify;
+}
 
-
+.content {
+/*    display: table-cell;
+    vertical-align: top;*/
+    padding: 20px 50px;
+    background: #F1F1F1;
+    
+}
 
 
 

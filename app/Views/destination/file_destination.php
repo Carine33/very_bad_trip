@@ -4,23 +4,16 @@
 
 <!-- SECTION PRESENTATION CONTINENT -->
 
-<!-- Tout le contenu de Thibaut à intégrer et à adapter par la suite -->
-
-
 
 	<div class="container">
 
 		<h1 class="text-center"><?php echo $destination['title_destination']; ?></h1>
 
-          	<div class="col-md-12"><!-- dbt div row 1-->
+		<br>
 
-            	<p></p>
-          	</div><!-- fin div row 1-->
-        
 
-        
 
-<!-- Slide à insérer -->
+<!-- CAROUSSEL -->
 			<div id="my_carousel" class="carousel slide" data-ride="carousel">
 		      	<!-- Bulles -->
 		    	<ol class="carousel-indicators">
@@ -61,26 +54,22 @@
 			</div>
 
 
-<!-- SECTION FICHE PAYS -->
+<!-- SECTION PRESENTATION PAYS -->
 
 		<?php foreach ($listePays as $key => $value) {
-
-				
-			?>
-
-				<h2 class="text-center"><?= $value['title_nation']?></h2>
-				<p><?= $value['description']?></p>
-				<a href="<?=$this->url('destination_viewPays' , ['pays' => $value['title_nation']]);?>">liens vers la fiche pays</a>
 			
+		?>
+				<h2 class="text-center"><?= $value['title_nation']?></h2><br>
 
-			<?php
+				<p id="descript"><?= $value['description']?></p>
+
+				<div class="text-right">	
+					<a href="<?=$this->url('destination_viewPays' , ['pays' => $value['title_nation']]);?>">En savoir plus...</a>
+				</div>
+
+		<?php
 		}
 		?>
-				
-				
-
-
-
 
 
 	</div>
