@@ -38,8 +38,9 @@ section {
 }
 
 #mainSection {
-    background: url('../postit.png');
-    background-position: 3% 80%;
+    /*background: url('../img/tour_du_monde.png');*/
+    background: url('../img/photos_souvenirsB.png');
+    background-position: 3% 55%;
     background-repeat: no-repeat;
 }
 

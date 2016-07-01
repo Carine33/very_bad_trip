@@ -54,23 +54,29 @@
 			</div>
 
 
+			<br><br>
 <!-- SECTION PRESENTATION PAYS -->
+
 
 		<?php foreach ($listePays as $key => $value) {
 			
 		?>
-				<h2 class="text-center"><?= $value['title_nation']?></h2><br>
+			<h2 class="text-center"><?= $value['title_nation']?></h2><br>
 
-				<p id="descript"><?= $value['description']?></p>
+			<p id="descript"><?= $value['description']?></p><br>
 
-				<div class="text-right">	
-					<a href="<?=$this->url('destination_viewPays' , ['pays' => $value['title_nation']]);?>">En savoir plus...</a>
-				</div>
-
+			<div class="text-right">	
+				<a href="<?=$this->url('destination_viewPays' , ['pays' => $value['title_nation']]);?>">En savoir plus...</a>
+			</div>
+			<br>
 		<?php
 		}
 		?>
 
-
+			<br><br>
+			<div class="text-center">
+				<img src="<?=$this->assetUrl('img/Around_the_World.png');  ?>">
+			</div>
 	</div>
+
 <?php $this->stop('main_content') ?>
