@@ -104,10 +104,10 @@
 
 		['GET|POST', '/destination/[i:id]', 'Destination#viewDestination', 'destination_viewdestination'],
 
-
-
-
 		['GET|POST', '/pays/[:pays]', 'Destination#viewPays', 'destination_viewPays'],
+
+
+		
 
 
 

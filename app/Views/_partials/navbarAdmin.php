@@ -61,6 +61,28 @@
                             <li><a href="<?=$this->url('destinationAdmin_selectMusic');?>">Liste des musiques</a></li>
                         </ul>
                     </li>
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liste pays<span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                          <?php use \Model\DestinationModel;
+
+
+                          $objetListePays = new DestinationModel();
+                          $listePays = $objetListePays->getListeTitleNation();
+
+                        foreach ($listePays as $key => $monpays) {
+
+                           
+                             ?>
+                                <li><a href="<?=$this->url('destination_viewPays' , ['pays' => $monpays['title_nation']]);?>"><?php echo $monpays['title_nation'];?></a></li>
+                                <?php 
+                        }
+                        ?>
+                            </ul>
+                    </li>
                      
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
                         <li>

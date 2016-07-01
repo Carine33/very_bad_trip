@@ -149,5 +149,14 @@ class DestinationModel extends \W\Model\Model
 
 		return $tableau;
 	}
+
+
+public function getListeTitleNation()
+	{
+	 				$mySql = 'SELECT DISTINCT title_nation FROM pays';
+                    $mySth1 = $this->dbh->prepare($mySql);
+                  	$mySth1->execute();
+                    return  $mySth1->fetchALL();
+    }
 }
 ?>

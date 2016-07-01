@@ -29,8 +29,8 @@
                     	<div class="form-group">
                         	<label for="username">Destination : </label>
                             <select id="title_destination" name="title_destination">
-                                <option value="AN">Amerique du nord</option>
-                                <option value="AS">Amerique du sud</option>
+                                <option value="Amérique du Nord">Amerique du nord</option>
+                                <option value="Amérique du Sud">Amerique du sud</option>
                                 <option value="Afrique">Afrique</option>
                                 <option value="Asie">Asie</option>
                                 <option value="Europe">Europe</option>

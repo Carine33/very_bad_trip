@@ -32,6 +32,26 @@
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'user'): ?>
 <!--                         <li> <a class="page-scroll" href="<?= $this;?>">destination</a> 
                         </li> -->
+
+                         <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liste pays<span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                          <?php //use \Model\DestinationModel;
+
+
+                          $objetListePays = new DestinationModel();
+                          $listePays = $objetListePays->getListeTitleNation();
+
+                        foreach ($listePays as $key => $monpays) {
+
+                           
+                             ?>
+                                <li><a href="<?=$this->url('destination_viewPays' , ['pays' => $monpays['title_nation']]);?>"><?php echo $monpays['title_nation'];?></a></li>
+                                <?php 
+                        }
+                        ?>
+                            </ul>
+                    </li>
                         <li>
                         <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>
                         </li>
@@ -68,4 +88,4 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-<!--     </nav>
+</nav>
