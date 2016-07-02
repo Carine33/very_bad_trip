@@ -70,7 +70,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronome_afrique_.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronomie_afrique_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -163,7 +163,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_afrique_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_afrique_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -256,7 +256,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_afrique_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_afrique_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -349,7 +349,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_afrique_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_afrique_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -442,7 +442,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_afrique_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_afrique_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">

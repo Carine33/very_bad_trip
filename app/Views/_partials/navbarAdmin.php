@@ -44,7 +44,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a></li>
                             <li><a href="<?=$this->url('destinationAdmin_selectDestinations');?>">Liste des destinations</a></li>
-                            <li><a href="#">Liste des requêtes</a></li>
                             
                         </ul>
                     </li>
