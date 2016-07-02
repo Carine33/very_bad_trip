@@ -30,7 +30,7 @@ class DestinationModel extends \W\Model\Model
 
 	}
 	
-	public function getDestinationByNameDestination($destination){
+	public function getRowDestination($destination){
 
 
 		$sql = 'SELECT * FROM destination WHERE title_destination = :destination';

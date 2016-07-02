@@ -41,7 +41,7 @@ class QuizController extends Controller
 
 			switch($theme){
 
-					case 'AS':
+					case 'Amérique du Sud':
 						$tableau['Amérique du Sud'] = $tableau['Amérique du Sud'] + 1;
 					break;
 
@@ -123,6 +123,9 @@ class QuizController extends Controller
 	public function repondreQuiz()
 	{
 
+			$resultatQuiz = array();
+			$post = array();
+
 	if(!empty($this->getUser())){
 		
 		if(!empty($_POST)){
@@ -162,7 +165,7 @@ class QuizController extends Controller
 
 		   
           $varMax = 0;
-          $monObjetDestination = new DestinationModel();
+         
 
             foreach ($tableau as $key => $value) {
             	if($value > $varMax){
@@ -173,37 +176,24 @@ class QuizController extends Controller
             foreach ($tableau as $key => $value) {
            		if($value == $varMax){
 	            	
-	                $resultatQuiz[] = $key; 
-   	
+           			$monObjetDestination = new DestinationModel();
+	            	$resultatQuiz[] = $monObjetDestination->getRowDestination($key);
+	                	
 	            }
-            }
-                       
-
-
-            foreach ($resultatQuiz as $key => $valueDestination) {
-
-            		$listeId[] = $monObjetDestination->getDestinationByNameDestination($valueDestination);
-            }
-            	
-            	
+            }  	
         	
-             if(count($listeId) == 1){
+             	/*if(count($listeId) == 1){
 
-             			
 
+             		var_dump($listeId);
+             		die();
              			foreach ($listeId as $key => $dest) {
-             				# code...
-             			}
-             			
-
-                        $this->redirectToRoute('destination_viewdestination',['id' => $dest['id']]);
-
-
-
+             			  $this->redirectToRoute('destination_viewdestination',['id' => $dest['id']]);
+                        }
                 }
-
-			$this->show('quiz/page_resultat', ['resultatQuiz' => $listeId] );
-			die();
+                else{*/
+				$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+				//}
 			
 
 

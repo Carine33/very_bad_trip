@@ -11,8 +11,7 @@
    
            if(!empty($_POST) && !empty($resultatQuiz)){ 
             
-               
-                
+                           
 
 
                     foreach ($resultatQuiz as $key => $value) {
