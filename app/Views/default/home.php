@@ -237,7 +237,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Thibaut_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Thibaut_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Thibaut" title="Photo de Thibaut, cliquez pour agrandir la photo">
                         <h4>Thibaut Taquet</h4>
-                        <p class="text-muted">Un résumé à éditer...</p>
+                        <p class="text-muted">Passionné de décoration florale et de design, la programmation c'est le futur, donc maintenant sur le web !</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -251,7 +251,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Carine, Damien, Hugues et Thibaut sortis de divers horizons...</p>
+                    <p class="large text-muted">Carine, Damien, Hugues et Thibaut issus de divers horizons vous partages leur univers ! </p>
                 </div>
             </div>
         </div>

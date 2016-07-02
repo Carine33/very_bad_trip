@@ -22,6 +22,14 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <style>
+        #background_login {
+            background-image: url("<?= $this->assetUrl('img/VeryGoodTripExplorateur_150.jpg');?>");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -52,7 +60,7 @@ elseif(empty($w_user['role'])){
 
 </header>
 
-<section>
+<section id="background_login">
 	<?= $this->section('main_content'); ?>
 </section>
 

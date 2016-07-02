@@ -5,17 +5,19 @@
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<h1>gestion des événements</h1>
-	
+
+			<br><br>
 
 					<table  class="col-lg-12 text-center">
 						<tr>
-							<td class="adminKey">destination</td>
-							<td class="adminKey">pays</td>
-							<td class="adminKey">denomination</td>
-							<td class="adminKey">image 3</td>
-							<td></td>
-							<td></td>
+							<th class="adminKey text-center">DESTINATION</th>
+							<th class="adminKey text-center">PAYS</th>
+							<th class="adminKey text-center">DENOMINATION</th>
+							<th class="adminKey text-center">IMAGE</th>
+							<th></th>
+							<th></th>
 						</tr>
+
 					<?php 
 
 					foreach ($listeEvenement as $event) {
@@ -28,7 +30,7 @@
 									<td class="adminKey"><?= $event['title_destination'] ?></td>
 									<td class="adminKey"><?= $event['title_nation'] ?></td>
 									<td class="adminKey"><?= $event['name_event'] ?></td>
-									<td class="adminKey"><?= $event['picture_event'] ?></td>
+									<td class="adminKey"><img width="50px" height="50px" src="<?= $this->assetUrl($event['picture_event']); ?>"></td>
 									<td class="adminKey"><a href="">modifier</a></td>
 									<td class="adminKey"><a href="<?=$this->url('destinationAdmin_supprimerEvenement',['eventid' => $event['id']]);?>">supprimer</a></td>
 								</tr>

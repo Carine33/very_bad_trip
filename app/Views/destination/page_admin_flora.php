@@ -6,15 +6,16 @@
 		<div class="col-lg-12 text-center">
 			<h1>gestion des plantes</h1>
 	
+				<br><br>
 
 					<table  class="col-lg-12 text-center">
 						<tr>
-							<td class="adminKey">destination</td>
-							<td class="adminKey">pays</td>
-							<td class="adminKey">denomination</td>
-							<td class="adminKey">image 3</td>
-							<td></td>
-							<td></td>
+							<th class="adminKey text-center">DESTINATION</th>
+							<th class="adminKey text-center">PAYS</th>
+							<th class="adminKey text-center">DENOMINATION</th>
+							<th class="adminKey text-center">IMAGE</th>
+							<th></th>
+							<th></th>
 						</tr>
 					<?php 
 
@@ -28,7 +29,7 @@
 									<td class="adminKey"><?= $flora['title_destination'] ?></td>
 									<td class="adminKey"><?= $flora['title_nation'] ?></td>
 									<td class="adminKey"><?= $flora['name_flora'] ?></td>
-									<td class="adminKey"><?= $flora['picture_flora'] ?></td>
+									<td class="adminKey"><img width="50px" height="50px" src="<?=$this->assetUrl($flora['picture_flora']); ?>"</td>
 									<td class="adminKey"><a href="">modifier</a></td>
 									<td class="adminKey"><a href="<?=$this->url('destinationAdmin_supprimerFlora',['floraid' => $flora['id']]);?>">supprimer</a></td>
 								</tr>
