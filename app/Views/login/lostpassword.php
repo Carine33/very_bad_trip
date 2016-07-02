@@ -13,7 +13,7 @@ if(!empty($params['showFormPassword'])){$showFormPassword = $params['showFormPas
 ?>
           
 <main class="container">
-        <h1 class="text-center">Mot de passe oublié</h1>
+        <h1 class="text-center">Mot de passe à modifier ou oublié</h1>
         <br>
 
         <?php if(!empty($error)): // On affiche les erreurs si $error n'est pas vide ?>
