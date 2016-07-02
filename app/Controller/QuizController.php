@@ -24,10 +24,10 @@ class QuizController extends Controller
 		$post['plante']="";
 
 		$tableauDeux = array(
-			'AS' => 0,
+			'Amérique du Sud' => 0,
 			'Asie' => 0,
 			'Afrique' => 0,
-			'AN' => 0,
+			'Amérique du Nord' => 0,
 			'Oceanie' => 0,
 			'Europe' => 0
 			);
@@ -42,7 +42,7 @@ class QuizController extends Controller
 			switch($theme){
 
 					case 'AS':
-						$tableau['AS'] = $tableau['AS'] + 1;
+						$tableau['Amérique du Sud'] = $tableau['Amérique du Sud'] + 1;
 					break;
 
 					case 'Asie':
@@ -53,8 +53,8 @@ class QuizController extends Controller
 						$tableau['Afrique'] = $tableau['Afrique'] + 1;			
 					break;
 
-					case 'AN':
-						$tableau['AN'] = $tableau['AN'] + 1;
+					case 'Amérique du Nord':
+						$tableau['Amérique du Nord'] = $tableau['Amérique du Nord'] + 1;
 					break;
 
 					case 'Oceanie':
@@ -124,67 +124,17 @@ class QuizController extends Controller
 	{
 
 	if(!empty($this->getUser())){
-		$i = 0;
-
-			//self::declaration();
 		
-
-		/*$tableautemp = array();
-		
-	
-		
-
-
-			
-	
-		if(!empty($_GET)){
-
-
-
-			
-
-			
-
-			if(isset($_GET['gastronomie'])){
-			$tableauDeux = self::switchQuizDeux($_GET['gastronomie'],$tableauDeux);
-			//$_GET['gastronomie'] = 0;
-			}
-			if(isset($_GET['monument'])){
-			$tableauDeux = self::switchQuizDeux($_GET['monument'],$tableauDeux);
-			//$_GET['monument'] = 0;
-			}
-			if(isset($_GET['musique'])){
-			$tableauDeux = self::switchQuizDeux($_GET['musique'],$tableauDeux);
-			//$_GET['musique'] = 0;
-			}
-			if(isset($_GET['film'])){
-			$tableauDeux = self::switchQuizDeux($_GET['film'],$tableauDeux);
-			//$_GET['film'] = 0;
-			}
-			if(isset($_GET['evenement'])){
-			$tableauDeux = self::switchQuizDeux($_GET['evenement'],$tableauDeux);
-			//$_GET['evenement'] = 0;
-			}
-			if(isset($_GET['plante'])){
-			$tableauDeux = self::switchQuizDeux($_GET['plante'],$tableauDeux);
-			//$_GET['plante'] = 0;
-			}
-
-			$this->show('quiz/page_quiz', ['monTableau' => $tableauDeux] );
-
-		}*/
-		
-
 		if(!empty($_POST)){
 			foreach ($_POST as $key => $value) {
 				$post[$key] = trim(strip_tags($value)); 
 			}
 
 		$tableau = array(
-			'AS' => 0,
+			'Amérique du Sud' => 0,
 			'Asie' => 0,
 			'Afrique' => 0,
-			'AN' => 0,
+			'Amérique du Nord' => 0,
 			'Oceanie' => 0,
 			'Europe' => 0
 			);
@@ -210,27 +160,49 @@ class QuizController extends Controller
 		    }
 
 
-
+		   
+          $varMax = 0;
+          $monObjetDestination = new DestinationModel();
 
             foreach ($tableau as $key => $value) {
-            # code...
-            //echo $key."/".$value."<br>";
-	            if($value == max($tableau) ){
+            	if($value > $varMax){
+            			$varMax = $value;
+            	}
+            }
+
+            foreach ($tableau as $key => $value) {
+           		if($value == $varMax){
 	            	
-	                  	$monObjetDestination = new DestinationModel();
-	                  	$resultatQuiz[$i] = $monObjetDestination->getDestinationByNameDestination($key);
-	                  	$i++;
+	                $resultatQuiz[] = $key; 
+   	
 	            }
             }
-                            
-            /*$_SESSION['resultat'] = $resultatQuiz;*/
+                       
 
-            
 
+            foreach ($resultatQuiz as $key => $valueDestination) {
+
+            		$listeId[] = $monObjetDestination->getDestinationByNameDestination($valueDestination);
+            }
+            	
+            	
         	
+             if(count($listeId) == 1){
+
+             			
+
+             			foreach ($listeId as $key => $dest) {
+             				# code...
+             			}
+             			
+
+                        $this->redirectToRoute('destination_viewdestination',['id' => $dest['id']]);
 
 
-			$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+
+                }
+
+			$this->show('quiz/page_resultat', ['resultatQuiz' => $listeId] );
 			die();
 			
 

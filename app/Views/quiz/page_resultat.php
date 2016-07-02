@@ -9,21 +9,25 @@
         <h1>Page de Quiz</h1>
 <?php 
    
-
-         if(!empty($_POST) && !empty($resultatQuiz)){ 
+           if(!empty($_POST) && !empty($resultatQuiz)){ 
             
-            foreach ($resultatQuiz as $key => $value) {
-                 ?>
-             <div class="col-lg-12">
-                <a href="<?=$this->url('destination_viewdestination',['id' => $value['id']]);?>"><?= $value['title_destination'] ?></a>
-            </div>
-        <?php
-            }
-        }
-        else{
+               
+                
 
-            echo 'bonjour';
-        }
+
+                    foreach ($resultatQuiz as $key => $value) {
+                    ?>
+                        <div class="col-lg-12">
+                            <a href="<?=$this->url('destination_viewdestination',['id' => $value['id']]);?>"><?= $value['title_destination'] ?></a>
+                        </div>
+                <?php
+                    }
+                
+            }
+            else{
+
+                echo 'bonjour';
+            }
 
         ?>
 

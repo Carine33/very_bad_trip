@@ -39,7 +39,7 @@
                     <div class="portfolio-caption text-center text-radio">
                                                  
                     
-                        <input type="radio" name="gastronomie" value="AS">
+                        <input type="radio" name="gastronomie" value="Amérique du Sud">
                                              
                                           
                        
@@ -89,7 +89,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="gastronomie" value="AN">
+                         <input type="radio" name="gastronomie" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -135,7 +135,7 @@
                       <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_amerique_sud_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                        <input type="radio" name="monument" value="AS">
+                        <input type="radio" name="monument" value="Amérique du Sud">
                     </div>
                 </div>
 
@@ -182,7 +182,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="monument" value="AN">
+                         <input type="radio" name="monument" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -228,7 +228,7 @@
                       <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_amerique_sud_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                        <input type="radio" name="musique" value="AS">
+                        <input type="radio" name="musique" value="Amérique du Sud">
                     </div>
                 </div>
 
@@ -275,7 +275,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="musique" value="AN">
+                         <input type="radio" name="musique" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -321,7 +321,7 @@
                       <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_amerique_sud_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                        <input type="radio" name="evenement" value="AS">
+                        <input type="radio" name="evenement" value="Amérique du Sud">
                     </div>
                 </div>
 
@@ -368,7 +368,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="evenement" value="AN">
+                         <input type="radio" name="evenement" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -414,7 +414,7 @@
                       <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_amerique_sud_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                        <input type="radio" name="film" value="AS">
+                        <input type="radio" name="film" value="Amérique du Sud">
                     </div>
                 </div>
 
@@ -461,7 +461,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="film" value="AN">
+                         <input type="radio" name="film" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -507,7 +507,7 @@
                       <img class="myPicture" src="<?=$this->assetUrl('img/quiz/plante/flore_amerique_sud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                        <input type="radio" name="plante" value="AS">
+                        <input type="radio" name="plante" value="Amérique du Sud">
                     </div>
                 </div>
 
@@ -554,7 +554,7 @@
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
-                         <input type="radio" name="plante" value="AN">
+                         <input type="radio" name="plante" value="Amérique du Nord">
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
