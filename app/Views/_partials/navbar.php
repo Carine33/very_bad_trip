@@ -47,7 +47,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$w_user['username'];?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?=$this->url('signin_selectSignin',['userid' => $w_user['id']]);?>">Modifier information</a></li>
-                                <li><a href="#">Changer de mot de passe</a></li>
+                                <li><a href="<?= $this->url('login_mylostpassword');?>">Changer de mot de passe</a></li>
                                 <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
                             </ul>
                         </li>
