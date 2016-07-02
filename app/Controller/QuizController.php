@@ -182,18 +182,18 @@ class QuizController extends Controller
 	            }
             }  	
         	
-             	/*if(count($listeId) == 1){
+             	if(count($resultatQuiz) == 1){
 
 
-             		var_dump($listeId);
-             		die();
-             			foreach ($listeId as $key => $dest) {
+             		
+             		
+             			foreach ($resultatQuiz as $key => $dest) {
              			  $this->redirectToRoute('destination_viewdestination',['id' => $dest['id']]);
                         }
-                }
-                else{*/
-				$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
-				//}
+	             }
+	             else{
+					$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+				}
 			
 
 
