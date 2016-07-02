@@ -535,8 +535,13 @@ class SigninController extends Controller
 		if(empty($_POST)){
 			$usersModel = new UsersModel();
 			$users = $usersModel->find($id);
+			if($users['role'] == 'user') {
+				$this->show('signin/page_modif_user', ['users' => $users]);
+			}
+			else {
+				$this->show('signin/page_modif_admin', ['users' => $users]);
+			}
 
-			$this->show('signin/page_modif_admin', ['users' => $users]);
 		}
 	
 

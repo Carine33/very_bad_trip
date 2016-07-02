@@ -30,7 +30,13 @@
 				            	<p class="help-block text-danger"></p>
 				        	</div>
 
-				           <div class="form-group">
+							<div class="form-group">
+								<label for="password">Votre mot de passe : </label>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe *">
+								<p class="help-block text-danger"></p>
+							</div>
+							
+				           	<div class="form-group">
 								<label for="avatar">Avatar : </label>
 								<input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
 						    	<input type="file" class="form-control" id="avatar" name="avatar" >
@@ -40,11 +46,6 @@
   									<input type="text" id="nomFichier" readonly="true" name="pictureDeux">
   								</div>
 						    </div>	
-							<div class="form-group">
-								<label for="password">Votre mot de passe : </label>
-								<input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe *">
-								<p class="help-block text-danger"></p>
-							</div>
 						</div>	
 						<div class="col-md-6">	
 							<div class="form-group">
@@ -64,7 +65,7 @@
 							</div>
 						</div>
 					
-						<div class="form-group">
+<!-- 						<div class="form-group">
 								<div class="col-md-6">
 									<label class="control-label" for="role">Statut</label>
 									<div class="radio">
@@ -78,7 +79,7 @@
 										</label>
 									</div>
 								</div>
-						</div>
+						</div> -->
 
 						<div class="clearfix"></div>
                             <div id="btnSubReg" class="col-lg-12 text-center">
