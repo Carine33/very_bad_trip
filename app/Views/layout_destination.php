@@ -36,7 +36,7 @@
 <body  id="page-top" class="index">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-	<?php 
+<?php 
 
 if($w_user['role']=='admin'){
     $this->insert('_partials/navbarAdmin');
@@ -44,7 +44,7 @@ if($w_user['role']=='admin'){
 elseif($w_user['role']=='user'){
    $this->insert('_partials/navbarBis'); 
 }
-else{
+elseif(empty($w_user['role'])){
    $this->insert('_partials/navbar'); 
 }
 ?>

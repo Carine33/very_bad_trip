@@ -37,12 +37,12 @@
 <?php 
 
 if($w_user['role']=='admin'){
-	$this->insert('_partials/navbarAdmin');
+    $this->insert('_partials/navbarAdmin');
 }
 elseif($w_user['role']=='user'){
    $this->insert('_partials/navbarBis'); 
 }
-else{
+elseif(empty($w_user['role'])){
    $this->insert('_partials/navbar'); 
 }
 ?>
