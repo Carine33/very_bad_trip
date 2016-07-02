@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
-                    <a class="navbar-brand page-scroll" href="#page-top">Very Good Trip ! <small style="font-family:Montserrat,Arial,sans-serif; letter-spacing: 1px; text-transform: uppercase; font-size: 16px; color: grey;">Administration</small></a>
+                    <a class="navbar-brand page-scroll" href="#page-top">Very Good Trip ! <small style="font-family:Montserrat,Arial,sans-serif; letter-spacing: 1px; text-transform: uppercase; font-size: 16px; color: grey;">Admin</small></a>
                 <?php else: ;?>
                     <a class="navbar-brand page-scroll" href="#page-top">Very Good Trip !</a>
                 <?php endif; ?> 
