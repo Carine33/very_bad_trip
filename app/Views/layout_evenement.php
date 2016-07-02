@@ -42,9 +42,10 @@ if($w_user['role']=='admin'){
 elseif($w_user['role']=='user'){
    $this->insert('_partials/navbarBis'); 
 }
-else(empty($w_user['role'])){
+else{
    $this->insert('_partials/navbar'); 
 }
+?>
 </nav>
 
 <header>
