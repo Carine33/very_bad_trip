@@ -1,5 +1,21 @@
 <?php $this->layout('layout_destination', ['title' => 'Destination']) ?>
 
+<?php $this->start('css') ?>
+
+<style>
+@media (min-width:1850px){
+	#mainSection {
+	    background: url('<?=$this->assetUrl('img/tour_du_monde.png'); ?>');
+	    background-position: 99% 65%;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	}
+}
+</style>
+
+<?php $this->stop('css') ?>
+
+
 <?php $this->start('main_content') ?>
 
 <!-- SECTION PRESENTATION CONTINENT -->
@@ -14,7 +30,7 @@
 		<br>
 		<h2>Quelques événements à voir :</h2>
 
-			<div class="content">
+			<div class="content row">
 
 			<?php 
 
@@ -25,12 +41,17 @@
 			foreach ($tableauEvent as $key => $value) {
 
 				?>
-				<h3><?php echo $value['name_event'];?></h3>
-					<p class="floatLeft">
+				<div class="col-md-12">
+					<h3><?php echo $value['name_event'];?></h3>
+
+					<div class="col-md-3 text-center">
 						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_event']); ?>">
-					</p>
-				<p ><?php echo $value['description'];?></p>
-				
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
 				<?php
 			}
 
@@ -38,35 +59,10 @@
 
 			</div>
 	
-		<h2>Plantes</h2>
 
-			<div class="content">
+		<h2>Pour les gourmands : </h2>
 
-			<?php 
-
-
-			$tableauFlora = $listeThemesPays['flora'];
-
-
-			foreach ($tableauFlora as $key => $value) {
-
-				?>
-				<p><?php echo $value['name_flora'];?></p>
-					<p class="floatLeft">
-						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_flora']); ?>">
-					</p>
-				<p><?php echo $value['description'];?></p>
-				
-				<?php
-			}
-
-			?>
-
-			</div>
-
-		<h2>Gastronomie</h2>
-
-			<div class="content">
+			<div class="content row">
 
 			<?php 
 
@@ -77,12 +73,17 @@
 			foreach ($tableauGastronomy as $key => $value) {
 
 				?>
-				<p><?php echo $value['name_dish'];?></p>
-					<p class="floatLeft">
+				<div class="col-md-12">
+					<h3><?php echo $value['name_dish'];?></h3>
+					
+					<div class="col-md-3 text-center">
 						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_dish']); ?>">
-					</p>
-				<p><?php echo $value['description'];?></p>
-				
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
 				<?php
 			}
 
@@ -90,9 +91,9 @@
 
 			</div>
 
-		<h2>Monument</h2>
+		<h2>Monuments à voir absolument</h2>
 
-			<div class="content">
+			<div class="content row">
 
 			<?php 
 
@@ -103,12 +104,17 @@
 			foreach ($tableauMonument as $key => $value) {
 
 				?>
-				<p><?php echo $value['name_monument'];?></p>
-					<p class="floatLeft">
+				<div class="col-md-12">
+					<h3><?php echo $value['name_monument'];?></h3>
+
+					<div class="col-md-3 text-center">
 						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_monument']); ?>">
-					</p>
-				<p><?php echo $value['description'];?></p>
-				
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
 				<?php
 			}
 
@@ -116,9 +122,9 @@
 
 			</div>
 
-		<h2>Les films à voir :</h2>
+		<h2>Les films à connaître</h2>
 
-			<div class="content">
+			<div class="content row">
 
 			<?php 
 
@@ -129,12 +135,16 @@
 			foreach ($tableauMovie as $key => $value) {
 
 				?>
-				<p><?php echo $value['title_movie'];?></p>
-					<p class="floatLeft">
+				<div class="col-md-12">
+					<h3><?php echo $value['title_movie'];?></h3>
+					<div class="col-md-3 text-center">
 						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['poster']); ?>">
-					</p>
-				<p><?php echo $value['description'];?></p>
-				
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
 				<?php
 			}
 
@@ -143,9 +153,9 @@
 			</div>
 
 
-		<h2>Music</h2>
+		<h2>Envie de musique ?</h2>
 
-			<div class="content">
+			<div class="content row">
 
 			<?php 
 
@@ -156,16 +166,51 @@
 			foreach ($tableauMusic as $key => $value) {
 
 				?>
-				<p><?php echo $value['name_music'];?></p>
-					<p class="floatLeft">
+				<div class="col-md-12">
+					<h3><?php echo $value['name_music'];?></h3>
+					<div class="col-md-3 text-center">
 						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_music']); ?>">
-					</p>
-				<p><?php echo $value['description'];?></p>
-				
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
 				<?php
 			}
 
 			?>	
+			</div>
+
+		<h2>Et si on parlait flore !</h2>
+
+			<div class="content row">
+
+			<?php 
+
+
+			$tableauFlora = $listeThemesPays['flora'];
+
+
+			foreach ($tableauFlora as $key => $value) {
+
+				?>
+				<div class="col-md-12">
+					<h3><?php echo $value['name_flora'];?></h3>
+
+					<div class="col-md-3 text-center">
+						<img width="200" height="150" style="border-radius: 10%; border: 5px solid white; margin-right: 20px;" src="<?=$this->assetUrl($value['picture_flora']); ?>">
+					</div>
+
+					<div class="col-md-9">
+						<p><?php echo $value['description'];?></p>
+					</div>
+				</div>
+				<?php
+			}
+
+			?>
+
 			</div>
 	</div>
 <?php $this->stop('main_content') ?>

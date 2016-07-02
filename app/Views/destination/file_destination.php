@@ -1,5 +1,21 @@
 <?php $this->layout('layout_destination', ['title' => 'Destination']) ?>
 
+<?php $this->start('css') ?>
+
+<style>
+@media (min-width:1850px){
+		#mainSection {
+	    background: url('<?=$this->assetUrl('img/photos_souvenirsB.png'); ?>');
+	    background-position: 3% 55%;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	}
+}
+</style>
+
+<?php $this->stop('css') ?>
+
+
 <?php $this->start('main_content') ?>
 
 <!-- SECTION PRESENTATION CONTINENT -->
@@ -74,7 +90,7 @@
 		?>
 
 			<br><br>
-			<div class="text-center">
+			<div id="img_destination" class="col-md-12">
 				<img src="<?=$this->assetUrl('img/Around_the_World.png');  ?>">
 			</div>
 	</div>

@@ -37,12 +37,6 @@ section {
     padding: 200px 0;
 }
 
-#mainSection {
-    /*background: url('../img/tour_du_monde.png');*/
-    background: url('../img/photos_souvenirsB.png');
-    background-position: 3% 55%;
-    background-repeat: no-repeat;
-}
 
 /**************************/
 /** CONTENU AP CAROUSSEL **/
@@ -67,14 +61,12 @@ section {
     
 }
 
-
-
-.floatLeft{
-    float: left;
+#img_destination  {
+    display: flex;
 }
 
-.both{
-    clear: both;
+#img_destination > img {
+    margin: auto;
 }
 
 
