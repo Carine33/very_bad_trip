@@ -8,14 +8,14 @@
 
 				<table class="col-lg-12 text-center">
 					<tr>
-						<td class="adminKey">avatar</td>
-						<td class="adminKey">nom</td>
-						<td class="adminEmail">email</td>
-						<td class="adminRole">role</td>
-						<td class="adminKey">pays</td>
-						<td class="adminKey">ville</td>
-						<td></td>
-						<td></td>
+						<th class="adminKey text-center">AVATAR</th>
+						<th class="adminKey text-center">NOM</th>
+						<th class="adminEmail text-center">EMAIL</th>
+						<th class="adminRole text-center">ROLE</th>
+						<th class="adminKey text-center">PAYS</th>
+						<th class="adminKey text-center">VILLE</th>
+						<th></th>
+						<th></th>
 					</tr>
 				<?php 
 				foreach ($listeUsers as $user) {
@@ -25,7 +25,7 @@
 
 							?>
 							<tr>
-								<td class="adminKey"><?= $user['avatar'] ?></td>
+								<td class="adminKey"><img width="50px" height="50px" src="<?= $this->assetUrl($user['avatar']); ?>"></td>
 								<td class="adminKey"><?= $user['username'] ?></td>
 								<td class="adminEmail"><?= $user['email'] ?></td>
 								<td class="adminRole"><?= $user['role'] ?></td>

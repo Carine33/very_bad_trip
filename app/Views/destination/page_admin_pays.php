@@ -10,7 +10,7 @@
 					<table  class="col-lg-12 text-center">
 						<tr>
 							
-							<td class="adminKey">pays</td>
+							<th class="adminKey text-center">PAYS</th>
 							
 						</tr>
 					<?php 
