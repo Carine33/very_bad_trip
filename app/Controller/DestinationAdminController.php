@@ -126,6 +126,28 @@ public function selectFilm()
 	$this->show('destination/page_admin_music', ['listeMusic' => $listeMusic]);
 	}
 
+
+
+
+
+public function selectPays()
+	{
+
+
+	//$this->allowTo(['admin']);
+
+	$paysModel = new PaysModel();
+	$listePays = $paysModel->findAll($orderBy = 'title_nation');
+
+	
+
+
+	$this->show('destination/page_admin_pays', ['listePays' => $listePays]);
+	}
+
+
+
+
 	public function supprimerDestination($id)
 	{
 

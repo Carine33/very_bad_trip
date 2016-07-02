@@ -1,4 +1,4 @@
-<?php $this->layout('layout_evenement', ['title' => 'Page d\'administration']) ?>
+<?php $this->layout('layout_registration', ['title' => 'Page d\'administration']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container">

@@ -31,7 +31,20 @@
 <body  id="page-top" class="index">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-	<?=$this->insert('_partials/navbarAdmin');?>
+
+
+
+<?php 
+
+if($w_user['role']=='admin'){
+	$this->insert('_partials/navbarAdmin');
+}
+elseif($w_user['role']=='user'){
+   $this->insert('_partials/navbarBis'); 
+}
+else(empty($w_user['role'])){
+   $this->insert('_partials/navbar'); 
+}
 </nav>
 
 <header>

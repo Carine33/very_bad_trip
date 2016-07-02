@@ -34,6 +34,7 @@
 		['GET|POST', '/page-admin-music', 'DestinationAdmin#selectMusic', 'destinationAdmin_selectMusic'],
 
 
+		['GET|POST', '/page-admin-pays', 'DestinationAdmin#selectPays', 'destinationAdmin_selectPays'],
 
 
 
@@ -81,7 +82,7 @@
 		['GET', '/page-supprimer-movie/[i:movieid]', 'DestinationAdmin#supprimerMovie', 'destinationAdmin_supprimerMovie'],
 
 
-['GET', '/page-supprimer-music/[i:musicid]', 'DestinationAdmin#supprimerMusic', 'destinationAdmin_supprimerMusic'],
+		['GET', '/page-supprimer-music/[i:musicid]', 'DestinationAdmin#supprimerMusic', 'destinationAdmin_supprimerMusic'],
 
 
 
