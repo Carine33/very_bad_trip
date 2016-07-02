@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<p>musique est supprimé</p>
+	<p>la musique est supprimée</p>
 
 
 <?php $this->stop('main_content') ?>

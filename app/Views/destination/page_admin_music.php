@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h1>gestion des musique</h1>
+			<h1>gestion des musiques</h1>
 	
 
 					<table  class="col-lg-12 text-center">

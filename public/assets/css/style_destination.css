@@ -69,6 +69,13 @@ section {
     margin: auto;
 }
 
+.hidden {
+    display: none;
+}
+
+.input_image {
+    padding: 1em 0;
+}
 
 
 /**************************/

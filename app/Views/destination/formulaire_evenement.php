@@ -21,7 +21,7 @@
             	<?=implode('<br>', $errors); ?>
             	</div>
         	<?php endif; ?>
-            <h1>Evénement</h1>
+            <h1>Evenement</h1>
          
         	<form method="post" enctype="multipart/form-data">
             	<div class="row">
@@ -29,9 +29,9 @@
                 	<div class="col-md-4 col-sm-6">
                     	<div class="form-group">
                         	<label for="username">Destination : </label>
-                            <select id="title_destination" name="title_destination">
-                                <option value="AN">Amerique du nord</option>
-                                <option value="AS">Amerique du sud</option>
+                            <select id="title_destination" class="form-control" name="title_destination">
+                                <option value="Amérique du Nord">Amérique du nord</option>
+                                <option value="Amérique du Sud">Amérique du sud</option>
                                 <option value="Afrique">Afrique</option>
                                 <option value="Asie">Asie</option>
                                 <option value="Europe">Europe</option>
@@ -42,14 +42,14 @@
                         <div class="form-group">
 
                             <label for="nation">Pays : </label>
-                            <input type="text" id="title_nation" name="title_nation">
+                            <input type="text" class="form-control" id="title_nation" name="title_nation">
                             <p class="help-block text-danger"></p>
 
                         </div>
                         <div class="form-group">
 
-                            <label for="name_event">nom de l'évenement : </label>
-                            <input type="text" id="name_event" name="name_event">
+                            <label for="name_event">Nom de l'événement : </label>
+                            <input type="text" class="form-control" id="name_event" name="name_event">
                             <p class="help-block text-danger"></p>
 
                         </div>
@@ -67,8 +67,8 @@
                             
                         <div class="form-group">
 
-                            <label for="name_event">description de l'évenement : </label>
-                            <textarea  id="description" name="description"></textarea>
+                            <label for="name_event">Description de l'événement : </label>
+                            <textarea  id="description" class="form-control" name="description"></textarea>
                             <p class="help-block text-danger"></p>
 
                         </div>

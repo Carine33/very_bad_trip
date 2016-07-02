@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h1>gestion des filmes</h1>
+			<h1>gestion des films</h1>
 	
 
 					<table  class="col-lg-12 text-center">

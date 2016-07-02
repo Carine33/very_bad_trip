@@ -29,9 +29,9 @@
                 	<div class="col-md-4 col-sm-6">
                     	<div class="form-group">
                         	<label for="username">Destination : </label>
-                            <select id="title_destination" name="title_destination">
-                                <option value="AN">Amerique du nord</option>
-                                <option value="AS">Amerique du sud</option>
+                            <select id="title_destination" class="form-control" name="title_destination">
+                                <option value="Amérique du Nord">Amérique du nord</option>
+                                <option value="Amérique du Sud">Amérique du sud</option>
                                 <option value="Afrique">Afrique</option>
                                 <option value="Asie">Asie</option>
                                 <option value="Europe">Europe</option>
@@ -42,33 +42,35 @@
                         <div class="form-group">
 
                             <label for="nation">Pays : </label>
-                            <input type="text" id="title_nation" name="title_nation">
+                            <input type="text" id="title_nation" class="form-control" name="title_nation">
                             <p class="help-block text-danger"></p>
 
                         </div>
                         <div class="form-group">
 
-                            <label for="name_monument">nom du monument : </label>
-                            <input type="text" id="name_monument" name="name_monument">
+                            <label for="name_monument">Nom du monument : </label>
+                            <input type="text" id="name_monument" class="form-control" name="name_monument">
                             <p class="help-block text-danger"></p>
 
                         </div>
 
-                         <div class="form-group">
-                                <label for="avatar">Image : </label>
-                                <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="avatar" name="avatar" >
-                                <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
-                                    <button type="button" class="btn btn-xl" id="fakeBrowser">Choisir </button>
-                                    <input type="text" id="nomFichier" readonly="true" name="pictureDeux">
-                                </div>
-                            </div>  
+                        <div class="form-group">
+                            <label for="avatar">Image : </label>
+                            <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
+                            <input type="file" class="form-control" id="avatar" name="avatar" >
+                            <p class="help-block text-danger"></p>
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-xl" id="fakeBrowser">Choisir </button>
+                                <input type="text" id="nomFichier" readonly="true" name="pictureDeux">
+                            </div>
+                        </div>  
                             
+                        <br><br>
+
                         <div class="form-group">
 
                             <label for="name_monument">Commentaire : </label>
-                            <textarea  id="description" name="description"></textarea>
+                            <textarea  id="description" class="form-control" name="description"></textarea>
                             <p class="help-block text-danger"></p>
 
                         </div>

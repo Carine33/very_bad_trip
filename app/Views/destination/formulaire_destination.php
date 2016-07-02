@@ -22,15 +22,15 @@
             	</div>
         	<?php endif; ?>
             
-        	<form method="post" enctype="multipart/form-data">
+        	<form method="post" id="form_destination" enctype="multipart/form-data">
             	<div class="row">
                     <div class="col-md-4 col-sm-6"></div>
                 	<div class="col-md-4 col-sm-6">
                     	<div class="form-group">
                         	<label for="username">Destination : </label>
-                            <select id="title_destination" name="title_destination">
-                                <option value="Amérique du Nord">Amerique du nord</option>
-                                <option value="Amérique du Sud">Amerique du sud</option>
+                            <select id="title_destination" class="form-control" name="title_destination">
+                                <option value="Amérique du Nord">Amérique du nord</option>
+                                <option value="Amérique du Sud">Amérique du sud</option>
                                 <option value="Afrique">Afrique</option>
                                 <option value="Asie">Asie</option>
                                 <option value="Europe">Europe</option>
@@ -40,31 +40,31 @@
                        	</div>
 
                         <div class="form-group">
-                                <label for="avatar">premiére image : </label>
+                                <label for="avatar">Première image : </label>
                                 <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_1avatar" name="img_1avatar" >
+                                <input type="file" class="form-control hidden" id="img_1avatar" name="img_1avatar" >
                                 <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
+                                <div class="col-md-12 input_image">
                                     <button type="button" class="btn btn-xl" id="fakeBrowser1">Choisir </button>
-                                    <input type="text" id="nomFichier1" readonly="true" name="pictureDeuxImg_1">
+                                    <input type="text" id="nomFichier1" readonly="true"  name="pictureDeuxImg_1">
                                 </div>
                             </div>  
                         <div class="form-group">
-                                <label for="avatar">deuxieme image : </label>
+                                <label for="avatar">Deuxième image : </label>
                                 <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_2avatar" name="img_2avatar" >
+                                <input type="file" class="form-control hidden" id="img_2avatar" name="img_2avatar" >
                                 <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
+                                <div class="col-md-12 input_image">
                                     <button type="button" class="btn btn-xl" id="fakeBrowser2">Choisir </button>
                                     <input type="text" id="nomFichier2" readonly="true" name="pictureDeuxImg_2">
                                 </div>
                             </div>
                         <div class="form-group">
-                                <label for="avatar">troisiéme image : </label>
+                                <label for="avatar">Troisième image : </label>
                                 <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="<?php echo $maxSize; ?>">
-                                <input type="file" class="form-control" id="img_3avatar" name="img_3avatar" >
+                                <input type="file" class="form-control hidden" id="img_3avatar" name="img_3avatar" >
                                 <p class="help-block text-danger"></p>
-                                <div class="col-md-12">
+                                <div class="col-md-12 input_image">
                                     <button type="button" class="btn btn-xl" id="fakeBrowser3">Choisir </button>
                                     <input type="text" id="nomFichier3" readonly="true" name="pictureDeuxImg_3">
                                 </div>

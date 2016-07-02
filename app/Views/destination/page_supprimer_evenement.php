@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<p>la devenement est supprimée</p>
+	<p>l'événement est supprimé</p>
 
 
 <?php $this->stop('main_content') ?>

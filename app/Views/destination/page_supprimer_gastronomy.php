@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<p>le monument est supprimé</p>
+	<p>le plat est supprimé</p>
 
 
 <?php $this->stop('main_content') ?>
