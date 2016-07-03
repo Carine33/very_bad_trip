@@ -251,40 +251,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Carine, Damien, Hugues et Thibaut issus de divers horizons vous partages leur univers ! </p>
+                    <p class="large text-muted">Carine, Damien, Hugues et Thibaut issus de divers horizons vous partagent leur univers ! </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients Aside -->
-    <!-- <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?=$this->assetUrl('img/logos/envato.jpg');?>" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?=$this->assetUrl('img/logos/designmodo.jpg');?>" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?=$this->assetUrl('img/logos/themeforest.jpg');?>" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?=$this->assetUrl('img/logos/creative-market.jpg');?>" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside> -->
-    
+  
     <!-- Section Contact -->
     <section id="contact">
         <div class="container">

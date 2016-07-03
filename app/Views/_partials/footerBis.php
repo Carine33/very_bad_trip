@@ -19,14 +19,11 @@
                         </li>
                     </ul>
                 </div>
-<!--                 <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div> -->
+                <div class="col-md-4">
+
+                        <span class="copyright">66 rue Abbé de l'Epée</span><br>
+                        <span class="copyright">33000 BORDEAUX</span>                    
+                </div>
             </div>
         </div>
     <!-- </footer> -->
