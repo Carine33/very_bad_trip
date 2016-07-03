@@ -32,7 +32,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronomie_amerique_sud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronomie_ameriquesud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                     </a>
 
                     <div class="portfolio-caption text-center text-radio">
@@ -84,7 +84,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronomie_amerique_nord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/gastronomie/gastronomie_ameriquenord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -131,7 +131,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_amerique_sud_1.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_ameriquesud_1.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
                         <input type="radio" name="monument" value="Amérique du Sud">
@@ -177,7 +177,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_amerique_nord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/monument/monument_ameriquenord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -224,7 +224,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_amerique_sud_'.rand(1, 1).'.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_ameriquesud_'.rand(1, 1).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
                         <input type="radio" name="musique" value="Amérique du Sud">
@@ -270,7 +270,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_amerique_nord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/musique/musique_ameriquenord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -317,7 +317,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_amerique_sud_'.rand(1, 1).'.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_ameriquesud_'.rand(1, 1).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
                         <input type="radio" name="evenement" value="Amérique du Sud">
@@ -363,7 +363,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_amerique_nord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/evenement/evenement_ameriquenord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -410,7 +410,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_amerique_sud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_ameriquesud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
                         <input type="radio" name="film" value="Amérique du Sud">
@@ -456,7 +456,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_amerique_nord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/film/film_ameriquenord_'.rand(1, 9).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
@@ -503,7 +503,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/plante/flore_amerique_sud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
+                      <img class="myPicture" src="<?=$this->assetUrl('img/quiz/plante/flore_ameriquesud_'.rand(1, 3).'.jpg');?>" alt="Photo" />
                     </a>
                     <div class="portfolio-caption text-center text-radio">
                         <input type="radio" name="plante" value="Amérique du Sud">
@@ -549,7 +549,7 @@
                                 <i class="fa fa-plus fa-2x"></i>
                             </div>
                         </div>
-                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/plante/flore_amerique_nord_'.rand(1,3).'.jpg');?>" alt="Photo" />
+                        <img class="myPicture" src="<?=$this->assetUrl('img/quiz/plante/flore_ameriquenord_'.rand(1,3).'.jpg');?>" alt="Photo" />
                         
                     </a>
                     <div class="portfolio-caption text-center text-radio">
