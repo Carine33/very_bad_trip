@@ -117,7 +117,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Amérique du Nord</h4>
-                                    <h4 class="subheading">Le Nouveau Monde !</h4>
+                                    <h4 class="subheading">L'Amérique, l'Amérique !</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Des destinations légendaires comme les Etats-Unis et le Canada : Écouter du jazz dans un bar de Manhattan ou le souffle du vent dans les plaines désertes du Grand Nord canadien, sentir le soleil sur sa peau au bord des plages paradisiaques de la Floride ou de la Californie...<br>
@@ -137,7 +137,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Amérique du Sud</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4 class="subheading">Le Nouveau Monde !</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Entre villes coloniales, faune et flore variée et forêt amazonienne, un voyage en Amérique du Sud vous invite à découvrir la diversité de ses paysages majestueux et la richesse de ses sites culturels au travers les mythiques et grandes civilisations.<br>
@@ -207,7 +207,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Damien_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Damien_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Damien" title="Photo de Damien, cliquez pour agrandir la photo">
                         <h4>Damien Vermilas</h4>
-                        <p class="text-muted">Un résumé à éditer...</p>
+                        <p class="text-muted">Serial Gamer ! La programmation c'est mon truc ! "if", "switch", "foreach"  etc.... what else ?</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -222,7 +222,7 @@
                     <div class="team-member">
                         <!-- <a href="img/team/Hugues_polaroid.jpg"> --><img src="<?=$this->assetUrl('img/team/Hugues_polaroid.jpg');?>" class="img-responsive" alt="Photo_de_Hugues" title="Photo de Hugues, cliquez pour agrandir la photo">
                         <h4>Hugues Fonteyraud</h4>
-                        <p class="text-muted">Un résumé à éditer... Fondu de musique et en particulier la guitare...</p>
+                        <p class="text-muted">Surnommé Hugues0111 ou encore Hugo. Fondu de musique et en particulier la guitare...</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
