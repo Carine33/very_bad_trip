@@ -14,12 +14,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="text-center col-md-4 col-sm-6 ">
+                <div class="text-center col-md-4 col-sm-6">
                 </div>
-                <div class="text-center col-md-4 col-sm-6 ">                    
+                <div class="text-center col-md-4 col-sm-6">                    
                     <a class="lienInscription btn btn-default btn-lg btn-block btn-xl monBtn" href="<?=$this->url('signin_signin');?>">S'inscrire</a>           
                 </div>
-                <div class="text-center col-md-4 col-sm-6 ">
+                <div class="text-center col-md-4 col-sm-6">
                 </div>
             </div>
         </div>
