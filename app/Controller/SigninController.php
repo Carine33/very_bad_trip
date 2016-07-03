@@ -136,9 +136,9 @@ class SigninController extends Controller
 				$errors[] = 'Vous devez indiquer votre ville';
 			}
 
-			if(empty($post['role'])){
+/*			if(empty($post['role'])){
 				$errors[] = 'Vous indiquez votre statut';
-			}
+			}*/
 
 			// Ici, il n'y a pas d'erreurs, on peut donc enregistrer en base de données
 			if(count($errors) === 0){
