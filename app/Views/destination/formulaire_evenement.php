@@ -21,6 +21,13 @@
             	<?=implode('<br>', $errors); ?>
             	</div>
         	<?php endif; ?>
+
+            <?php if(isset($success) && $success === true): ?>
+                    <div class="alert alert-success">
+                        <p>Votre ajout a bien été enregistré.</p>
+                    </div>
+            <?php endif; ?>
+            
             <h1>Evenement</h1>
          
         	<form method="post" enctype="multipart/form-data">

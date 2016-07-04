@@ -1,6 +1,6 @@
 ## VERY GOOD TRIP 
 
-VERY GOOD TRIP est un site pour documenter sur des destinations dans le monde entier. A travers un quiz original, présentant seulement des photos, l'utilisateur sélectionne celles qui l'inspirent le plus. Ces photos sont classées par thèmes comme la musique, le cinéma, la gastronomie etc... A la fin de ce quiz, l'utilisateur s'inscrit afin de voir le résultat du continent qui lui propose une sélection de 3 pays dont il peut voir pour chacun plus de détails par thèmes. Aussi, il peut, sous son propre compte, accéder à des fiches pays, les commenter afin de partager ses avis. C'est avant tout un site pour les passionnés de voyages !
+VERY GOOD TRIP est un site pour documenter sur des destinations dans le monde entier. A travers un quiz original, présentant seulement des photos, l'utilisateur sélectionne celles qui l'inspirent le plus. Ces photos sont classées par thèmes comme la musique, le cinéma, la gastronomie etc... A la fin de ce quiz, l'utilisateur s'inscrit afin de voir le résultat du continent qui lui propose une sélection de 3 pays dont il peut voir pour chacun plus de détails par thèmes. Aussi, il peut, sous son propre compte, accéder à des fiches pays. C'est avant tout un site pour les passionnés de voyages !
 
 ---
 

@@ -424,7 +424,8 @@ public function selectPays()
 				if($destination->insert($dataInsert)){
 					// Ici l'insertion en base est effectuée
 					$success = true;
-					$this->redirectToRoute('default_home');
+					$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
+					$this->show('destination/formulaire_destination', $params);
 				}
 
 				
@@ -1364,8 +1365,9 @@ public function insererFlora()
 
 				/*header ('Location: home.php');
 				die;*/
+				$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
 
-				$this->redirectToRoute('default_home');
+				$this->show('destination/formulaire_music', $params);
 			}
 			else {
 				// On peut faire un truc ici... 
@@ -1441,8 +1443,9 @@ public function insererFlora()
 
 				/*header ('Location: home.php');
 				die;*/
+				$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize];
 
-				$this->redirectToRoute('default_home');
+				$this->show('destination/formulaire_pays', $params);
 			}
 			else {
 				// On peut faire un truc ici... 
