@@ -49,30 +49,11 @@
                                 <li><a href="<?=$this->url('signin_selectSignin',['userid' => $w_user['id']]);?>">Modifier information</a></li>
                                 <li><a href="<?= $this->url('login_mylostpassword');?>">Changer de mot de passe</a></li>
                                 <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
-                                
+                                 <li><a href="<?= $this->url('destinationAdmin_selectPays');?>">Liste des pays</a></li>
                             </ul>
                         </li>
                 
                     <?php endif; ?>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liste pays<span class="caret"></span></a>
-                             <ul class="dropdown-menu">
-                              <?php use \Model\DestinationModel;
-
-
-                              $objetListePays = new DestinationModel();
-                              $listePays = $objetListePays->getListeTitleNation();
-
-                            foreach ($listePays as $key => $monpays) {
-
-                               
-                                 ?>
-                                    <li><a href="<?=$this->url('destination_viewPays' , ['pays' => $monpays['title_nation']]);?>"><?php echo $monpays['title_nation'];?></a></li>
-                                    <?php 
-                            }
-                            ?>
-                                </ul>
-                        </li>
 
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
                         <li>

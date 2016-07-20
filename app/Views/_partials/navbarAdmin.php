@@ -36,6 +36,7 @@
                             <li><a href="<?=$this->url('DestinationAdmin_insererMonument');?>">Ajouter un monument</a></li>
                             <li><a href="<?=$this->url('DestinationAdmin_insererMovie');?>">Ajouter un film</a></li>                            
                             <li><a href="<?=$this->url('DestinationAdmin_insererMusic');?>">Ajouter un artiste</a></li>
+                             <li><a href="<?=$this->url('destination_insererTheme');?>">Ajouter un theme</a></li>
                         </ul>
                     </li>
 
@@ -44,6 +45,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?=$this->url('users_selectUsers');?>">Liste des utilisateurs</a></li>
                             <li><a href="<?=$this->url('destinationAdmin_selectDestinations');?>">Liste des destinations</a></li>
+                            <li><a href="<?=$this->url('default_selectContacts');?>">Liste des contacts</a></li>
+                            <li><a href="<?=$this->url('default_selectComments');?>">Liste des commentaires</a></li>
+                             <li><a href="<?=$this->url('destination_selectThemes');?>">Liste des themes</a></li>
                             
                         </ul>
                     </li>

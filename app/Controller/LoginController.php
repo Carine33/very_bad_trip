@@ -51,6 +51,13 @@ class LoginController extends Controller
 
 
 
+
+						if(!empty($user['role']) && !empty($_SESSION['resultat'][0]['title_destination'])){
+
+							$resultatQuiz = $_SESSION['resultat'];
+							$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+						}
+
 						if($user['role'] == 'user'){
 							$this->redirectToRoute('default_home');
 						}
@@ -59,7 +66,6 @@ class LoginController extends Controller
 							$this->redirectToRoute('admin_adminIndex');
 						}
 
-	
 
 			}
 		}
@@ -75,6 +81,7 @@ class LoginController extends Controller
 		if(!empty($_GET) && isset($_GET['logout']) && $_GET['logout'] == 'Oui'){
 			$authModel = new AuthModel();
 			$authModel->logUserOut(); // Permet de déconnecter l'utilisateur
+			unset($_SESSION['resultat']);
 			// On redirige l'utilisateur vers la page d'accueil 
 			$this->redirectToRoute('default_home');
 			

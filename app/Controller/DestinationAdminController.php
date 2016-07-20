@@ -413,7 +413,7 @@ public function selectPays()
 			
 				$destination = new DestinationsModel();
 
-				var_dump("ici fileForDBimg_3 : ".$fileForDBimg_3);
+				//var_dump("ici fileForDBimg_3 : ".$fileForDBimg_3);
 
 				$dataInsert = [
 					'title_destination' => $post['title_destination'], 

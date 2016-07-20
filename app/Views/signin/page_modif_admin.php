@@ -50,6 +50,7 @@
   								</div>
 
 						    </div>	
+						    <p id="demo"></p>
 							
 						</div>	
 						<div class="col-md-6">	

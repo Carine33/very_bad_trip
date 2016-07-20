@@ -25,6 +25,7 @@
 
 				<form method="post" enctype="multipart/form-data" action="<?=$this->url('signin_updateSigninUser');?>">
 					<input type="hidden" name="id" value="<?php echo $users['id'] ?>">
+					<input type="hidden" name="role" value="<?php echo $users['role'] ?>">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">

@@ -1,4 +1,4 @@
-<!--     <nav class="navbar navbar-default navbar-fixed-top"> -->
+    <nav class="navbar navbar-default navbar-fixed-top"> -->
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display = Menu "hamburger" -->
             <div class="navbar-header page-scroll">
@@ -22,22 +22,17 @@
                     </li>
                     <?php if(empty($w_user['role']) || ($w_user['role'] != 'user' && $w_user['role'] != 'admin')): ?>
                     <li>
-                        <a class="page-scroll" href="#inscription">Inscription</a>
+                        <a class="page-scroll" href="<?=$this->url('signin_signin');?>">Inscription</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?= $this->url('login_login');?>">Se connecter</a>
                     </li>
                      <?php endif; ?>
-                    <li>
-                        <a class="page-scroll" href="#destinations">Destination</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">La Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                     
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'user'): ?>
+
+
+
                         <li>
                         <div><img id="myAvatar" src="<?=$this->assetUrl($w_user['avatar']);?>"></div>
                         </li>
@@ -49,30 +44,12 @@
                                 <li><a href="<?=$this->url('signin_selectSignin',['userid' => $w_user['id']]);?>">Modifier information</a></li>
                                 <li><a href="<?= $this->url('login_mylostpassword');?>">Changer de mot de passe</a></li>
                                 <li><a href="<?= $this->url('login_logout');?>">Se déconnecter</a></li>
-                                
+                                 <li><a href="<?= $this->url('destinationAdmin_selectPays');?>">Liste des pays</a></li>
                             </ul>
                         </li>
+                        
                 
                     <?php endif; ?>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liste pays<span class="caret"></span></a>
-                             <ul class="dropdown-menu">
-                              <?php use \Model\DestinationModel;
-
-
-                              $objetListePays = new DestinationModel();
-                              $listePays = $objetListePays->getListeTitleNation();
-
-                            foreach ($listePays as $key => $monpays) {
-
-                               
-                                 ?>
-                                    <li><a href="<?=$this->url('destination_viewPays' , ['pays' => $monpays['title_nation']]);?>"><?php echo $monpays['title_nation'];?></a></li>
-                                    <?php 
-                            }
-                            ?>
-                                </ul>
-                        </li>
 
                     <?php if(!empty($w_user['role']) && $w_user['role'] == 'admin'): ?>
                         <li>
@@ -94,4 +71,4 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-<!--     </nav> -->
+</nav>

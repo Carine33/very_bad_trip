@@ -36,10 +36,12 @@
 
 		['GET|POST', '/page-admin-pays', 'DestinationAdmin#selectPays', 'destinationAdmin_selectPays'],
 
+		['GET|POST', '/page-admin-contacts', 'Default#selectContacts', 'default_selectContacts'],
+
+		['GET|POST', '/page-admin-comments', 'Default#selectComments', 'default_selectComments'],
 
 
-
-
+		['GET|POST', '/page-admin-themes', 'Destination#selectThemes', 'destination_selectThemes'],
 
 
 
@@ -56,6 +58,12 @@
 		['GET', '/page-supprimer-destination/[i:destinationid]', 'Destination#supprimerDestination', 'destination_supprimerDestination'],
 		['GET|POST', '/miseAJourUserParAdmin', 'Signin#updateSigninAdmin', 'signin_updateSigninAdmin'],
 		['GET|POST', '/miseAJourUserParUser', 'Signin#updateSigninUser', 'signin_updateSigninUser'],
+
+
+		['GET|POST', '/miseAJour_theme/[i:themeid]', 'destination#updateTheme', 'destination_updateTheme'],
+
+
+
 
 		['GET|POST', '/selectUser/[i:userid]', 'Signin#selectSignin', 'signin_selectSignin'],
 		['GET|POST', '/selectUserParUser/[i:userid]', 'Signin#selectSigninUser', 'signin_selectSigninUser'],
@@ -84,7 +92,11 @@
 
 		['GET', '/page-supprimer-music/[i:musicid]', 'DestinationAdmin#supprimerMusic', 'destinationAdmin_supprimerMusic'],
 
+['GET', '/page-supprimer-contact/[i:contactid]', 'Default#supprimerContact', 'default_supprimerContact'],
 
+['GET', '/page-supprimer-comments/[i:commentid]', 'Default#supprimerComment', 'default_supprimerComment'],
+
+['GET', '/page-supprimer-theme/[i:themeid]', 'Destination#supprimerTheme', 'destination_supprimerTheme'],
 
 
 
@@ -123,10 +135,12 @@
 		['GET|POST', '/creer-movie', 'DestinationAdmin#insererMovie', 'DestinationAdmin_insererMovie'],
 		['GET|POST', '/creer-music', 'DestinationAdmin#insererMusic', 'DestinationAdmin_insererMusic'],
 
+		['GET|POST', '/creer-theme', 'Destination#insererTheme', 'destination_insererTheme'],
+
 		
 		['GET|POST', '/creer-pays', 'DestinationAdmin#insererPays', 'DestinationAdmin_insererPays'],
 
 
-
+		['GET|POST', '/transfert_themes', 'Destination#transfertThemes', 'destination_transfertThemes'],
 
 	);

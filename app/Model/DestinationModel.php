@@ -75,7 +75,7 @@ class DestinationModel extends \W\Model\Model
 
 		$tableau = array();
 
-		$sql1 = 'SELECT * FROM event WHERE  title_nation = :pays LIMIT 3';
+		$sql1 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "event" LIMIT 3';
 			
 			
 			
@@ -85,7 +85,7 @@ class DestinationModel extends \W\Model\Model
 
 		$event = $sth1->fetchALL();
 
-		$sql2 = 'SELECT * FROM flora WHERE  title_nation = :pays LIMIT 3';
+		$sql2 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "flora" LIMIT 3';
 			
 			
 			
@@ -95,7 +95,7 @@ class DestinationModel extends \W\Model\Model
 
 		$flora = $sth2->fetchALL();
 
-		$sql3 = 'SELECT * FROM gastronomy WHERE  title_nation = :pays LIMIT 3';
+		$sql3 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "gastronomy" LIMIT 3';
 			
 			
 			
@@ -105,7 +105,7 @@ class DestinationModel extends \W\Model\Model
 
 		$gastronomy = $sth3->fetchALL();
 
-		$sql4 = 'SELECT * FROM monument WHERE  title_nation = :pays LIMIT 3';
+		$sql4 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "monument" LIMIT 3';
 			
 			
 			
@@ -115,7 +115,7 @@ class DestinationModel extends \W\Model\Model
 
 		$monument = $sth4->fetchALL();
 
-		$sql5 = 'SELECT * FROM movie WHERE  title_nation = :pays LIMIT 3';
+		$sql5 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "movie" LIMIT 3';
 			
 			
 			
@@ -125,7 +125,7 @@ class DestinationModel extends \W\Model\Model
 
 		$movie = $sth5->fetchALL();
 
-		$sql6 = 'SELECT * FROM music WHERE  title_nation = :pays LIMIT 3';
+		$sql6 = 'SELECT * FROM theme WHERE  title_nation = :pays AND theme = "music" LIMIT 3';
 			
 			
 			

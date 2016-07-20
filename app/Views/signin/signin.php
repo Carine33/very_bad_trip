@@ -22,6 +22,7 @@
 				<?php else: ?>
 
 				<form method="post" enctype="multipart/form-data">
+				<input type="hidden" name="role"  value="user"> 
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">

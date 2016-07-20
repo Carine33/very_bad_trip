@@ -96,7 +96,7 @@ elseif(empty($w_user['role'])){
 
     function modifNomFichier(){
 
-        /*document.getElementById('demo').innerHTML = '<img src="' + fileInput.value +'" />';*/
+        //document.getElementById('demo').innerHTML = '<img src="' + fileInput.value +'" />';
         //document.getElementById('demo').innerHTML = fileInput.value;
         textInput.value = fileInput.value;
     }
@@ -111,7 +111,7 @@ elseif(empty($w_user['role'])){
 
      var previewImage = function(event) {
         var fakeImage = URL.createObjectURL(event.target.files[0]); 
-
+            alert(fakeImage);
         var fileName = document.getElementById('nomFichier');
         fileName.value = fakeImage;
 

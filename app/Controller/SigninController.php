@@ -324,11 +324,13 @@ class SigninController extends Controller
 					'avatar'	=> '',
 					'email'		=> $post['email'],
 					'country' 	=> $post['country'],
-					'city'		=> $post['city']
+					'city'		=> $post['city'],
+					'role'		=> $post['role']
 				
 				];
 				if (!empty($_FILES['avatar']['tmp_name'])){
 					$data['avatar'] = $fileForDB;
+					
 											
 				} //$finalFileName
 				else {
@@ -343,7 +345,8 @@ class SigninController extends Controller
 					$currentUser = $this->getUser(); // Contient les données de l'utilisateur
 
 					$success = true;
-					$this->show('signin/page_vide');
+					$params = ['errors' => $errors, 'success' => $success, 'maxSize' => $maxSize, 'users' => $post];
+				$this->show('signin/page_modif_admin', $params);
 				}
 
 				

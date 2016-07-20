@@ -126,14 +126,14 @@ class QuizController extends Controller
 			$resultatQuiz = array();
 			$post = array();
 
-	if(!empty($this->getUser())){
+	
 		
 		if(!empty($_POST)){
 			foreach ($_POST as $key => $value) {
 				$post[$key] = trim(strip_tags($value)); 
 			}
 
-		$tableau = array(
+			$tableau = array(
 			'Amérique du Sud' => 0,
 			'Asie' => 0,
 			'Afrique' => 0,
@@ -178,25 +178,29 @@ class QuizController extends Controller
 	            	
            			$monObjetDestination = new DestinationModel();
 	            	$resultatQuiz[] = $monObjetDestination->getRowDestination($key);
+	            	$_SESSION['resultat']=$resultatQuiz;
 	                	
 	            }
             }  	
         	
+
+
+           if(!empty($this->getUser())){
              	if(count($resultatQuiz) == 1){
-
-
-             		
-             		
-             			foreach ($resultatQuiz as $key => $dest) {
+	       			foreach ($resultatQuiz as $key => $dest) {
              			  $this->redirectToRoute('destination_viewdestination',['id' => $dest['id']]);
-                        }
-	             }
-	             else{
+                    }
+	            }
+	            else{
 					$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
 				}
-			
-
-
+			}
+			else{
+							$this->redirectToRoute('login_login');
+					
+			}
+				/*$this->show('quiz/page_resultat', ['resultatQuiz' => $resultatQuiz] );
+*/
 		}// fin if(!empty($_POST))
 
 		$this->show('quiz/page_quiz');
@@ -205,9 +209,5 @@ class QuizController extends Controller
 
 	}
 	
-	else{
-				$this->redirectToRoute('login_login');
-		
-	}
-}
+
 }
